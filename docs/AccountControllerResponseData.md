@@ -6,16 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **float** |  | 
 **balance** | **str** |  | 
-**transaction_hash** | **str** |  | [optional] 
-**signed_transaction** | **str** |  | [optional] 
-**raw_transaction** | **str** |  | [optional] 
-**data** | **str** |  | 
-**transactions** | [**List[TransactionData]**](TransactionData.md) |  | [optional] 
-**moon_scan_url** | **str** |  | [optional] 
-**signature** | **str** |  | [optional] 
-**transaction** | [**Tx**](Tx.md) |  | [optional] 
-**user_ops** | [**List[TransactionRequest]**](TransactionRequest.md) |  | [optional] 
 **userop_transaction** | **str** |  | [optional] 
+**user_ops** | [**List[TransactionRequest]**](TransactionRequest.md) |  | [optional] 
+**transaction** | [**Tx**](Tx.md) |  | [optional] 
+**signature** | **str** |  | [optional] 
+**moon_scan_url** | **str** |  | [optional] 
+**transactions** | [**List[TransactionData]**](TransactionData.md) |  | [optional] 
+**data** | **str** |  | 
+**raw_transaction** | **str** |  | [optional] 
+**signed_transaction** | **str** |  | [optional] 
+**transaction_hash** | **str** |  | [optional] 
 **keys** | **List[str]** |  | [optional] 
 **address** | **str** |  | 
 **name** | **str** |  | [optional] 
