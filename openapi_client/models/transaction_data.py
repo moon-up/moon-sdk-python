@@ -21,7 +21,6 @@ import json
 from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel, StrictStr
 from pydantic import Field
-from openapi_client.models.transaction_data import TransactionData
 from openapi_client.models.transaction_request import TransactionRequest
 from openapi_client.models.tx import Tx
 try:
@@ -29,21 +28,20 @@ try:
 except ImportError:
     from typing_extensions import Self
 
-class Transaction(BaseModel):
+class TransactionData(BaseModel):
     """
-    Transaction
+    TransactionData
     """ # noqa: E501
-    transaction_hash: Optional[StrictStr] = None
-    signed_transaction: Optional[StrictStr] = None
-    raw_transaction: Optional[StrictStr] = None
-    data: Optional[StrictStr] = None
-    transactions: Optional[List[TransactionData]] = None
     moon_scan_url: Optional[StrictStr] = None
+    transaction_hash: StrictStr
+    signed_transaction: StrictStr
+    signed_message: Optional[StrictStr] = None
+    raw_transaction: Optional[StrictStr] = None
     signature: Optional[StrictStr] = None
     transaction: Optional[Tx] = None
     user_ops: Optional[List[TransactionRequest]] = Field(default=None, alias="userOps")
     userop_transaction: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["transaction_hash", "signed_transaction", "raw_transaction", "data", "transactions", "moon_scan_url", "signature", "transaction", "userOps", "userop_transaction"]
+    __properties: ClassVar[List[str]] = ["moon_scan_url", "transaction_hash", "signed_transaction", "signed_message", "raw_transaction", "signature", "transaction", "userOps", "userop_transaction"]
 
     model_config = {
         "populate_by_name": True,
@@ -62,7 +60,7 @@ class Transaction(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of Transaction from a JSON string"""
+        """Create an instance of TransactionData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -81,13 +79,6 @@ class Transaction(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
-        _items = []
-        if self.transactions:
-            for _item in self.transactions:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['transactions'] = _items
         # override the default output from pydantic by calling `to_dict()` of transaction
         if self.transaction:
             _dict['transaction'] = self.transaction.to_dict()
@@ -102,7 +93,7 @@ class Transaction(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Dict) -> Self:
-        """Create an instance of Transaction from a dict"""
+        """Create an instance of TransactionData from a dict"""
         if obj is None:
             return None
 
@@ -110,12 +101,11 @@ class Transaction(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "moon_scan_url": obj.get("moon_scan_url"),
             "transaction_hash": obj.get("transaction_hash"),
             "signed_transaction": obj.get("signed_transaction"),
+            "signed_message": obj.get("signed_message"),
             "raw_transaction": obj.get("raw_transaction"),
-            "data": obj.get("data"),
-            "transactions": [TransactionData.from_dict(_item) for _item in obj.get("transactions")] if obj.get("transactions") is not None else None,
-            "moon_scan_url": obj.get("moon_scan_url"),
             "signature": obj.get("signature"),
             "transaction": Tx.from_dict(obj.get("transaction")) if obj.get("transaction") is not None else None,
             "userOps": [TransactionRequest.from_dict(_item) for _item in obj.get("userOps")] if obj.get("userOps") is not None else None,

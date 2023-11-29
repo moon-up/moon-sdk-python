@@ -18,11 +18,9 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
 from pydantic import Field
-from openapi_client.models.transaction_request import TransactionRequest
-from openapi_client.models.tx import Tx
 try:
     from typing import Self
 except ImportError:
@@ -32,15 +30,23 @@ class Erc721Response(BaseModel):
     """
     Erc721Response
     """ # noqa: E501
-    moon_scan_url: Optional[StrictStr] = None
-    transaction_hash: StrictStr
-    signed_transaction: StrictStr
-    signed_message: Optional[StrictStr] = None
-    raw_transaction: Optional[StrictStr] = None
-    signature: Optional[StrictStr] = None
-    transaction: Optional[Dict[str, Tx]] = None
-    user_ops: Optional[List[TransactionRequest]] = Field(default=None, alias="userOps")
-    userop_transaction: Optional[StrictStr] = None
+    type: Optional[Union[StrictFloat, StrictInt]] = None
+    chain_id: Optional[Union[StrictFloat, StrictInt]] = None
+    data: Optional[StrictStr] = None
+    gas: Optional[StrictStr] = None
+    gas_price: Optional[StrictStr] = None
+    gas_tip_cap: Optional[StrictStr] = None
+    gas_fee_cap: Optional[StrictStr] = None
+    value: Optional[StrictStr] = None
+    nonce: Optional[Union[StrictFloat, StrictInt]] = None
+    var_from: Optional[StrictStr] = Field(default=None, alias="from")
+    to: Optional[StrictStr] = None
+    blob_gas: Optional[StrictStr] = None
+    blob_gas_fee_cap: Optional[StrictStr] = None
+    blob_hashes: Optional[List[StrictStr]] = None
+    v: Optional[StrictStr] = None
+    r: Optional[StrictStr] = None
+    s: Optional[StrictStr] = None
     name: Optional[StrictStr] = None
     symbol: Optional[StrictStr] = None
     balance_of: Optional[StrictStr] = None
@@ -48,7 +54,7 @@ class Erc721Response(BaseModel):
     token_uri: Optional[StrictStr] = None
     contract_address: Optional[StrictStr] = None
     is_approved_for_all: Optional[StrictStr] = Field(default=None, alias="isApprovedForAll")
-    __properties: ClassVar[List[str]] = ["moon_scan_url", "transaction_hash", "signed_transaction", "signed_message", "raw_transaction", "signature", "transaction", "userOps", "userop_transaction", "name", "symbol", "balance_of", "owner_of", "token_uri", "contract_address", "isApprovedForAll"]
+    __properties: ClassVar[List[str]] = ["type", "chain_id", "data", "gas", "gas_price", "gas_tip_cap", "gas_fee_cap", "value", "nonce", "from", "to", "blob_gas", "blob_gas_fee_cap", "blob_hashes", "v", "r", "s", "name", "symbol", "balance_of", "owner_of", "token_uri", "contract_address", "isApprovedForAll"]
 
     model_config = {
         "populate_by_name": True,
@@ -86,20 +92,36 @@ class Erc721Response(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each value in transaction (dict)
-        _field_dict = {}
-        if self.transaction:
-            for _key in self.transaction:
-                if self.transaction[_key]:
-                    _field_dict[_key] = self.transaction[_key].to_dict()
-            _dict['transaction'] = _field_dict
-        # override the default output from pydantic by calling `to_dict()` of each item in user_ops (list)
-        _items = []
-        if self.user_ops:
-            for _item in self.user_ops:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['userOps'] = _items
+        # set to None if gas_tip_cap (nullable) is None
+        # and model_fields_set contains the field
+        if self.gas_tip_cap is None and "gas_tip_cap" in self.model_fields_set:
+            _dict['gas_tip_cap'] = None
+
+        # set to None if gas_fee_cap (nullable) is None
+        # and model_fields_set contains the field
+        if self.gas_fee_cap is None and "gas_fee_cap" in self.model_fields_set:
+            _dict['gas_fee_cap'] = None
+
+        # set to None if to (nullable) is None
+        # and model_fields_set contains the field
+        if self.to is None and "to" in self.model_fields_set:
+            _dict['to'] = None
+
+        # set to None if blob_gas (nullable) is None
+        # and model_fields_set contains the field
+        if self.blob_gas is None and "blob_gas" in self.model_fields_set:
+            _dict['blob_gas'] = None
+
+        # set to None if blob_gas_fee_cap (nullable) is None
+        # and model_fields_set contains the field
+        if self.blob_gas_fee_cap is None and "blob_gas_fee_cap" in self.model_fields_set:
+            _dict['blob_gas_fee_cap'] = None
+
+        # set to None if blob_hashes (nullable) is None
+        # and model_fields_set contains the field
+        if self.blob_hashes is None and "blob_hashes" in self.model_fields_set:
+            _dict['blob_hashes'] = None
+
         return _dict
 
     @classmethod
@@ -112,20 +134,23 @@ class Erc721Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "moon_scan_url": obj.get("moon_scan_url"),
-            "transaction_hash": obj.get("transaction_hash"),
-            "signed_transaction": obj.get("signed_transaction"),
-            "signed_message": obj.get("signed_message"),
-            "raw_transaction": obj.get("raw_transaction"),
-            "signature": obj.get("signature"),
-            "transaction": dict(
-                (_k, Tx.from_dict(_v))
-                for _k, _v in obj.get("transaction").items()
-            )
-            if obj.get("transaction") is not None
-            else None,
-            "userOps": [TransactionRequest.from_dict(_item) for _item in obj.get("userOps")] if obj.get("userOps") is not None else None,
-            "userop_transaction": obj.get("userop_transaction"),
+            "type": obj.get("type"),
+            "chain_id": obj.get("chain_id"),
+            "data": obj.get("data"),
+            "gas": obj.get("gas"),
+            "gas_price": obj.get("gas_price"),
+            "gas_tip_cap": obj.get("gas_tip_cap"),
+            "gas_fee_cap": obj.get("gas_fee_cap"),
+            "value": obj.get("value"),
+            "nonce": obj.get("nonce"),
+            "from": obj.get("from"),
+            "to": obj.get("to"),
+            "blob_gas": obj.get("blob_gas"),
+            "blob_gas_fee_cap": obj.get("blob_gas_fee_cap"),
+            "blob_hashes": obj.get("blob_hashes"),
+            "v": obj.get("v"),
+            "r": obj.get("r"),
+            "s": obj.get("s"),
             "name": obj.get("name"),
             "symbol": obj.get("symbol"),
             "balance_of": obj.get("balance_of"),

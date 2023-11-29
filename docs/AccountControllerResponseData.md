@@ -6,19 +6,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **float** |  | 
 **balance** | **str** |  | 
-**moon_scan_url** | **str** |  | [optional] 
-**transaction_hash** | **str** |  | 
-**signed_transaction** | **str** |  | 
-**signed_message** | **str** |  | [optional] 
+**transaction_hash** | **str** |  | [optional] 
+**signed_transaction** | **str** |  | [optional] 
 **raw_transaction** | **str** |  | [optional] 
+**data** | **str** |  | 
+**transactions** | [**List[TransactionData]**](TransactionData.md) |  | [optional] 
+**moon_scan_url** | **str** |  | [optional] 
 **signature** | **str** |  | [optional] 
-**transaction** | [**Dict[str, Tx]**](Tx.md) |  | [optional] 
+**transaction** | [**Tx**](Tx.md) |  | [optional] 
 **user_ops** | [**List[TransactionRequest]**](TransactionRequest.md) |  | [optional] 
 **userop_transaction** | **str** |  | [optional] 
 **keys** | **List[str]** |  | [optional] 
 **address** | **str** |  | 
 **name** | **str** |  | [optional] 
-**data** | **str** |  | 
 **encoding** | **str** |  | [optional] 
 **header** | **bool** |  | [optional] 
 **signtype** | **bool** |  | [optional] 
@@ -33,6 +33,21 @@ Name | Type | Description | Notes
 **variable_borrow_index** | **str** |  | 
 **last_update_timestamp** | **str** |  | 
 **usage_as_collateral_enabled** | **str** |  | 
+**type** | **float** |  | [optional] 
+**chain_id** | **float** |  | [optional] 
+**gas** | **str** |  | [optional] 
+**gas_price** | **str** |  | [optional] 
+**gas_tip_cap** | **str** |  | [optional] 
+**gas_fee_cap** | **str** |  | [optional] 
+**value** | **str** |  | [optional] 
+**var_from** | **str** |  | [optional] 
+**to** | **str** |  | [optional] 
+**blob_gas** | **str** |  | [optional] 
+**blob_gas_fee_cap** | **str** |  | [optional] 
+**blob_hashes** | **List[str]** |  | [optional] 
+**v** | **str** |  | [optional] 
+**r** | **str** |  | [optional] 
+**s** | **str** |  | [optional] 
 **symbol** | **str** |  | [optional] 
 **decimals** | **str** |  | [optional] 
 **total_supply** | **str** |  | [optional] 

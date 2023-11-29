@@ -22,6 +22,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel, StrictBool, StrictStr
 from openapi_client.models.input_body import InputBody
 from openapi_client.models.transaction import Transaction
+from openapi_client.models.transaction_data import TransactionData
 from openapi_client.models.transaction_response import TransactionResponse
 from openapi_client.models.transaction_response_tx import TransactionResponseTx
 try:
@@ -35,7 +36,7 @@ class ConveyorFinanceControllerResponse(BaseModel):
     """ # noqa: E501
     input: Optional[InputBody] = None
     convey: Optional[TransactionResponse] = None
-    data: Optional[Transaction] = None
+    data: Optional[TransactionData] = None
     tx: Optional[TransactionResponseTx] = None
     signed: Optional[Transaction] = None
     success: StrictBool
@@ -107,7 +108,7 @@ class ConveyorFinanceControllerResponse(BaseModel):
         _obj = cls.model_validate({
             "input": InputBody.from_dict(obj.get("input")) if obj.get("input") is not None else None,
             "convey": TransactionResponse.from_dict(obj.get("convey")) if obj.get("convey") is not None else None,
-            "data": Transaction.from_dict(obj.get("data")) if obj.get("data") is not None else None,
+            "data": TransactionData.from_dict(obj.get("data")) if obj.get("data") is not None else None,
             "tx": TransactionResponseTx.from_dict(obj.get("tx")) if obj.get("tx") is not None else None,
             "signed": Transaction.from_dict(obj.get("signed")) if obj.get("signed") is not None else None,
             "success": obj.get("success"),

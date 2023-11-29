@@ -94,6 +94,7 @@ from openapi_client.models.supported_payment_types_currency_response import Supp
 from openapi_client.models.supported_payment_types_message import SupportedPaymentTypesMessage
 from openapi_client.models.token_swap_params import TokenSwapParams
 from openapi_client.models.transaction import Transaction
+from openapi_client.models.transaction_data import TransactionData
 from openapi_client.models.transaction_input import TransactionInput
 from openapi_client.models.transaction_input_meta_data import TransactionInputMetaData
 from openapi_client.models.transaction_input_supported_params import TransactionInputSupportedParams

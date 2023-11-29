@@ -4,15 +4,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**moon_scan_url** | **str** |  | [optional] 
-**transaction_hash** | **str** |  | 
-**signed_transaction** | **str** |  | 
-**signed_message** | **str** |  | [optional] 
-**raw_transaction** | **str** |  | [optional] 
-**signature** | **str** |  | [optional] 
-**transaction** | [**Dict[str, Tx]**](Tx.md) |  | [optional] 
-**user_ops** | [**List[TransactionRequest]**](TransactionRequest.md) |  | [optional] 
-**userop_transaction** | **str** |  | [optional] 
+**type** | **float** |  | [optional] 
+**chain_id** | **float** |  | [optional] 
+**data** | **str** |  | [optional] 
+**gas** | **str** |  | [optional] 
+**gas_price** | **str** |  | [optional] 
+**gas_tip_cap** | **str** |  | [optional] 
+**gas_fee_cap** | **str** |  | [optional] 
+**value** | **str** |  | [optional] 
+**nonce** | **float** |  | [optional] 
+**var_from** | **str** |  | [optional] 
+**to** | **str** |  | [optional] 
+**blob_gas** | **str** |  | [optional] 
+**blob_gas_fee_cap** | **str** |  | [optional] 
+**blob_hashes** | **List[str]** |  | [optional] 
+**v** | **str** |  | [optional] 
+**r** | **str** |  | [optional] 
+**s** | **str** |  | [optional] 
 **balance_of** | **str** |  | [optional] 
 **balance_of_batch** | **str** |  | [optional] 
 
