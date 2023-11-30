@@ -33,17 +33,17 @@ class Transaction(BaseModel):
     """
     Transaction
     """ # noqa: E501
-    userop_transaction: Optional[StrictStr] = None
-    user_ops: Optional[List[TransactionRequest]] = Field(default=None, alias="userOps")
-    transaction: Optional[Tx] = None
-    signature: Optional[StrictStr] = None
-    moon_scan_url: Optional[StrictStr] = None
-    transactions: Optional[List[TransactionData]] = None
-    data: Optional[StrictStr] = None
-    raw_transaction: Optional[StrictStr] = None
-    signed_transaction: Optional[StrictStr] = None
     transaction_hash: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["userop_transaction", "userOps", "transaction", "signature", "moon_scan_url", "transactions", "data", "raw_transaction", "signed_transaction", "transaction_hash"]
+    signed_transaction: Optional[StrictStr] = None
+    raw_transaction: Optional[StrictStr] = None
+    data: Optional[StrictStr] = None
+    transactions: Optional[List[TransactionData]] = None
+    moon_scan_url: Optional[StrictStr] = None
+    signature: Optional[StrictStr] = None
+    transaction: Optional[Tx] = None
+    user_ops: Optional[List[TransactionRequest]] = Field(default=None, alias="userOps")
+    userop_transaction: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["transaction_hash", "signed_transaction", "raw_transaction", "data", "transactions", "moon_scan_url", "signature", "transaction", "userOps", "userop_transaction"]
 
     model_config = {
         "populate_by_name": True,
@@ -81,16 +81,6 @@ class Transaction(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in user_ops (list)
-        _items = []
-        if self.user_ops:
-            for _item in self.user_ops:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['userOps'] = _items
-        # override the default output from pydantic by calling `to_dict()` of transaction
-        if self.transaction:
-            _dict['transaction'] = self.transaction.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
         _items = []
         if self.transactions:
@@ -98,6 +88,16 @@ class Transaction(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['transactions'] = _items
+        # override the default output from pydantic by calling `to_dict()` of transaction
+        if self.transaction:
+            _dict['transaction'] = self.transaction.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in user_ops (list)
+        _items = []
+        if self.user_ops:
+            for _item in self.user_ops:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['userOps'] = _items
         # set to None if data (nullable) is None
         # and model_fields_set contains the field
         if self.data is None and "data" in self.model_fields_set:
@@ -115,16 +115,16 @@ class Transaction(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "userop_transaction": obj.get("userop_transaction"),
-            "userOps": [TransactionRequest.from_dict(_item) for _item in obj.get("userOps")] if obj.get("userOps") is not None else None,
-            "transaction": Tx.from_dict(obj.get("transaction")) if obj.get("transaction") is not None else None,
-            "signature": obj.get("signature"),
-            "moon_scan_url": obj.get("moon_scan_url"),
-            "transactions": [TransactionData.from_dict(_item) for _item in obj.get("transactions")] if obj.get("transactions") is not None else None,
-            "data": obj.get("data"),
-            "raw_transaction": obj.get("raw_transaction"),
+            "transaction_hash": obj.get("transaction_hash"),
             "signed_transaction": obj.get("signed_transaction"),
-            "transaction_hash": obj.get("transaction_hash")
+            "raw_transaction": obj.get("raw_transaction"),
+            "data": obj.get("data"),
+            "transactions": [TransactionData.from_dict(_item) for _item in obj.get("transactions")] if obj.get("transactions") is not None else None,
+            "moon_scan_url": obj.get("moon_scan_url"),
+            "signature": obj.get("signature"),
+            "transaction": Tx.from_dict(obj.get("transaction")) if obj.get("transaction") is not None else None,
+            "userOps": [TransactionRequest.from_dict(_item) for _item in obj.get("userOps")] if obj.get("userOps") is not None else None,
+            "userop_transaction": obj.get("userop_transaction")
         })
         return _obj
 
