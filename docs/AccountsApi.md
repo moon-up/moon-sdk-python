@@ -1,4 +1,4 @@
-# openapi_client.AccountsApi
+# moonsdk.AccountsApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -27,18 +27,19 @@ Method | HTTP request | Description
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.broadcast_input import BroadcastInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.broadcast_input import BroadcastInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -60,15 +61,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
-    broadcast_input = openapi_client.BroadcastInput() # BroadcastInput | 
+    broadcast_input = moonsdk.BroadcastInput() # BroadcastInput | 
 
     try:
-        api_response = api_instance.broadcast_tx(authorization, account_name, broadcast_input)
+        api_response = await api_instance.broadcast_tx(authorization, account_name, broadcast_input)
         print("The response of AccountsApi->broadcast_tx:\n")
         pprint(api_response)
     except Exception as e:
@@ -78,6 +79,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -99,6 +101,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -114,18 +117,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.create_account_input import CreateAccountInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.create_account_input import CreateAccountInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -147,14 +151,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
-    create_account_input = openapi_client.CreateAccountInput() # CreateAccountInput | 
+    create_account_input = moonsdk.CreateAccountInput() # CreateAccountInput | 
 
     try:
-        api_response = api_instance.create_account(authorization, create_account_input)
+        api_response = await api_instance.create_account(authorization, create_account_input)
         print("The response of AccountsApi->create_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -164,6 +168,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -184,6 +189,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -199,17 +205,18 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -231,14 +238,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
 
     try:
-        api_response = api_instance.delete_account(authorization, account_name)
+        api_response = await api_instance.delete_account(authorization, account_name)
         print("The response of AccountsApi->delete_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -248,6 +255,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -268,6 +276,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -283,18 +292,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.deploy_input import DeployInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.deploy_input import DeployInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -316,15 +326,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
-    deploy_input = openapi_client.DeployInput() # DeployInput | 
+    deploy_input = moonsdk.DeployInput() # DeployInput | 
 
     try:
-        api_response = api_instance.deploy_contract(authorization, account_name, deploy_input)
+        api_response = await api_instance.deploy_contract(authorization, account_name, deploy_input)
         print("The response of AccountsApi->deploy_contract:\n")
         pprint(api_response)
     except Exception as e:
@@ -334,6 +344,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -355,6 +366,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -370,17 +382,18 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -402,14 +415,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
 
     try:
-        api_response = api_instance.get_account(authorization, account_name)
+        api_response = await api_instance.get_account(authorization, account_name)
         print("The response of AccountsApi->get_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -419,6 +432,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -439,6 +453,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -454,17 +469,18 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -486,15 +502,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
     chain_id = 'chain_id_example' # str | 
 
     try:
-        api_response = api_instance.get_balance(account_name, authorization, chain_id)
+        api_response = await api_instance.get_balance(account_name, authorization, chain_id)
         print("The response of AccountsApi->get_balance:\n")
         pprint(api_response)
     except Exception as e:
@@ -504,6 +520,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -525,6 +542,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -540,17 +558,18 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -572,14 +591,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
 
     try:
-        api_response = api_instance.get_nonce(account_name, authorization)
+        api_response = await api_instance.get_nonce(account_name, authorization)
         print("The response of AccountsApi->get_nonce:\n")
         pprint(api_response)
     except Exception as e:
@@ -589,6 +608,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -609,6 +629,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -624,17 +645,18 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -656,13 +678,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     authorization = 'authorization_example' # str | 
 
     try:
-        api_response = api_instance.list_accounts(authorization)
+        api_response = await api_instance.list_accounts(authorization)
         print("The response of AccountsApi->list_accounts:\n")
         pprint(api_response)
     except Exception as e:
@@ -672,6 +694,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -691,6 +714,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -706,18 +730,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.sign_message import SignMessage
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.sign_message import SignMessage
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -739,15 +764,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
-    sign_message = openapi_client.SignMessage() # SignMessage | 
+    sign_message = moonsdk.SignMessage() # SignMessage | 
 
     try:
-        api_response = api_instance.sign_message(account_name, authorization, sign_message)
+        api_response = await api_instance.sign_message(account_name, authorization, sign_message)
         print("The response of AccountsApi->sign_message:\n")
         pprint(api_response)
     except Exception as e:
@@ -757,6 +782,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -778,6 +804,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -793,18 +820,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.input_body import InputBody
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.input_body import InputBody
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -826,15 +854,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.sign_transaction(account_name, authorization, input_body)
+        api_response = await api_instance.sign_transaction(account_name, authorization, input_body)
         print("The response of AccountsApi->sign_transaction:\n")
         pprint(api_response)
     except Exception as e:
@@ -844,6 +872,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -865,6 +894,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -880,18 +910,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.sign_typed_data import SignTypedData
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.sign_typed_data import SignTypedData
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -913,15 +944,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
-    sign_typed_data = openapi_client.SignTypedData() # SignTypedData | 
+    sign_typed_data = moonsdk.SignTypedData() # SignTypedData | 
 
     try:
-        api_response = api_instance.sign_typed_data(account_name, authorization, sign_typed_data)
+        api_response = await api_instance.sign_typed_data(account_name, authorization, sign_typed_data)
         print("The response of AccountsApi->sign_typed_data:\n")
         pprint(api_response)
     except Exception as e:
@@ -931,6 +962,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -952,6 +984,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -967,18 +1000,19 @@ Name | Type | Description  | Notes
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.account_controller_response import AccountControllerResponse
-from openapi_client.models.input_body import InputBody
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.input_body import InputBody
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -1000,15 +1034,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
+    api_instance = moonsdk.AccountsApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.transfer_eth(account_name, authorization, input_body)
+        api_response = await api_instance.transfer_eth(account_name, authorization, input_body)
         print("The response of AccountsApi->transfer_eth:\n")
         pprint(api_response)
     except Exception as e:
@@ -1018,6 +1052,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1039,6 +1074,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |

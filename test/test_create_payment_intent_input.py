@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_payment_intent_input import CreatePaymentIntentInput
+from moonsdk.models.create_payment_intent_input import CreatePaymentIntentInput
 
 class TestCreatePaymentIntentInput(unittest.TestCase):
     """CreatePaymentIntentInput unit test stubs"""
@@ -36,6 +36,7 @@ class TestCreatePaymentIntentInput(unittest.TestCase):
         model = CreatePaymentIntentInput()
         if include_optional:
             return CreatePaymentIntentInput(
+                config = '',
                 metadata = {
                     'key' : ''
                     },

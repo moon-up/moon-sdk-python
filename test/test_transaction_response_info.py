@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_response_info import TransactionResponseInfo
+from moonsdk.models.transaction_response_info import TransactionResponseInfo
 
 class TestTransactionResponseInfo(unittest.TestCase):
     """TransactionResponseInfo unit test stubs"""

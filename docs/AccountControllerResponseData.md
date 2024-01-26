@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **float** |  | 
@@ -66,7 +67,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.account_controller_response_data import AccountControllerResponseData
+from moonsdk.models.account_controller_response_data import AccountControllerResponseData
 
 # TODO update the JSON string below
 json = "{}"

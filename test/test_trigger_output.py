@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.trigger_output import TriggerOutput
+from moonsdk.models.trigger_output import TriggerOutput
 
 class TestTriggerOutput(unittest.TestCase):
     """TriggerOutput unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.eos_transaction_input import EosTransactionInput
+from moonsdk.models.eos_transaction_input import EosTransactionInput
 
 class TestEosTransactionInput(unittest.TestCase):
     """EosTransactionInput unit test stubs"""

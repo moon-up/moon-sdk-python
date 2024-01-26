@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **float** |  | [optional] 
@@ -32,7 +33,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.erc721_response import Erc721Response
+from moonsdk.models.erc721_response import Erc721Response
 
 # TODO update the JSON string below
 json = "{}"

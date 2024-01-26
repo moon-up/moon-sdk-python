@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **transaction_hash** | **str** |  | 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ierc20_transfer import IERC20Transfer
+from moonsdk.models.ierc20_transfer import IERC20Transfer
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
+from moonsdk.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
 
 class TestSupportedDefaultResponseDefaults(unittest.TestCase):
     """SupportedDefaultResponseDefaults unit test stubs"""
@@ -36,7 +36,7 @@ class TestSupportedDefaultResponseDefaults(unittest.TestCase):
         model = SupportedDefaultResponseDefaults()
         if include_optional:
             return SupportedDefaultResponseDefaults(
-                id = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                id = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                     provider = '', 
                     payment_method = '', 
                     amount = 1.337, 
@@ -45,7 +45,7 @@ class TestSupportedDefaultResponseDefaults(unittest.TestCase):
             )
         else:
             return SupportedDefaultResponseDefaults(
-                id = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                id = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                     provider = '', 
                     payment_method = '', 
                     amount = 1.337, 

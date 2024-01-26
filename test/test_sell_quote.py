@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.sell_quote import SellQuote
+from moonsdk.models.sell_quote import SellQuote
 
 class TestSellQuote(unittest.TestCase):
     """SellQuote unit test stubs"""

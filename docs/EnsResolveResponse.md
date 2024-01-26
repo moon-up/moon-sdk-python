@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **str** |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ens_resolve_response import EnsResolveResponse
+from moonsdk.models.ens_resolve_response import EnsResolveResponse
 
 # TODO update the JSON string below
 json = "{}"

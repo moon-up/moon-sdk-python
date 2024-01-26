@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
+from moonsdk.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
 
 class TestGetSupportedOnRampsResponseMessageInner(unittest.TestCase):
     """GetSupportedOnRampsResponseMessageInner unit test stubs"""
@@ -38,8 +38,8 @@ class TestGetSupportedOnRampsResponseMessageInner(unittest.TestCase):
             return GetSupportedOnRampsResponseMessageInner(
                 id = '',
                 display_name = '',
-                icons = openapi_client.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
-                    png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                icons = moonsdk.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
+                    png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                         160x160 = '', 
                         32x32 = '', ), 
                     svg = '', ),
@@ -49,8 +49,8 @@ class TestGetSupportedOnRampsResponseMessageInner(unittest.TestCase):
             return GetSupportedOnRampsResponseMessageInner(
                 id = '',
                 display_name = '',
-                icons = openapi_client.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
-                    png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                icons = moonsdk.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
+                    png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                         160x160 = '', 
                         32x32 = '', ), 
                     svg = '', ),

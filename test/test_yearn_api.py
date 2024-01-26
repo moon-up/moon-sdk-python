@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.yearn_api import YearnApi
+from moonsdk.api.yearn_api import YearnApi
 
 
 class TestYearnApi(unittest.TestCase):

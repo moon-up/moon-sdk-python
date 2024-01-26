@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.ripple_api import RippleApi
+from moonsdk.api.ripple_api import RippleApi
 
 
 class TestRippleApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.i_native_balance import INativeBalance
+from moonsdk.models.i_native_balance import INativeBalance
 
 class TestINativeBalance(unittest.TestCase):
     """INativeBalance unit test stubs"""

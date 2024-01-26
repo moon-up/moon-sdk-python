@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.accounts_api import AccountsApi
+from moonsdk.api.accounts_api import AccountsApi
 
 
 class TestAccountsApi(unittest.TestCase):

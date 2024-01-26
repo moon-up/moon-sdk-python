@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.i_old_nft_approval import IOldNFTApproval
+from moonsdk.models.i_old_nft_approval import IOldNFTApproval
 
 class TestIOldNFTApproval(unittest.TestCase):
     """IOldNFTApproval unit test stubs"""
@@ -37,7 +37,7 @@ class TestIOldNFTApproval(unittest.TestCase):
         if include_optional:
             return IOldNFTApproval(
                 erc721 = [
-                    openapi_client.models.inft_approval_erc721.INFTApprovalERC721(
+                    moonsdk.models.inft_approval_erc721.INFTApprovalERC721(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -49,7 +49,7 @@ class TestIOldNFTApproval(unittest.TestCase):
                         token_symbol = '', )
                     ],
                 erc1155 = [
-                    openapi_client.models.inft_approval_erc1155.INFTApprovalERC1155(
+                    moonsdk.models.inft_approval_erc1155.INFTApprovalERC1155(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -64,7 +64,7 @@ class TestIOldNFTApproval(unittest.TestCase):
         else:
             return IOldNFTApproval(
                 erc721 = [
-                    openapi_client.models.inft_approval_erc721.INFTApprovalERC721(
+                    moonsdk.models.inft_approval_erc721.INFTApprovalERC721(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -76,7 +76,7 @@ class TestIOldNFTApproval(unittest.TestCase):
                         token_symbol = '', )
                     ],
                 erc1155 = [
-                    openapi_client.models.inft_approval_erc1155.INFTApprovalERC1155(
+                    moonsdk.models.inft_approval_erc1155.INFTApprovalERC1155(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 

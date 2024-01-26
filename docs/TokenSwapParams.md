@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | **str** |  | [optional] 
@@ -31,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.token_swap_params import TokenSwapParams
+from moonsdk.models.token_swap_params import TokenSwapParams
 
 # TODO update the JSON string below
 json = "{}"

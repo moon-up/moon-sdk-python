@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# moonsdk.DefaultApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -14,28 +14,29 @@ Method | HTTP request | Description
 
 ### Example
 
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.ping_response import PingResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.ping_response import PingResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = moonsdk.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.get_message()
+        api_response = await api_instance.get_message()
         print("The response of DefaultApi->get_message:\n")
         pprint(api_response)
     except Exception as e:
@@ -45,6 +46,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -61,6 +63,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.solana_api import SolanaApi
+from moonsdk.api.solana_api import SolanaApi
 
 
 class TestSolanaApi(unittest.TestCase):

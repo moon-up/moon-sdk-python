@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.block import Block
+from moonsdk.models.block import Block
 
 class TestBlock(unittest.TestCase):
     """Block unit test stubs"""

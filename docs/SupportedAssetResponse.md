@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **country** | **str** |  | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_asset_response import SupportedAssetResponse
+from moonsdk.models.supported_asset_response import SupportedAssetResponse
 
 # TODO update the JSON string below
 json = "{}"

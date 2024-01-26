@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **erc721** | [**List[INFTApprovalERC721]**](INFTApprovalERC721.md) |  | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.i_old_nft_approval import IOldNFTApproval
+from moonsdk.models.i_old_nft_approval import IOldNFTApproval
 
 # TODO update the JSON string below
 json = "{}"

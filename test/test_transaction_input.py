@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input import TransactionInput
+from moonsdk.models.transaction_input import TransactionInput
 
 class TestTransactionInput(unittest.TestCase):
     """TransactionInput unit test stubs"""
@@ -36,11 +36,11 @@ class TestTransactionInput(unittest.TestCase):
         model = TransactionInput()
         if include_optional:
             return TransactionInput(
-                supported_params = openapi_client.models.transaction_input_supported_params.TransactionInput_supportedParams(
-                    partner_data = openapi_client.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
-                        redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                supported_params = moonsdk.models.transaction_input_supported_params.TransactionInput_supportedParams(
+                    partner_data = moonsdk.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
+                        redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                             success = '', ), ), 
-                    theme = openapi_client.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
+                    theme = moonsdk.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
                         border_radius = 1.337, 
                         card_color = '', 
                         secondary_text_color = '', 
@@ -49,9 +49,9 @@ class TestTransactionInput(unittest.TestCase):
                         primary_color = '', 
                         theme_name = '', 
                         is_dark = True, ), ),
-                wallet = openapi_client.models.transaction_input_wallet.TransactionInput_wallet(
+                wallet = moonsdk.models.transaction_input_wallet.TransactionInput_wallet(
                     address = '', ),
-                meta_data = openapi_client.models.transaction_input_meta_data.TransactionInput_metaData(
+                meta_data = moonsdk.models.transaction_input_meta_data.TransactionInput_metaData(
                     quote_id = '', ),
                 originating_host = '',
                 partner_context = '',
@@ -66,11 +66,11 @@ class TestTransactionInput(unittest.TestCase):
             )
         else:
             return TransactionInput(
-                supported_params = openapi_client.models.transaction_input_supported_params.TransactionInput_supportedParams(
-                    partner_data = openapi_client.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
-                        redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                supported_params = moonsdk.models.transaction_input_supported_params.TransactionInput_supportedParams(
+                    partner_data = moonsdk.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
+                        redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                             success = '', ), ), 
-                    theme = openapi_client.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
+                    theme = moonsdk.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
                         border_radius = 1.337, 
                         card_color = '', 
                         secondary_text_color = '', 
@@ -79,9 +79,9 @@ class TestTransactionInput(unittest.TestCase):
                         primary_color = '', 
                         theme_name = '', 
                         is_dark = True, ), ),
-                wallet = openapi_client.models.transaction_input_wallet.TransactionInput_wallet(
+                wallet = moonsdk.models.transaction_input_wallet.TransactionInput_wallet(
                     address = '', ),
-                meta_data = openapi_client.models.transaction_input_meta_data.TransactionInput_metaData(
+                meta_data = moonsdk.models.transaction_input_meta_data.TransactionInput_metaData(
                     quote_id = '', ),
                 originating_host = '',
                 partner_context = '',

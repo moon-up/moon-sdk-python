@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | [**List[GetSupportedOnRampsResponseMessageInner]**](GetSupportedOnRampsResponseMessageInner.md) |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
+from moonsdk.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
 
 # TODO update the JSON string below
 json = "{}"

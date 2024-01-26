@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | [**SupportedPaymentTypesMessage**](SupportedPaymentTypesMessage.md) |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
+from moonsdk.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
 
 # TODO update the JSON string below
 json = "{}"

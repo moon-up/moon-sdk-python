@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.erc1155_request import Erc1155Request
+from moonsdk.models.erc1155_request import Erc1155Request
 
 class TestErc1155Request(unittest.TestCase):
     """Erc1155Request unit test stubs"""

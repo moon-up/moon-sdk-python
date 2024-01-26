@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.inft_approval_erc721 import INFTApprovalERC721
+from moonsdk.models.inft_approval_erc721 import INFTApprovalERC721
 
 class TestINFTApprovalERC721(unittest.TestCase):
     """INFTApprovalERC721 unit test stubs"""

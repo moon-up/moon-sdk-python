@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
+from moonsdk.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
 
 class TestConveyorFinanceControllerResponse(unittest.TestCase):
     """ConveyorFinanceControllerResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestConveyorFinanceControllerResponse(unittest.TestCase):
         model = ConveyorFinanceControllerResponse()
         if include_optional:
             return ConveyorFinanceControllerResponse(
-                input = openapi_client.models.input_body.InputBody(
+                input = moonsdk.models.input_body.InputBody(
                     to = '', 
                     data = '', 
                     input = '', 
@@ -52,16 +52,16 @@ class TestConveyorFinanceControllerResponse(unittest.TestCase):
                     token_ids = '', 
                     approved = True, 
                     broadcast = True, ),
-                convey = openapi_client.models.transaction_response.TransactionResponse(
+                convey = moonsdk.models.transaction_response.TransactionResponse(
                     message = '', 
-                    tx = openapi_client.models.transaction_response_tx.TransactionResponse_tx(
+                    tx = moonsdk.models.transaction_response_tx.TransactionResponse_tx(
                         data = '', 
                         value = '', 
                         nonce = 1.337, 
                         gas = '', 
                         to = '', 
                         from = '', ), 
-                    info = openapi_client.models.transaction_response_info.TransactionResponse_info(
+                    info = moonsdk.models.transaction_response_info.TransactionResponse_info(
                         conveyor_gas = '', 
                         affiliate_gas = '', 
                         affiliate_aggregator = '', 
@@ -69,37 +69,35 @@ class TestConveyorFinanceControllerResponse(unittest.TestCase):
                         amount_out_min = '', ), 
                     chain_id = 1.337, 
                     current_block_number = 1.337, ),
-                data = openapi_client.models.transaction.Transaction(
+                data = moonsdk.models.transaction_data.TransactionData(
                     moon_scan_url = '', 
                     transaction_hash = '', 
                     signed_transaction = '', 
                     signed_message = '', 
                     raw_transaction = '', 
                     signature = '', 
-                    transaction = {
-                        'key' : openapi_client.models.tx.Tx(
-                            type = 1.337, 
-                            chain_id = 1.337, 
-                            data = '', 
-                            gas = '', 
-                            gas_price = '', 
-                            gas_tip_cap = '', 
-                            gas_fee_cap = '', 
-                            value = '', 
-                            nonce = 1.337, 
-                            from = '', 
-                            to = '', 
-                            blob_gas = '', 
-                            blob_gas_fee_cap = '', 
-                            blob_hashes = [
-                                ''
-                                ], 
-                            v = '', 
-                            r = '', 
-                            s = '', )
-                        }, 
+                    transaction = moonsdk.models.tx.Tx(
+                        type = 1.337, 
+                        chain_id = 1.337, 
+                        data = '', 
+                        gas = '', 
+                        gas_price = '', 
+                        gas_tip_cap = '', 
+                        gas_fee_cap = '', 
+                        value = '', 
+                        nonce = 1.337, 
+                        from = '', 
+                        to = '', 
+                        blob_gas = '', 
+                        blob_gas_fee_cap = '', 
+                        blob_hashes = [
+                            ''
+                            ], 
+                        v = '', 
+                        r = '', 
+                        s = '', ), 
                     user_ops = [
-                        openapi_client.models.transaction_request.TransactionRequest(
+                        moonsdk.models.transaction_request.TransactionRequest(
                             nonce = '', 
                             data = '', 
                             value = '', 
@@ -109,44 +107,79 @@ class TestConveyorFinanceControllerResponse(unittest.TestCase):
                             max_priority_fee_per_gas = '', )
                         ], 
                     userop_transaction = '', ),
-                tx = openapi_client.models.transaction_response_tx.TransactionResponse_tx(
+                tx = moonsdk.models.transaction_response_tx.TransactionResponse_tx(
                     data = '', 
                     value = '', 
                     nonce = 1.337, 
                     gas = '', 
                     to = '', 
                     from = '', ),
-                signed = openapi_client.models.transaction.Transaction(
-                    moon_scan_url = '', 
+                signed = moonsdk.models.transaction.Transaction(
                     transaction_hash = '', 
                     signed_transaction = '', 
-                    signed_message = '', 
                     raw_transaction = '', 
-                    signature = '', 
-                    transaction = {
-                        'key' : openapi_client.models.tx.Tx(
-                            type = 1.337, 
-                            chain_id = 1.337, 
-                            data = '', 
-                            gas = '', 
-                            gas_price = '', 
-                            gas_tip_cap = '', 
-                            gas_fee_cap = '', 
-                            value = '', 
-                            nonce = 1.337, 
-                            from = '', 
-                            to = '', 
-                            blob_gas = '', 
-                            blob_gas_fee_cap = '', 
-                            blob_hashes = [
-                                ''
+                    data = '', 
+                    transactions = [
+                        moonsdk.models.transaction_data.TransactionData(
+                            moon_scan_url = '', 
+                            transaction_hash = '', 
+                            signed_transaction = '', 
+                            signed_message = '', 
+                            raw_transaction = '', 
+                            signature = '', 
+                            transaction = moonsdk.models.tx.Tx(
+                                type = 1.337, 
+                                chain_id = 1.337, 
+                                data = '', 
+                                gas = '', 
+                                gas_price = '', 
+                                gas_tip_cap = '', 
+                                gas_fee_cap = '', 
+                                value = '', 
+                                nonce = 1.337, 
+                                from = '', 
+                                to = '', 
+                                blob_gas = '', 
+                                blob_gas_fee_cap = '', 
+                                blob_hashes = [
+                                    ''
+                                    ], 
+                                v = '', 
+                                r = '', 
+                                s = '', ), 
+                            user_ops = [
+                                moonsdk.models.transaction_request.TransactionRequest(
+                                    nonce = '', 
+                                    data = '', 
+                                    value = '', 
+                                    to = '', 
+                                    from = '', 
+                                    max_fee_per_gas = '', 
+                                    max_priority_fee_per_gas = '', )
                                 ], 
-                            v = '', 
-                            r = '', 
-                            s = '', )
-                        }, 
+                            userop_transaction = '', )
+                        ], 
+                    moon_scan_url = '', 
+                    signature = '', 
+                    transaction = moonsdk.models.tx.Tx(
+                        type = 1.337, 
+                        chain_id = 1.337, 
+                        data = '', 
+                        gas = '', 
+                        gas_price = '', 
+                        gas_tip_cap = '', 
+                        gas_fee_cap = '', 
+                        value = '', 
+                        nonce = 1.337, 
+                        from = '', 
+                        to = '', 
+                        blob_gas = '', 
+                        blob_gas_fee_cap = '', 
+                        v = '', 
+                        r = '', 
+                        s = '', ), 
                     user_ops = [
-                        openapi_client.models.transaction_request.TransactionRequest(
+                        moonsdk.models.transaction_request.TransactionRequest(
                             nonce = '', 
                             data = '', 
                             value = '', 

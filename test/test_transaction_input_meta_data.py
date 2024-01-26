@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input_meta_data import TransactionInputMetaData
+from moonsdk.models.transaction_input_meta_data import TransactionInputMetaData
 
 class TestTransactionInputMetaData(unittest.TestCase):
     """TransactionInputMetaData unit test stubs"""

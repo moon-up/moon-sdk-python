@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.available_payment_method import AvailablePaymentMethod
+from moonsdk.models.available_payment_method import AvailablePaymentMethod
 
 class TestAvailablePaymentMethod(unittest.TestCase):
     """AvailablePaymentMethod unit test stubs"""

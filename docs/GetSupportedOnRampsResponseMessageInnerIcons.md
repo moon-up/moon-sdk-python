@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **png** | [**GetSupportedOnRampsResponseMessageInnerIconsPng**](GetSupportedOnRampsResponseMessageInnerIconsPng.md) |  | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
+from moonsdk.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
 
 # TODO update the JSON string below
 json = "{}"

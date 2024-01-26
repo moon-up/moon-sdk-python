@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
@@ -11,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
+from moonsdk.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.cosmos_input import CosmosInput
+from moonsdk.models.cosmos_input import CosmosInput
 
 class TestCosmosInput(unittest.TestCase):
     """CosmosInput unit test stubs"""

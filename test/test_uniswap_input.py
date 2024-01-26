@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.uniswap_input import UniswapInput
+from moonsdk.models.uniswap_input import UniswapInput
 
 class TestUniswapInput(unittest.TestCase):
     """UniswapInput unit test stubs"""

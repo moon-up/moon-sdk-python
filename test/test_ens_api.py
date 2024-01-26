@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.ens_api import ENSApi
+from moonsdk.api.ens_api import ENSApi
 
 
 class TestENSApi(unittest.TestCase):

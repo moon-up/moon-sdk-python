@@ -2,8 +2,10 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**config** | **str** |  | [optional] 
 **metadata** | **Dict[str, str]** |  | 
 **network** | **str** |  | [optional] 
 **amount** | **float** |  | 
@@ -12,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_payment_intent_input import CreatePaymentIntentInput
+from moonsdk.models.create_payment_intent_input import CreatePaymentIntentInput
 
 # TODO update the JSON string below
 json = "{}"

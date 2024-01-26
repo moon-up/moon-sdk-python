@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_account_input import CreateAccountInput
+from moonsdk.models.create_account_input import CreateAccountInput
 
 class TestCreateAccountInput(unittest.TestCase):
     """CreateAccountInput unit test stubs"""

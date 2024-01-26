@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_request import TransactionRequest
+from moonsdk.models.transaction_request import TransactionRequest
 
 class TestTransactionRequest(unittest.TestCase):
     """TransactionRequest unit test stubs"""

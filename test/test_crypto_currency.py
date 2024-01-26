@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.crypto_currency import CryptoCurrency
+from moonsdk.models.crypto_currency import CryptoCurrency
 
 class TestCryptoCurrency(unittest.TestCase):
     """CryptoCurrency unit test stubs"""

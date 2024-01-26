@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.fiat_currency import FiatCurrency
+from moonsdk.models.fiat_currency import FiatCurrency
 
 class TestFiatCurrency(unittest.TestCase):
     """FiatCurrency unit test stubs"""

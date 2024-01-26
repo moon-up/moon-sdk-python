@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.doge_coin_transaction_input import DogeCoinTransactionInput
+from moonsdk.models.doge_coin_transaction_input import DogeCoinTransactionInput
 
 class TestDogeCoinTransactionInput(unittest.TestCase):
     """DogeCoinTransactionInput unit test stubs"""

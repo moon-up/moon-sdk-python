@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_default_response import SupportedDefaultResponse
+from moonsdk.models.supported_default_response import SupportedDefaultResponse
 
 class TestSupportedDefaultResponse(unittest.TestCase):
     """SupportedDefaultResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestSupportedDefaultResponse(unittest.TestCase):
         model = SupportedDefaultResponse()
         if include_optional:
             return SupportedDefaultResponse(
-                defaults = openapi_client.models.supported_default_response_defaults.SupportedDefaultResponse_defaults(
-                    id = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                defaults = moonsdk.models.supported_default_response_defaults.SupportedDefaultResponse_defaults(
+                    id = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                         provider = '', 
                         payment_method = '', 
                         amount = 1.337, 
                         target = '', 
                         source = '', ), ),
-                recommended = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                recommended = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                     provider = '', 
                     payment_method = '', 
                     amount = 1.337, 
@@ -52,14 +52,14 @@ class TestSupportedDefaultResponse(unittest.TestCase):
             )
         else:
             return SupportedDefaultResponse(
-                defaults = openapi_client.models.supported_default_response_defaults.SupportedDefaultResponse_defaults(
-                    id = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                defaults = moonsdk.models.supported_default_response_defaults.SupportedDefaultResponse_defaults(
+                    id = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                         provider = '', 
                         payment_method = '', 
                         amount = 1.337, 
                         target = '', 
                         source = '', ), ),
-                recommended = openapi_client.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
+                recommended = moonsdk.models.supported_default_response_defaults_id.SupportedDefaultResponse_defaults_id(
                     provider = '', 
                     payment_method = '', 
                     amount = 1.337, 

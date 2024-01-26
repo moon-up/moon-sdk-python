@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.aave_api import AaveApi
+from moonsdk.api.aave_api import AaveApi
 
 
 class TestAaveApi(unittest.TestCase):

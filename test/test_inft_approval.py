@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.inft_approval import INFTApproval
+from moonsdk.models.inft_approval import INFTApproval
 
 class TestINFTApproval(unittest.TestCase):
     """INFTApproval unit test stubs"""

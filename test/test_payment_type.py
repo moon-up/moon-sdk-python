@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.payment_type import PaymentType
+from moonsdk.models.payment_type import PaymentType
 
 class TestPaymentType(unittest.TestCase):
     """PaymentType unit test stubs"""

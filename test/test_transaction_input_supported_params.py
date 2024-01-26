@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input_supported_params import TransactionInputSupportedParams
+from moonsdk.models.transaction_input_supported_params import TransactionInputSupportedParams
 
 class TestTransactionInputSupportedParams(unittest.TestCase):
     """TransactionInputSupportedParams unit test stubs"""
@@ -36,10 +36,10 @@ class TestTransactionInputSupportedParams(unittest.TestCase):
         model = TransactionInputSupportedParams()
         if include_optional:
             return TransactionInputSupportedParams(
-                partner_data = openapi_client.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
-                    redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                partner_data = moonsdk.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
+                    redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                         success = '', ), ),
-                theme = openapi_client.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
+                theme = moonsdk.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
                     border_radius = 1.337, 
                     card_color = '', 
                     secondary_text_color = '', 
@@ -51,10 +51,10 @@ class TestTransactionInputSupportedParams(unittest.TestCase):
             )
         else:
             return TransactionInputSupportedParams(
-                partner_data = openapi_client.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
-                    redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                partner_data = moonsdk.models.transaction_input_supported_params_partner_data.TransactionInput_supportedParams_partnerData(
+                    redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                         success = '', ), ),
-                theme = openapi_client.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
+                theme = moonsdk.models.transaction_input_supported_params_theme.TransactionInput_supportedParams_theme(
                     border_radius = 1.337, 
                     card_color = '', 
                     secondary_text_color = '', 

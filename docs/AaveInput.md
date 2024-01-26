@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | **str** |  | [optional] 
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.aave_input import AaveInput
+from moonsdk.models.aave_input import AaveInput
 
 # TODO update the JSON string below
 json = "{}"

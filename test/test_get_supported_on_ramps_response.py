@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
+from moonsdk.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
 
 class TestGetSupportedOnRampsResponse(unittest.TestCase):
     """GetSupportedOnRampsResponse unit test stubs"""
@@ -37,11 +37,11 @@ class TestGetSupportedOnRampsResponse(unittest.TestCase):
         if include_optional:
             return GetSupportedOnRampsResponse(
                 message = [
-                    openapi_client.models.get_supported_on_ramps_response_message_inner.GetSupportedOnRampsResponse_message_inner(
+                    moonsdk.models.get_supported_on_ramps_response_message_inner.GetSupportedOnRampsResponse_message_inner(
                         id = '', 
                         display_name = '', 
-                        icons = openapi_client.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
-                            png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                        icons = moonsdk.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
+                            png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                                 160x160 = '', 
                                 32x32 = '', ), 
                             svg = '', ), 
@@ -51,11 +51,11 @@ class TestGetSupportedOnRampsResponse(unittest.TestCase):
         else:
             return GetSupportedOnRampsResponse(
                 message = [
-                    openapi_client.models.get_supported_on_ramps_response_message_inner.GetSupportedOnRampsResponse_message_inner(
+                    moonsdk.models.get_supported_on_ramps_response_message_inner.GetSupportedOnRampsResponse_message_inner(
                         id = '', 
                         display_name = '', 
-                        icons = openapi_client.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
-                            png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                        icons = moonsdk.models.get_supported_on_ramps_response_message_inner_icons.GetSupportedOnRampsResponse_message_inner_icons(
+                            png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                                 160x160 = '', 
                                 32x32 = '', ), 
                             svg = '', ), 

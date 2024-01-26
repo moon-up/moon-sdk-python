@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.onramper_api import OnramperApi
+from moonsdk.api.onramper_api import OnramperApi
 
 
 class TestOnramperApi(unittest.TestCase):

@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | **str** |  | [optional] 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.solana_transaction_input import SolanaTransactionInput
+from moonsdk.models.solana_transaction_input import SolanaTransactionInput
 
 # TODO update the JSON string below
 json = "{}"

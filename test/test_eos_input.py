@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.eos_input import EosInput
+from moonsdk.models.eos_input import EosInput
 
 class TestEosInput(unittest.TestCase):
     """EosInput unit test stubs"""

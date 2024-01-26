@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.message import Message
+from moonsdk.models.message import Message
 
 class TestMessage(unittest.TestCase):
     """Message unit test stubs"""
@@ -37,7 +37,7 @@ class TestMessage(unittest.TestCase):
         if include_optional:
             return Message(
                 fiat = [
-                    openapi_client.models.fiat_currency.FiatCurrency(
+                    moonsdk.models.fiat_currency.FiatCurrency(
                         icon = '', 
                         symbol = '', 
                         name = '', 
@@ -45,7 +45,7 @@ class TestMessage(unittest.TestCase):
                         id = '', )
                     ],
                 crypto = [
-                    openapi_client.models.crypto_currency.CryptoCurrency(
+                    moonsdk.models.crypto_currency.CryptoCurrency(
                         network_display_name = '', 
                         icon = '', 
                         chain_id = 1.337, 
@@ -61,7 +61,7 @@ class TestMessage(unittest.TestCase):
         else:
             return Message(
                 fiat = [
-                    openapi_client.models.fiat_currency.FiatCurrency(
+                    moonsdk.models.fiat_currency.FiatCurrency(
                         icon = '', 
                         symbol = '', 
                         name = '', 
@@ -69,7 +69,7 @@ class TestMessage(unittest.TestCase):
                         id = '', )
                     ],
                 crypto = [
-                    openapi_client.models.crypto_currency.CryptoCurrency(
+                    moonsdk.models.crypto_currency.CryptoCurrency(
                         network_display_name = '', 
                         icon = '', 
                         chain_id = 1.337, 

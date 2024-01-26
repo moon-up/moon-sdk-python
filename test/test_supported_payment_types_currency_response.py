@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
+from moonsdk.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
 
 class TestSupportedPaymentTypesCurrencyResponse(unittest.TestCase):
     """SupportedPaymentTypesCurrencyResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestSupportedPaymentTypesCurrencyResponse(unittest.TestCase):
         model = SupportedPaymentTypesCurrencyResponse()
         if include_optional:
             return SupportedPaymentTypesCurrencyResponse(
-                message = openapi_client.models.supported_payment_types_message.SupportedPaymentTypesMessage(
-                    googlepay = openapi_client.models.payment_type.PaymentType(
+                message = moonsdk.models.supported_payment_types_message.SupportedPaymentTypesMessage(
+                    googlepay = moonsdk.models.payment_type.PaymentType(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', ), 
-                    applepay = openapi_client.models.payment_type.PaymentType(
+                    applepay = moonsdk.models.payment_type.PaymentType(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', ), 
@@ -49,12 +49,12 @@ class TestSupportedPaymentTypesCurrencyResponse(unittest.TestCase):
             )
         else:
             return SupportedPaymentTypesCurrencyResponse(
-                message = openapi_client.models.supported_payment_types_message.SupportedPaymentTypesMessage(
-                    googlepay = openapi_client.models.payment_type.PaymentType(
+                message = moonsdk.models.supported_payment_types_message.SupportedPaymentTypesMessage(
+                    googlepay = moonsdk.models.payment_type.PaymentType(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', ), 
-                    applepay = openapi_client.models.payment_type.PaymentType(
+                    applepay = moonsdk.models.payment_type.PaymentType(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', ), 

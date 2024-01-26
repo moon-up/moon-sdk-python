@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input_supported_params_partner_data_redirect_url import TransactionInputSupportedParamsPartnerDataRedirectUrl
+from moonsdk.models.transaction_input_supported_params_partner_data_redirect_url import TransactionInputSupportedParamsPartnerDataRedirectUrl
 
 class TestTransactionInputSupportedParamsPartnerDataRedirectUrl(unittest.TestCase):
     """TransactionInputSupportedParamsPartnerDataRedirectUrl unit test stubs"""

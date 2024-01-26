@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_payment_types_message import SupportedPaymentTypesMessage
+from moonsdk.models.supported_payment_types_message import SupportedPaymentTypesMessage
 
 class TestSupportedPaymentTypesMessage(unittest.TestCase):
     """SupportedPaymentTypesMessage unit test stubs"""
@@ -36,30 +36,30 @@ class TestSupportedPaymentTypesMessage(unittest.TestCase):
         model = SupportedPaymentTypesMessage()
         if include_optional:
             return SupportedPaymentTypesMessage(
-                googlepay = openapi_client.models.payment_type.PaymentType(
+                googlepay = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', ),
-                applepay = openapi_client.models.payment_type.PaymentType(
+                applepay = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', ),
-                creditcard = openapi_client.models.payment_type.PaymentType(
+                creditcard = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', )
             )
         else:
             return SupportedPaymentTypesMessage(
-                googlepay = openapi_client.models.payment_type.PaymentType(
+                googlepay = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', ),
-                applepay = openapi_client.models.payment_type.PaymentType(
+                applepay = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', ),
-                creditcard = openapi_client.models.payment_type.PaymentType(
+                creditcard = moonsdk.models.payment_type.PaymentType(
                     icon = '', 
                     name = '', 
                     payment_type_id = '', ),

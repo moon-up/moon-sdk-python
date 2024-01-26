@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.payment_api import PaymentApi
+from moonsdk.api.payment_api import PaymentApi
 
 
 class TestPaymentApi(unittest.TestCase):
@@ -24,6 +24,30 @@ class TestPaymentApi(unittest.TestCase):
         self.api = PaymentApi()
 
     def tearDown(self) -> None:
+        pass
+
+    def test_create_payment_intent_config(self) -> None:
+        """Test case for create_payment_intent_config
+
+        """
+        pass
+
+    def test_delete_payment_intent_config(self) -> None:
+        """Test case for delete_payment_intent_config
+
+        """
+        pass
+
+    def test_get_all_payment_intent_configs(self) -> None:
+        """Test case for get_all_payment_intent_configs
+
+        """
+        pass
+
+    def test_get_one_payment_intent_configs(self) -> None:
+        """Test case for get_one_payment_intent_configs
+
+        """
         pass
 
     def test_moralis_webhook(self) -> None:
@@ -70,6 +94,12 @@ class TestPaymentApi(unittest.TestCase):
 
     def test_tatum_webhook(self) -> None:
         """Test case for tatum_webhook
+
+        """
+        pass
+
+    def test_update_payment_intent_config(self) -> None:
+        """Test case for update_payment_intent_config
 
         """
         pass

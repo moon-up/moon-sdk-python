@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.tron_api import TronApi
+from moonsdk.api.tron_api import TronApi
 
 
 class TestTronApi(unittest.TestCase):

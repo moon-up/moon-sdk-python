@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.quote import Quote
+from moonsdk.models.quote import Quote
 
 class TestQuote(unittest.TestCase):
     """Quote unit test stubs"""
@@ -43,7 +43,7 @@ class TestQuote(unittest.TestCase):
                 quote_id = '',
                 ramp = '',
                 available_payment_methods = [
-                    openapi_client.models.available_payment_method.AvailablePaymentMethod(
+                    moonsdk.models.available_payment_method.AvailablePaymentMethod(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', )
@@ -62,7 +62,7 @@ class TestQuote(unittest.TestCase):
                 quote_id = '',
                 ramp = '',
                 available_payment_methods = [
-                    openapi_client.models.available_payment_method.AvailablePaymentMethod(
+                    moonsdk.models.available_payment_method.AvailablePaymentMethod(
                         icon = '', 
                         name = '', 
                         payment_type_id = '', )

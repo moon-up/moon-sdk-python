@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chain_id** | **str** |  | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.broadcast_input import BroadcastInput
+from moonsdk.models.broadcast_input import BroadcastInput
 
 # TODO update the JSON string below
 json = "{}"

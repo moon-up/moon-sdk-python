@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.uni_swap_api import UniSwapApi
+from moonsdk.api.uni_swap_api import UniSwapApi
 
 
 class TestUniSwapApi(unittest.TestCase):

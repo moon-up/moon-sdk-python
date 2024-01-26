@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_response import TransactionResponse
+from moonsdk.models.transaction_response import TransactionResponse
 
 class TestTransactionResponse(unittest.TestCase):
     """TransactionResponse unit test stubs"""
@@ -37,14 +37,14 @@ class TestTransactionResponse(unittest.TestCase):
         if include_optional:
             return TransactionResponse(
                 message = '',
-                tx = openapi_client.models.transaction_response_tx.TransactionResponse_tx(
+                tx = moonsdk.models.transaction_response_tx.TransactionResponse_tx(
                     data = '', 
                     value = '', 
                     nonce = 1.337, 
                     gas = '', 
                     to = '', 
                     from = '', ),
-                info = openapi_client.models.transaction_response_info.TransactionResponse_info(
+                info = moonsdk.models.transaction_response_info.TransactionResponse_info(
                     conveyor_gas = '', 
                     affiliate_gas = '', 
                     affiliate_aggregator = '', 
@@ -56,14 +56,14 @@ class TestTransactionResponse(unittest.TestCase):
         else:
             return TransactionResponse(
                 message = '',
-                tx = openapi_client.models.transaction_response_tx.TransactionResponse_tx(
+                tx = moonsdk.models.transaction_response_tx.TransactionResponse_tx(
                     data = '', 
                     value = '', 
                     nonce = 1.337, 
                     gas = '', 
                     to = '', 
                     from = '', ),
-                info = openapi_client.models.transaction_response_info.TransactionResponse_info(
+                info = moonsdk.models.transaction_response_info.TransactionResponse_info(
                     conveyor_gas = '', 
                     affiliate_gas = '', 
                     affiliate_aggregator = '', 

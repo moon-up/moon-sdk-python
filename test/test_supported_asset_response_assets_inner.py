@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_asset_response_assets_inner import SupportedAssetResponseAssetsInner
+from moonsdk.models.supported_asset_response_assets_inner import SupportedAssetResponseAssetsInner
 
 class TestSupportedAssetResponseAssetsInner(unittest.TestCase):
     """SupportedAssetResponseAssetsInner unit test stubs"""

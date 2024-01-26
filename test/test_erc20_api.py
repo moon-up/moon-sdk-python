@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.erc20_api import Erc20Api
+from moonsdk.api.erc20_api import Erc20Api
 
 
 class TestErc20Api(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.tx import Tx
+from moonsdk.models.tx import Tx
 
 class TestTx(unittest.TestCase):
     """Tx unit test stubs"""

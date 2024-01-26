@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png import GetSupportedOnRampsResponseMessageInnerIconsPng
+from moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png import GetSupportedOnRampsResponseMessageInnerIconsPng
 
 class TestGetSupportedOnRampsResponseMessageInnerIconsPng(unittest.TestCase):
     """GetSupportedOnRampsResponseMessageInnerIconsPng unit test stubs"""

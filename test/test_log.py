@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.log import Log
+from moonsdk.models.log import Log
 
 class TestLog(unittest.TestCase):
     """Log unit test stubs"""
@@ -37,7 +37,7 @@ class TestLog(unittest.TestCase):
         if include_optional:
             return Log(
                 triggers = [
-                    openapi_client.models.trigger_output.TriggerOutput(
+                    moonsdk.models.trigger_output.TriggerOutput(
                         value = null, 
                         name = '', )
                     ],

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.account_controller_response_data import AccountControllerResponseData
+from moonsdk.models.account_controller_response_data import AccountControllerResponseData
 
 class TestAccountControllerResponseData(unittest.TestCase):
     """AccountControllerResponseData unit test stubs"""
@@ -38,36 +38,74 @@ class TestAccountControllerResponseData(unittest.TestCase):
             return AccountControllerResponseData(
                 nonce = 1.337,
                 balance = '',
-                moon_scan_url = '',
                 transaction_hash = '',
                 signed_transaction = '',
-                signed_message = '',
                 raw_transaction = '',
-                signature = '',
-                transaction = {
-                    'key' : openapi_client.models.tx.Tx(
-                        type = 1.337, 
-                        chain_id = 1.337, 
-                        data = '', 
-                        gas = '', 
-                        gas_price = '', 
-                        gas_tip_cap = '', 
-                        gas_fee_cap = '', 
-                        value = '', 
-                        nonce = 1.337, 
-                        from = '', 
-                        to = '', 
-                        blob_gas = '', 
-                        blob_gas_fee_cap = '', 
-                        blob_hashes = [
-                            ''
+                data = '',
+                transactions = [
+                    moonsdk.models.transaction_data.TransactionData(
+                        moon_scan_url = '', 
+                        transaction_hash = '', 
+                        signed_transaction = '', 
+                        signed_message = '', 
+                        raw_transaction = '', 
+                        signature = '', 
+                        transaction = moonsdk.models.tx.Tx(
+                            type = 1.337, 
+                            chain_id = 1.337, 
+                            data = '', 
+                            gas = '', 
+                            gas_price = '', 
+                            gas_tip_cap = '', 
+                            gas_fee_cap = '', 
+                            value = '', 
+                            nonce = 1.337, 
+                            from = '', 
+                            to = '', 
+                            blob_gas = '', 
+                            blob_gas_fee_cap = '', 
+                            blob_hashes = [
+                                ''
+                                ], 
+                            v = '', 
+                            r = '', 
+                            s = '', ), 
+                        user_ops = [
+                            moonsdk.models.transaction_request.TransactionRequest(
+                                nonce = '', 
+                                data = '', 
+                                value = '', 
+                                to = '', 
+                                from = '', 
+                                max_fee_per_gas = '', 
+                                max_priority_fee_per_gas = '', )
                             ], 
-                        v = '', 
-                        r = '', 
-                        s = '', )
-                    },
+                        userop_transaction = '', )
+                    ],
+                moon_scan_url = '',
+                signature = '',
+                transaction = moonsdk.models.tx.Tx(
+                    type = 1.337, 
+                    chain_id = 1.337, 
+                    data = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    gas_tip_cap = '', 
+                    gas_fee_cap = '', 
+                    value = '', 
+                    nonce = 1.337, 
+                    from = '', 
+                    to = '', 
+                    blob_gas = '', 
+                    blob_gas_fee_cap = '', 
+                    blob_hashes = [
+                        ''
+                        ], 
+                    v = '', 
+                    r = '', 
+                    s = '', ),
                 user_ops = [
-                    openapi_client.models.transaction_request.TransactionRequest(
+                    moonsdk.models.transaction_request.TransactionRequest(
                         nonce = '', 
                         data = '', 
                         value = '', 
@@ -82,7 +120,6 @@ class TestAccountControllerResponseData(unittest.TestCase):
                     ],
                 address = '',
                 name = '',
-                data = '',
                 encoding = '',
                 header = True,
                 signtype = True,
@@ -97,6 +134,23 @@ class TestAccountControllerResponseData(unittest.TestCase):
                 variable_borrow_index = '',
                 last_update_timestamp = '',
                 usage_as_collateral_enabled = '',
+                type = 1.337,
+                chain_id = 1.337,
+                gas = '',
+                gas_price = '',
+                gas_tip_cap = '',
+                gas_fee_cap = '',
+                value = '',
+                var_from = '',
+                to = '',
+                blob_gas = '',
+                blob_gas_fee_cap = '',
+                blob_hashes = [
+                    ''
+                    ],
+                v = '',
+                r = '',
+                s = '',
                 symbol = '',
                 decimals = '',
                 total_supply = '',
@@ -116,10 +170,8 @@ class TestAccountControllerResponseData(unittest.TestCase):
             return AccountControllerResponseData(
                 nonce = 1.337,
                 balance = '',
-                transaction_hash = '',
-                signed_transaction = '',
-                address = '',
                 data = '',
+                address = '',
                 domain = '',
                 current_atoken_balance = '',
                 current_borrow_balance = '',

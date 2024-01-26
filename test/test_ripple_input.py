@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ripple_input import RippleInput
+from moonsdk.models.ripple_input import RippleInput
 
 class TestRippleInput(unittest.TestCase):
     """RippleInput unit test stubs"""

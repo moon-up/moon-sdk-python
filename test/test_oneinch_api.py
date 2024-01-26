@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.oneinch_api import OneinchApi
+from moonsdk.api.oneinch_api import OneinchApi
 
 
 class TestOneinchApi(unittest.TestCase):

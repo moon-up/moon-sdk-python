@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **partner_data** | [**TransactionInputSupportedParamsPartnerData**](TransactionInputSupportedParamsPartnerData.md) |  | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_input_supported_params import TransactionInputSupportedParams
+from moonsdk.models.transaction_input_supported_params import TransactionInputSupportedParams
 
 # TODO update the JSON string below
 json = "{}"

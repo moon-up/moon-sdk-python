@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.erc20_response import Erc20Response
+from moonsdk.models.erc20_response import Erc20Response
 
 class TestErc20Response(unittest.TestCase):
     """Erc20Response unit test stubs"""
@@ -36,45 +36,25 @@ class TestErc20Response(unittest.TestCase):
         model = Erc20Response()
         if include_optional:
             return Erc20Response(
-                moon_scan_url = '',
-                transaction_hash = '',
-                signed_transaction = '',
-                signed_message = '',
-                raw_transaction = '',
-                signature = '',
-                transaction = {
-                    'key' : openapi_client.models.tx.Tx(
-                        type = 1.337, 
-                        chain_id = 1.337, 
-                        data = '', 
-                        gas = '', 
-                        gas_price = '', 
-                        gas_tip_cap = '', 
-                        gas_fee_cap = '', 
-                        value = '', 
-                        nonce = 1.337, 
-                        from = '', 
-                        to = '', 
-                        blob_gas = '', 
-                        blob_gas_fee_cap = '', 
-                        blob_hashes = [
-                            ''
-                            ], 
-                        v = '', 
-                        r = '', 
-                        s = '', )
-                    },
-                user_ops = [
-                    openapi_client.models.transaction_request.TransactionRequest(
-                        nonce = '', 
-                        data = '', 
-                        value = '', 
-                        to = '', 
-                        from = '', 
-                        max_fee_per_gas = '', 
-                        max_priority_fee_per_gas = '', )
+                type = 1.337,
+                chain_id = 1.337,
+                data = '',
+                gas = '',
+                gas_price = '',
+                gas_tip_cap = '',
+                gas_fee_cap = '',
+                value = '',
+                nonce = 1.337,
+                var_from = '',
+                to = '',
+                blob_gas = '',
+                blob_gas_fee_cap = '',
+                blob_hashes = [
+                    ''
                     ],
-                userop_transaction = '',
+                v = '',
+                r = '',
+                s = '',
                 name = '',
                 symbol = '',
                 decimals = '',
@@ -85,8 +65,6 @@ class TestErc20Response(unittest.TestCase):
             )
         else:
             return Erc20Response(
-                transaction_hash = '',
-                signed_transaction = '',
         )
         """
 

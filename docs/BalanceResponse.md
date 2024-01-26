@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **balance** | **str** |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.balance_response import BalanceResponse
+from moonsdk.models.balance_response import BalanceResponse
 
 # TODO update the JSON string below
 json = "{}"

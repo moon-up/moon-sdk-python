@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input_wallet import TransactionInputWallet
+from moonsdk.models.transaction_input_wallet import TransactionInputWallet
 
 class TestTransactionInputWallet(unittest.TestCase):
     """TransactionInputWallet unit test stubs"""

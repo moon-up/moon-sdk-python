@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **provider** | **str** |  | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
+from moonsdk.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
 
 # TODO update the JSON string below
 json = "{}"

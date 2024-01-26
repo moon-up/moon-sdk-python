@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.internal_transaction import InternalTransaction
+from moonsdk.models.internal_transaction import InternalTransaction
 
 class TestInternalTransaction(unittest.TestCase):
     """InternalTransaction unit test stubs"""

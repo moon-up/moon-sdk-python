@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.doge_coin_api import DogeCoinApi
+from moonsdk.api.doge_coin_api import DogeCoinApi
 
 
 class TestDogeCoinApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.inft_transfer import INFTTransfer
+from moonsdk.models.inft_transfer import INFTTransfer
 
 class TestINFTTransfer(unittest.TestCase):
     """INFTTransfer unit test stubs"""
@@ -43,7 +43,7 @@ class TestINFTTransfer(unittest.TestCase):
                 token_name = '',
                 token_symbol = '',
                 triggers = [
-                    openapi_client.models.trigger_output.TriggerOutput(
+                    moonsdk.models.trigger_output.TriggerOutput(
                         value = null, 
                         name = '', )
                     ],

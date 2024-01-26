@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.sign_message import SignMessage
+from moonsdk.models.sign_message import SignMessage
 
 class TestSignMessage(unittest.TestCase):
     """SignMessage unit test stubs"""

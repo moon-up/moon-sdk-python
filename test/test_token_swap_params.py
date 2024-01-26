@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.token_swap_params import TokenSwapParams
+from moonsdk.models.token_swap_params import TokenSwapParams
 
 class TestTokenSwapParams(unittest.TestCase):
     """TokenSwapParams unit test stubs"""

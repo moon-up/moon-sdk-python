@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.nonce_response import NonceResponse
+from moonsdk.models.nonce_response import NonceResponse
 
 class TestNonceResponse(unittest.TestCase):
     """NonceResponse unit test stubs"""

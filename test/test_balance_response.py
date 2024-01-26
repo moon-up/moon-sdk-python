@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.balance_response import BalanceResponse
+from moonsdk.models.balance_response import BalanceResponse
 
 class TestBalanceResponse(unittest.TestCase):
     """BalanceResponse unit test stubs"""

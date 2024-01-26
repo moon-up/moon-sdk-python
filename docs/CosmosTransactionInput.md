@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | **str** |  | [optional] 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cosmos_transaction_input import CosmosTransactionInput
+from moonsdk.models.cosmos_transaction_input import CosmosTransactionInput
 
 # TODO update the JSON string below
 json = "{}"

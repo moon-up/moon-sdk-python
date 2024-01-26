@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_controller_response import AccountControllerResponse
 
 class TestAccountControllerResponse(unittest.TestCase):
     """AccountControllerResponse unit test stubs"""

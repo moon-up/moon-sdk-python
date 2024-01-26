@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.solana_transaction_input import SolanaTransactionInput
+from moonsdk.models.solana_transaction_input import SolanaTransactionInput
 
 class TestSolanaTransactionInput(unittest.TestCase):
     """SolanaTransactionInput unit test stubs"""

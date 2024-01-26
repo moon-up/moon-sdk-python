@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | **Dict[str, str]** |  | [optional] 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.payment_intent_response import PaymentIntentResponse
+from moonsdk.models.payment_intent_response import PaymentIntentResponse
 
 # TODO update the JSON string below
 json = "{}"

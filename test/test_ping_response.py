@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ping_response import PingResponse
+from moonsdk.models.ping_response import PingResponse
 
 class TestPingResponse(unittest.TestCase):
     """PingResponse unit test stubs"""

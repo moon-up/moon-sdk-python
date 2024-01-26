@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.abi_item import AbiItem
+from moonsdk.models.abi_item import AbiItem
 
 class TestAbiItem(unittest.TestCase):
     """AbiItem unit test stubs"""
@@ -39,12 +39,12 @@ class TestAbiItem(unittest.TestCase):
                 anonymous = True,
                 constant = True,
                 inputs = [
-                    openapi_client.models.abi_input.AbiInput(
+                    moonsdk.models.abi_input.AbiInput(
                         name = '', 
                         type = '', 
                         indexed = True, 
                         components = [
-                            openapi_client.models.abi_input.AbiInput(
+                            moonsdk.models.abi_input.AbiInput(
                                 name = '', 
                                 type = '', 
                                 indexed = True, 
@@ -54,11 +54,11 @@ class TestAbiItem(unittest.TestCase):
                     ],
                 name = '',
                 outputs = [
-                    openapi_client.models.abi_output.AbiOutput(
+                    moonsdk.models.abi_output.AbiOutput(
                         name = '', 
                         type = '', 
                         components = [
-                            openapi_client.models.abi_output.AbiOutput(
+                            moonsdk.models.abi_output.AbiOutput(
                                 name = '', 
                                 type = '', 
                                 internal_type = '', )

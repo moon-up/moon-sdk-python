@@ -3,6 +3,7 @@
 The abi to parse the log object of the contract
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **anonymous** | **bool** |  | [optional] 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.abi_item import AbiItem
+from moonsdk.models.abi_item import AbiItem
 
 # TODO update the JSON string below
 json = "{}"

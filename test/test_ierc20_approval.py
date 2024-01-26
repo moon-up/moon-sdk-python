@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ierc20_approval import IERC20Approval
+from moonsdk.models.ierc20_approval import IERC20Approval
 
 class TestIERC20Approval(unittest.TestCase):
     """IERC20Approval unit test stubs"""
@@ -47,7 +47,7 @@ class TestIERC20Approval(unittest.TestCase):
                 token_symbol = '',
                 value_with_decimals = '',
                 triggers = [
-                    openapi_client.models.trigger_output.TriggerOutput(
+                    moonsdk.models.trigger_output.TriggerOutput(
                         value = null, 
                         name = '', )
                     ]

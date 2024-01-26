@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.payment_intent_response import PaymentIntentResponse
+from moonsdk.models.payment_intent_response import PaymentIntentResponse
 
 class TestPaymentIntentResponse(unittest.TestCase):
     """PaymentIntentResponse unit test stubs"""

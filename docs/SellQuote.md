@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recommendations** | **List[str]** |  | 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.sell_quote import SellQuote
+from moonsdk.models.sell_quote import SellQuote
 
 # TODO update the JSON string below
 json = "{}"

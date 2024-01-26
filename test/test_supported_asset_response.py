@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_asset_response import SupportedAssetResponse
+from moonsdk.models.supported_asset_response import SupportedAssetResponse
 
 class TestSupportedAssetResponse(unittest.TestCase):
     """SupportedAssetResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestSupportedAssetResponse(unittest.TestCase):
             return SupportedAssetResponse(
                 country = '',
                 assets = [
-                    openapi_client.models.supported_asset_response_assets_inner.SupportedAssetResponse_assets_inner(
+                    moonsdk.models.supported_asset_response_assets_inner.SupportedAssetResponse_assets_inner(
                         crypto = [
                             ''
                             ], 
@@ -52,7 +52,7 @@ class TestSupportedAssetResponse(unittest.TestCase):
             return SupportedAssetResponse(
                 country = '',
                 assets = [
-                    openapi_client.models.supported_asset_response_assets_inner.SupportedAssetResponse_assets_inner(
+                    moonsdk.models.supported_asset_response_assets_inner.SupportedAssetResponse_assets_inner(
                         crypto = [
                             ''
                             ], 

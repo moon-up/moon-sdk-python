@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_swap_dto import GetSwapDto
+from moonsdk.models.get_swap_dto import GetSwapDto
 
 class TestGetSwapDto(unittest.TestCase):
     """GetSwapDto unit test stubs"""

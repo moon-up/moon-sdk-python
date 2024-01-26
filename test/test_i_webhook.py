@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.i_webhook import IWebhook
+from moonsdk.models.i_webhook import IWebhook
 
 class TestIWebhook(unittest.TestCase):
     """IWebhook unit test stubs"""
@@ -36,15 +36,15 @@ class TestIWebhook(unittest.TestCase):
         model = IWebhook()
         if include_optional:
             return IWebhook(
-                block = openapi_client.models.block.Block(
+                block = moonsdk.models.block.Block(
                     number = '', 
                     hash = '', 
                     timestamp = '', ),
                 chain_id = '',
                 logs = [
-                    openapi_client.models.log.Log(
+                    moonsdk.models.log.Log(
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], 
@@ -58,37 +58,72 @@ class TestIWebhook(unittest.TestCase):
                         topic3 = '', )
                     ],
                 txs = [
-                    openapi_client.models.transaction.Transaction(
-                        moon_scan_url = '', 
+                    moonsdk.models.transaction.Transaction(
                         transaction_hash = '', 
                         signed_transaction = '', 
-                        signed_message = '', 
                         raw_transaction = '', 
-                        signature = '', 
-                        transaction = {
-                            'key' : openapi_client.models.tx.Tx(
-                                type = 1.337, 
-                                chain_id = 1.337, 
-                                data = '', 
-                                gas = '', 
-                                gas_price = '', 
-                                gas_tip_cap = '', 
-                                gas_fee_cap = '', 
-                                value = '', 
-                                nonce = 1.337, 
-                                from = '', 
-                                to = '', 
-                                blob_gas = '', 
-                                blob_gas_fee_cap = '', 
-                                blob_hashes = [
-                                    ''
+                        data = '', 
+                        transactions = [
+                            moonsdk.models.transaction_data.TransactionData(
+                                moon_scan_url = '', 
+                                transaction_hash = '', 
+                                signed_transaction = '', 
+                                signed_message = '', 
+                                raw_transaction = '', 
+                                signature = '', 
+                                transaction = moonsdk.models.tx.Tx(
+                                    type = 1.337, 
+                                    chain_id = 1.337, 
+                                    data = '', 
+                                    gas = '', 
+                                    gas_price = '', 
+                                    gas_tip_cap = '', 
+                                    gas_fee_cap = '', 
+                                    value = '', 
+                                    nonce = 1.337, 
+                                    from = '', 
+                                    to = '', 
+                                    blob_gas = '', 
+                                    blob_gas_fee_cap = '', 
+                                    blob_hashes = [
+                                        ''
+                                        ], 
+                                    v = '', 
+                                    r = '', 
+                                    s = '', ), 
+                                user_ops = [
+                                    moonsdk.models.transaction_request.TransactionRequest(
+                                        nonce = '', 
+                                        data = '', 
+                                        value = '', 
+                                        to = '', 
+                                        from = '', 
+                                        max_fee_per_gas = '', 
+                                        max_priority_fee_per_gas = '', )
                                     ], 
-                                v = '', 
-                                r = '', 
-                                s = '', )
-                            }, 
+                                userop_transaction = '', )
+                            ], 
+                        moon_scan_url = '', 
+                        signature = '', 
+                        transaction = moonsdk.models.tx.Tx(
+                            type = 1.337, 
+                            chain_id = 1.337, 
+                            data = '', 
+                            gas = '', 
+                            gas_price = '', 
+                            gas_tip_cap = '', 
+                            gas_fee_cap = '', 
+                            value = '', 
+                            nonce = 1.337, 
+                            from = '', 
+                            to = '', 
+                            blob_gas = '', 
+                            blob_gas_fee_cap = '', 
+                            v = '', 
+                            r = '', 
+                            s = '', ), 
                         user_ops = [
-                            openapi_client.models.transaction_request.TransactionRequest(
+                            moonsdk.models.transaction_request.TransactionRequest(
                                 nonce = '', 
                                 data = '', 
                                 value = '', 
@@ -100,7 +135,7 @@ class TestIWebhook(unittest.TestCase):
                         userop_transaction = '', )
                     ],
                 txs_internal = [
-                    openapi_client.models.internal_transaction.InternalTransaction(
+                    moonsdk.models.internal_transaction.InternalTransaction(
                         from = '', 
                         to = '', 
                         value = '', 
@@ -115,7 +150,7 @@ class TestIWebhook(unittest.TestCase):
                 tag = '',
                 stream_id = '',
                 erc20_transfers = [
-                    openapi_client.models.ierc20_transfer.IERC20Transfer(
+                    moonsdk.models.ierc20_transfer.IERC20Transfer(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -127,13 +162,13 @@ class TestIWebhook(unittest.TestCase):
                         token_symbol = '', 
                         value_with_decimals = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], )
                     ],
                 erc20_approvals = [
-                    openapi_client.models.ierc20_approval.IERC20Approval(
+                    moonsdk.models.ierc20_approval.IERC20Approval(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -145,13 +180,13 @@ class TestIWebhook(unittest.TestCase):
                         token_symbol = '', 
                         value_with_decimals = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], )
                     ],
                 nft_transfers = [
-                    openapi_client.models.inft_transfer.INFTTransfer(
+                    moonsdk.models.inft_transfer.INFTTransfer(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -159,7 +194,7 @@ class TestIWebhook(unittest.TestCase):
                         token_name = '', 
                         token_symbol = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], 
@@ -170,13 +205,13 @@ class TestIWebhook(unittest.TestCase):
                         amount = '', )
                     ],
                 native_balances = [
-                    openapi_client.models.i_native_balance.INativeBalance(
+                    moonsdk.models.i_native_balance.INativeBalance(
                         address = '', 
                         balance = '', )
                     ],
-                nft_approvals = openapi_client.models.i_old_nft_approval.IOldNFTApproval(
+                nft_approvals = moonsdk.models.i_old_nft_approval.IOldNFTApproval(
                     erc721 = [
-                        openapi_client.models.inft_approval_erc721.INFTApprovalERC721(
+                        moonsdk.models.inft_approval_erc721.INFTApprovalERC721(
                             transaction_hash = '', 
                             contract = '', 
                             log_index = '', 
@@ -188,7 +223,7 @@ class TestIWebhook(unittest.TestCase):
                             token_symbol = '', )
                         ], 
                     erc1155 = [
-                        openapi_client.models.inft_approval_erc1155.INFTApprovalERC1155(
+                        moonsdk.models.inft_approval_erc1155.INFTApprovalERC1155(
                             transaction_hash = '', 
                             contract = '', 
                             log_index = '', 
@@ -200,7 +235,7 @@ class TestIWebhook(unittest.TestCase):
                             token_symbol = '', )
                         ], ),
                 nft_token_approvals = [
-                    openapi_client.models.inft_approval.INFTApproval(
+                    moonsdk.models.inft_approval.INFTApproval(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -215,15 +250,15 @@ class TestIWebhook(unittest.TestCase):
             )
         else:
             return IWebhook(
-                block = openapi_client.models.block.Block(
+                block = moonsdk.models.block.Block(
                     number = '', 
                     hash = '', 
                     timestamp = '', ),
                 chain_id = '',
                 logs = [
-                    openapi_client.models.log.Log(
+                    moonsdk.models.log.Log(
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], 
@@ -237,37 +272,72 @@ class TestIWebhook(unittest.TestCase):
                         topic3 = '', )
                     ],
                 txs = [
-                    openapi_client.models.transaction.Transaction(
-                        moon_scan_url = '', 
+                    moonsdk.models.transaction.Transaction(
                         transaction_hash = '', 
                         signed_transaction = '', 
-                        signed_message = '', 
                         raw_transaction = '', 
-                        signature = '', 
-                        transaction = {
-                            'key' : openapi_client.models.tx.Tx(
-                                type = 1.337, 
-                                chain_id = 1.337, 
-                                data = '', 
-                                gas = '', 
-                                gas_price = '', 
-                                gas_tip_cap = '', 
-                                gas_fee_cap = '', 
-                                value = '', 
-                                nonce = 1.337, 
-                                from = '', 
-                                to = '', 
-                                blob_gas = '', 
-                                blob_gas_fee_cap = '', 
-                                blob_hashes = [
-                                    ''
+                        data = '', 
+                        transactions = [
+                            moonsdk.models.transaction_data.TransactionData(
+                                moon_scan_url = '', 
+                                transaction_hash = '', 
+                                signed_transaction = '', 
+                                signed_message = '', 
+                                raw_transaction = '', 
+                                signature = '', 
+                                transaction = moonsdk.models.tx.Tx(
+                                    type = 1.337, 
+                                    chain_id = 1.337, 
+                                    data = '', 
+                                    gas = '', 
+                                    gas_price = '', 
+                                    gas_tip_cap = '', 
+                                    gas_fee_cap = '', 
+                                    value = '', 
+                                    nonce = 1.337, 
+                                    from = '', 
+                                    to = '', 
+                                    blob_gas = '', 
+                                    blob_gas_fee_cap = '', 
+                                    blob_hashes = [
+                                        ''
+                                        ], 
+                                    v = '', 
+                                    r = '', 
+                                    s = '', ), 
+                                user_ops = [
+                                    moonsdk.models.transaction_request.TransactionRequest(
+                                        nonce = '', 
+                                        data = '', 
+                                        value = '', 
+                                        to = '', 
+                                        from = '', 
+                                        max_fee_per_gas = '', 
+                                        max_priority_fee_per_gas = '', )
                                     ], 
-                                v = '', 
-                                r = '', 
-                                s = '', )
-                            }, 
+                                userop_transaction = '', )
+                            ], 
+                        moon_scan_url = '', 
+                        signature = '', 
+                        transaction = moonsdk.models.tx.Tx(
+                            type = 1.337, 
+                            chain_id = 1.337, 
+                            data = '', 
+                            gas = '', 
+                            gas_price = '', 
+                            gas_tip_cap = '', 
+                            gas_fee_cap = '', 
+                            value = '', 
+                            nonce = 1.337, 
+                            from = '', 
+                            to = '', 
+                            blob_gas = '', 
+                            blob_gas_fee_cap = '', 
+                            v = '', 
+                            r = '', 
+                            s = '', ), 
                         user_ops = [
-                            openapi_client.models.transaction_request.TransactionRequest(
+                            moonsdk.models.transaction_request.TransactionRequest(
                                 nonce = '', 
                                 data = '', 
                                 value = '', 
@@ -279,7 +349,7 @@ class TestIWebhook(unittest.TestCase):
                         userop_transaction = '', )
                     ],
                 txs_internal = [
-                    openapi_client.models.internal_transaction.InternalTransaction(
+                    moonsdk.models.internal_transaction.InternalTransaction(
                         from = '', 
                         to = '', 
                         value = '', 
@@ -294,7 +364,7 @@ class TestIWebhook(unittest.TestCase):
                 tag = '',
                 stream_id = '',
                 erc20_transfers = [
-                    openapi_client.models.ierc20_transfer.IERC20Transfer(
+                    moonsdk.models.ierc20_transfer.IERC20Transfer(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -306,13 +376,13 @@ class TestIWebhook(unittest.TestCase):
                         token_symbol = '', 
                         value_with_decimals = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], )
                     ],
                 erc20_approvals = [
-                    openapi_client.models.ierc20_approval.IERC20Approval(
+                    moonsdk.models.ierc20_approval.IERC20Approval(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -324,13 +394,13 @@ class TestIWebhook(unittest.TestCase):
                         token_symbol = '', 
                         value_with_decimals = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], )
                     ],
                 nft_transfers = [
-                    openapi_client.models.inft_transfer.INFTTransfer(
+                    moonsdk.models.inft_transfer.INFTTransfer(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 
@@ -338,7 +408,7 @@ class TestIWebhook(unittest.TestCase):
                         token_name = '', 
                         token_symbol = '', 
                         triggers = [
-                            openapi_client.models.trigger_output.TriggerOutput(
+                            moonsdk.models.trigger_output.TriggerOutput(
                                 value = null, 
                                 name = '', )
                             ], 
@@ -349,13 +419,13 @@ class TestIWebhook(unittest.TestCase):
                         amount = '', )
                     ],
                 native_balances = [
-                    openapi_client.models.i_native_balance.INativeBalance(
+                    moonsdk.models.i_native_balance.INativeBalance(
                         address = '', 
                         balance = '', )
                     ],
-                nft_approvals = openapi_client.models.i_old_nft_approval.IOldNFTApproval(
+                nft_approvals = moonsdk.models.i_old_nft_approval.IOldNFTApproval(
                     erc721 = [
-                        openapi_client.models.inft_approval_erc721.INFTApprovalERC721(
+                        moonsdk.models.inft_approval_erc721.INFTApprovalERC721(
                             transaction_hash = '', 
                             contract = '', 
                             log_index = '', 
@@ -367,7 +437,7 @@ class TestIWebhook(unittest.TestCase):
                             token_symbol = '', )
                         ], 
                     erc1155 = [
-                        openapi_client.models.inft_approval_erc1155.INFTApprovalERC1155(
+                        moonsdk.models.inft_approval_erc1155.INFTApprovalERC1155(
                             transaction_hash = '', 
                             contract = '', 
                             log_index = '', 
@@ -379,7 +449,7 @@ class TestIWebhook(unittest.TestCase):
                             token_symbol = '', )
                         ], ),
                 nft_token_approvals = [
-                    openapi_client.models.inft_approval.INFTApproval(
+                    moonsdk.models.inft_approval.INFTApproval(
                         transaction_hash = '', 
                         contract = '', 
                         log_index = '', 

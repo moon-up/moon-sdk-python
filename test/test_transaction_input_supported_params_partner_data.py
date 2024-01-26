@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_input_supported_params_partner_data import TransactionInputSupportedParamsPartnerData
+from moonsdk.models.transaction_input_supported_params_partner_data import TransactionInputSupportedParamsPartnerData
 
 class TestTransactionInputSupportedParamsPartnerData(unittest.TestCase):
     """TransactionInputSupportedParamsPartnerData unit test stubs"""
@@ -36,12 +36,12 @@ class TestTransactionInputSupportedParamsPartnerData(unittest.TestCase):
         model = TransactionInputSupportedParamsPartnerData()
         if include_optional:
             return TransactionInputSupportedParamsPartnerData(
-                redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                     success = '', )
             )
         else:
             return TransactionInputSupportedParamsPartnerData(
-                redirect_url = openapi_client.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
+                redirect_url = moonsdk.models.transaction_input_supported_params_partner_data_redirect_url.TransactionInput_supportedParams_partnerData_redirectUrl(
                     success = '', ),
         )
         """

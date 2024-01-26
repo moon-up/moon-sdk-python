@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.broadcast_input import BroadcastInput
+from moonsdk.models.broadcast_input import BroadcastInput
 
 class TestBroadcastInput(unittest.TestCase):
     """BroadcastInput unit test stubs"""

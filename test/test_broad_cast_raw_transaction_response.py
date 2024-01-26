@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
+from moonsdk.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
 
 class TestBroadCastRawTransactionResponse(unittest.TestCase):
     """BroadCastRawTransactionResponse unit test stubs"""

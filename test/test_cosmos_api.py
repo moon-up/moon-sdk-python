@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.cosmos_api import CosmosApi
+from moonsdk.api.cosmos_api import CosmosApi
 
 
 class TestCosmosApi(unittest.TestCase):

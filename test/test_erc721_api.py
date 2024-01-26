@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.erc721_api import Erc721Api
+from moonsdk.api.erc721_api import Erc721Api
 
 
 class TestErc721Api(unittest.TestCase):

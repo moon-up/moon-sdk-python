@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **icon** | **str** |  | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.fiat_currency import FiatCurrency
+from moonsdk.models.fiat_currency import FiatCurrency
 
 # TODO update the JSON string below
 json = "{}"

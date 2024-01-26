@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **transaction_hash** | **str** |  | 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.inft_approval import INFTApproval
+from moonsdk.models.inft_approval import INFTApproval
 
 # TODO update the JSON string below
 json = "{}"

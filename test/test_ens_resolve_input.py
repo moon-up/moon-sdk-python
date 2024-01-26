@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ens_resolve_input import EnsResolveInput
+from moonsdk.models.ens_resolve_input import EnsResolveInput
 
 class TestEnsResolveInput(unittest.TestCase):
     """EnsResolveInput unit test stubs"""

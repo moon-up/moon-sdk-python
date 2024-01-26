@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.erc1155_api import ERC1155Api
+from moonsdk.api.erc1155_api import ERC1155Api
 
 
 class TestERC1155Api(unittest.TestCase):

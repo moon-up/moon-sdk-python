@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.abi_output import AbiOutput
+from moonsdk.models.abi_output import AbiOutput
 
 class TestAbiOutput(unittest.TestCase):
     """AbiOutput unit test stubs"""
@@ -39,11 +39,11 @@ class TestAbiOutput(unittest.TestCase):
                 name = '',
                 type = '',
                 components = [
-                    openapi_client.models.abi_output.AbiOutput(
+                    moonsdk.models.abi_output.AbiOutput(
                         name = '', 
                         type = '', 
                         components = [
-                            openapi_client.models.abi_output.AbiOutput(
+                            moonsdk.models.abi_output.AbiOutput(
                                 name = '', 
                                 type = '', 
                                 internal_type = '', )

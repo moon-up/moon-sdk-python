@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.bitcoin_api import BitcoinApi
+from moonsdk.api.bitcoin_api import BitcoinApi
 
 
 class TestBitcoinApi(unittest.TestCase):

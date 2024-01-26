@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **network** | **str** |  | [optional] 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tron_input import TronInput
+from moonsdk.models.tron_input import TronInput
 
 # TODO update the JSON string below
 json = "{}"

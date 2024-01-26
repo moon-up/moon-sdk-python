@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.litecoin_transaction_input import LitecoinTransactionInput
+from moonsdk.models.litecoin_transaction_input import LitecoinTransactionInput
 
 class TestLitecoinTransactionInput(unittest.TestCase):
     """LitecoinTransactionInput unit test stubs"""

@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **supported_params** | [**TransactionInputSupportedParams**](TransactionInputSupportedParams.md) |  | 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_input import TransactionInput
+from moonsdk.models.transaction_input import TransactionInput
 
 # TODO update the JSON string below
 json = "{}"

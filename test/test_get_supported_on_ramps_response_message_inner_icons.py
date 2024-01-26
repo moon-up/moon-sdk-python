@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
+from moonsdk.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
 
 class TestGetSupportedOnRampsResponseMessageInnerIcons(unittest.TestCase):
     """GetSupportedOnRampsResponseMessageInnerIcons unit test stubs"""
@@ -36,14 +36,14 @@ class TestGetSupportedOnRampsResponseMessageInnerIcons(unittest.TestCase):
         model = GetSupportedOnRampsResponseMessageInnerIcons()
         if include_optional:
             return GetSupportedOnRampsResponseMessageInnerIcons(
-                png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                     160x160 = '', 
                     32x32 = '', ),
                 svg = ''
             )
         else:
             return GetSupportedOnRampsResponseMessageInnerIcons(
-                png = openapi_client.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
+                png = moonsdk.models.get_supported_on_ramps_response_message_inner_icons_png.GetSupportedOnRampsResponse_message_inner_icons_png(
                     160x160 = '', 
                     32x32 = '', ),
                 svg = '',

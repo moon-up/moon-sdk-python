@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
+from moonsdk.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
 
 class TestSupportedDefaultResponseDefaultsId(unittest.TestCase):
     """SupportedDefaultResponseDefaultsId unit test stubs"""

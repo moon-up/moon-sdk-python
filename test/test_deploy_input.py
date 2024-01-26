@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.deploy_input import DeployInput
+from moonsdk.models.deploy_input import DeployInput
 
 class TestDeployInput(unittest.TestCase):
     """DeployInput unit test stubs"""

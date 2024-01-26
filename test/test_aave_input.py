@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.aave_input import AaveInput
+from moonsdk.models.aave_input import AaveInput
 
 class TestAaveInput(unittest.TestCase):
     """AaveInput unit test stubs"""

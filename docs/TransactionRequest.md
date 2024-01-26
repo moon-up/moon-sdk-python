@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **str** |  | [optional] 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_request import TransactionRequest
+from moonsdk.models.transaction_request import TransactionRequest
 
 # TODO update the JSON string below
 json = "{}"

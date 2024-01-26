@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction import Transaction
+from moonsdk.models.transaction import Transaction
 
 class TestTransaction(unittest.TestCase):
     """Transaction unit test stubs"""
@@ -36,36 +36,74 @@ class TestTransaction(unittest.TestCase):
         model = Transaction()
         if include_optional:
             return Transaction(
-                moon_scan_url = '',
                 transaction_hash = '',
                 signed_transaction = '',
-                signed_message = '',
                 raw_transaction = '',
-                signature = '',
-                transaction = {
-                    'key' : openapi_client.models.tx.Tx(
-                        type = 1.337, 
-                        chain_id = 1.337, 
-                        data = '', 
-                        gas = '', 
-                        gas_price = '', 
-                        gas_tip_cap = '', 
-                        gas_fee_cap = '', 
-                        value = '', 
-                        nonce = 1.337, 
-                        from = '', 
-                        to = '', 
-                        blob_gas = '', 
-                        blob_gas_fee_cap = '', 
-                        blob_hashes = [
-                            ''
+                data = '',
+                transactions = [
+                    moonsdk.models.transaction_data.TransactionData(
+                        moon_scan_url = '', 
+                        transaction_hash = '', 
+                        signed_transaction = '', 
+                        signed_message = '', 
+                        raw_transaction = '', 
+                        signature = '', 
+                        transaction = moonsdk.models.tx.Tx(
+                            type = 1.337, 
+                            chain_id = 1.337, 
+                            data = '', 
+                            gas = '', 
+                            gas_price = '', 
+                            gas_tip_cap = '', 
+                            gas_fee_cap = '', 
+                            value = '', 
+                            nonce = 1.337, 
+                            from = '', 
+                            to = '', 
+                            blob_gas = '', 
+                            blob_gas_fee_cap = '', 
+                            blob_hashes = [
+                                ''
+                                ], 
+                            v = '', 
+                            r = '', 
+                            s = '', ), 
+                        user_ops = [
+                            moonsdk.models.transaction_request.TransactionRequest(
+                                nonce = '', 
+                                data = '', 
+                                value = '', 
+                                to = '', 
+                                from = '', 
+                                max_fee_per_gas = '', 
+                                max_priority_fee_per_gas = '', )
                             ], 
-                        v = '', 
-                        r = '', 
-                        s = '', )
-                    },
+                        userop_transaction = '', )
+                    ],
+                moon_scan_url = '',
+                signature = '',
+                transaction = moonsdk.models.tx.Tx(
+                    type = 1.337, 
+                    chain_id = 1.337, 
+                    data = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    gas_tip_cap = '', 
+                    gas_fee_cap = '', 
+                    value = '', 
+                    nonce = 1.337, 
+                    from = '', 
+                    to = '', 
+                    blob_gas = '', 
+                    blob_gas_fee_cap = '', 
+                    blob_hashes = [
+                        ''
+                        ], 
+                    v = '', 
+                    r = '', 
+                    s = '', ),
                 user_ops = [
-                    openapi_client.models.transaction_request.TransactionRequest(
+                    moonsdk.models.transaction_request.TransactionRequest(
                         nonce = '', 
                         data = '', 
                         value = '', 
@@ -78,8 +116,6 @@ class TestTransaction(unittest.TestCase):
             )
         else:
             return Transaction(
-                transaction_hash = '',
-                signed_transaction = '',
         )
         """
 

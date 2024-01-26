@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ens_reverse_resolve_response import ENSReverseResolveResponse
+from moonsdk.models.ens_reverse_resolve_response import ENSReverseResolveResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.bitcoin_cash_input import BitcoinCashInput
+from moonsdk.models.bitcoin_cash_input import BitcoinCashInput
 
 class TestBitcoinCashInput(unittest.TestCase):
     """BitcoinCashInput unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.eos_api import EosApi
+from moonsdk.api.eos_api import EosApi
 
 
 class TestEosApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.tron_input import TronInput
+from moonsdk.models.tron_input import TronInput
 
 class TestTronInput(unittest.TestCase):
     """TronInput unit test stubs"""

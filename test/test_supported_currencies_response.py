@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.supported_currencies_response import SupportedCurrenciesResponse
+from moonsdk.models.supported_currencies_response import SupportedCurrenciesResponse
 
 class TestSupportedCurrenciesResponse(unittest.TestCase):
     """SupportedCurrenciesResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestSupportedCurrenciesResponse(unittest.TestCase):
         model = SupportedCurrenciesResponse()
         if include_optional:
             return SupportedCurrenciesResponse(
-                message = openapi_client.models.message.Message(
+                message = moonsdk.models.message.Message(
                     fiat = [
-                        openapi_client.models.fiat_currency.FiatCurrency(
+                        moonsdk.models.fiat_currency.FiatCurrency(
                             icon = '', 
                             symbol = '', 
                             name = '', 
@@ -46,7 +46,7 @@ class TestSupportedCurrenciesResponse(unittest.TestCase):
                             id = '', )
                         ], 
                     crypto = [
-                        openapi_client.models.crypto_currency.CryptoCurrency(
+                        moonsdk.models.crypto_currency.CryptoCurrency(
                             network_display_name = '', 
                             icon = '', 
                             chain_id = 1.337, 
@@ -61,9 +61,9 @@ class TestSupportedCurrenciesResponse(unittest.TestCase):
             )
         else:
             return SupportedCurrenciesResponse(
-                message = openapi_client.models.message.Message(
+                message = moonsdk.models.message.Message(
                     fiat = [
-                        openapi_client.models.fiat_currency.FiatCurrency(
+                        moonsdk.models.fiat_currency.FiatCurrency(
                             icon = '', 
                             symbol = '', 
                             name = '', 
@@ -71,7 +71,7 @@ class TestSupportedCurrenciesResponse(unittest.TestCase):
                             id = '', )
                         ], 
                     crypto = [
-                        openapi_client.models.crypto_currency.CryptoCurrency(
+                        moonsdk.models.crypto_currency.CryptoCurrency(
                             network_display_name = '', 
                             icon = '', 
                             chain_id = 1.337, 

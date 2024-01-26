@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.input_body import InputBody
+from moonsdk.models.input_body import InputBody
 
 class TestInputBody(unittest.TestCase):
     """InputBody unit test stubs"""

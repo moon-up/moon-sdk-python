@@ -1,4 +1,4 @@
-# openapi_client.ConveyorFinanceApi
+# moonsdk.ConveyorFinanceApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -16,18 +16,19 @@ Method | HTTP request | Description
 
 * Api Key Authentication (ApiKeyAuth):
 * Api Key Authentication (BearerAuth):
+
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
-from openapi_client.models.token_swap_params import TokenSwapParams
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
+from moonsdk.models.token_swap_params import TokenSwapParams
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://vault-api.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://vault-api.usemoon.ai"
 )
 
@@ -49,15 +50,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ConveyorFinanceApi(api_client)
+    api_instance = moonsdk.ConveyorFinanceApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    token_swap_params = openapi_client.TokenSwapParams() # TokenSwapParams | 
+    token_swap_params = moonsdk.TokenSwapParams() # TokenSwapParams | 
 
     try:
-        api_response = api_instance.swap(authorization, name, token_swap_params)
+        api_response = await api_instance.swap(authorization, name, token_swap_params)
         print("The response of ConveyorFinanceApi->swap:\n")
         pprint(api_response)
     except Exception as e:
@@ -67,6 +68,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -88,6 +90,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |

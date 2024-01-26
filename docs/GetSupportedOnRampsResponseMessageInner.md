@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
+from moonsdk.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
 
 # TODO update the JSON string below
 json = "{}"

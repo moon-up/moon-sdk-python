@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **float** |  | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.nonce_response import NonceResponse
+from moonsdk.models.nonce_response import NonceResponse
 
 # TODO update the JSON string below
 json = "{}"

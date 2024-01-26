@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ens_reverse_resolve_response import ENSReverseResolveResponse
+from moonsdk.models.ens_reverse_resolve_response import ENSReverseResolveResponse
 
 class TestENSReverseResolveResponse(unittest.TestCase):
     """ENSReverseResolveResponse unit test stubs"""

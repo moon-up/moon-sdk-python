@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_data import TransactionData
+from moonsdk.models.transaction_data import TransactionData
 
 class TestTransactionData(unittest.TestCase):
     """TransactionData unit test stubs"""
@@ -42,7 +42,7 @@ class TestTransactionData(unittest.TestCase):
                 signed_message = '',
                 raw_transaction = '',
                 signature = '',
-                transaction = openapi_client.models.tx.Tx(
+                transaction = moonsdk.models.tx.Tx(
                     type = 1.337, 
                     chain_id = 1.337, 
                     data = '', 
@@ -63,7 +63,7 @@ class TestTransactionData(unittest.TestCase):
                     r = '', 
                     s = '', ),
                 user_ops = [
-                    openapi_client.models.transaction_request.TransactionRequest(
+                    moonsdk.models.transaction_request.TransactionRequest(
                         nonce = '', 
                         data = '', 
                         value = '', 

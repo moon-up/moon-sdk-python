@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **triggers** | [**List[TriggerOutput]**](TriggerOutput.md) |  | [optional] 
@@ -17,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.log import Log
+from moonsdk.models.log import Log
 
 # TODO update the JSON string below
 json = "{}"

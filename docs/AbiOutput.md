@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.abi_output import AbiOutput
+from moonsdk.models.abi_output import AbiOutput
 
 # TODO update the JSON string below
 json = "{}"

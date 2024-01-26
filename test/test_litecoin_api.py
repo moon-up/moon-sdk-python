@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.litecoin_api import LitecoinApi
+from moonsdk.api.litecoin_api import LitecoinApi
 
 
 class TestLitecoinApi(unittest.TestCase):

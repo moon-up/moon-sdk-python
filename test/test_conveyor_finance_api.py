@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.conveyor_finance_api import ConveyorFinanceApi
+from moonsdk.api.conveyor_finance_api import ConveyorFinanceApi
 
 
 class TestConveyorFinanceApi(unittest.TestCase):
