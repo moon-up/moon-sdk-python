@@ -25,8 +25,8 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.erc1155_request import Erc1155Request
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
 from moonsdk.api_client import ApiClient
 from moonsdk.api_response import ApiResponse
@@ -64,7 +64,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """balance_of
 
 
@@ -107,7 +107,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -138,7 +138,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """balance_of
 
 
@@ -181,7 +181,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -255,7 +255,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -363,7 +363,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """balance_of_batch
 
 
@@ -406,7 +406,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -437,7 +437,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """balance_of_batch
 
 
@@ -480,7 +480,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -554,7 +554,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -662,7 +662,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """is_approved_for_all
 
 
@@ -705,7 +705,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -736,7 +736,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """is_approved_for_all
 
 
@@ -779,7 +779,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -853,7 +853,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -961,7 +961,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """safe_batch_transfer_from
 
 
@@ -1004,7 +1004,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1035,7 +1035,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """safe_batch_transfer_from
 
 
@@ -1078,7 +1078,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1152,7 +1152,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1260,7 +1260,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """safe_transfer_from
 
 
@@ -1303,7 +1303,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1334,7 +1334,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """safe_transfer_from
 
 
@@ -1377,7 +1377,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1451,7 +1451,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1559,7 +1559,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """set_approval_for_all
 
 
@@ -1602,7 +1602,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1633,7 +1633,7 @@ class ERC1155Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """set_approval_for_all
 
 
@@ -1676,7 +1676,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1750,7 +1750,7 @@ class ERC1155Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

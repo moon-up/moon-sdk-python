@@ -1,6 +1,6 @@
 # moonsdk.OnramperApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,10 +33,10 @@ from moonsdk.models.transaction_input import TransactionInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -122,10 +122,10 @@ from moonsdk.models.quote import Quote
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -221,10 +221,10 @@ from moonsdk.models.sell_quote import SellQuote
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -320,10 +320,10 @@ from moonsdk.models.supported_asset_response import SupportedAssetResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -409,10 +409,10 @@ from moonsdk.models.supported_currencies_response import SupportedCurrenciesResp
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -496,10 +496,10 @@ from moonsdk.models.supported_default_response import SupportedDefaultResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -585,10 +585,10 @@ from moonsdk.models.get_supported_on_ramps_response import GetSupportedOnRampsRe
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -670,10 +670,10 @@ from moonsdk.models.supported_payment_types_currency_response import SupportedPa
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -761,10 +761,10 @@ from moonsdk.models.supported_payment_types_currency_response import SupportedPa
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters

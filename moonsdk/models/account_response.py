@@ -18,8 +18,9 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictStr
+from typing import Any, ClassVar, Dict, List
+from pydantic import BaseModel
+from moonsdk.models.account_data import AccountData
 try:
     from typing import Self
 except ImportError:
@@ -29,9 +30,8 @@ class AccountResponse(BaseModel):
     """
     AccountResponse
     """ # noqa: E501
-    keys: Optional[List[StrictStr]] = None
-    address: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["keys", "address"]
+    data: AccountData
+    __properties: ClassVar[List[str]] = ["data"]
 
     model_config = {
         "populate_by_name": True,
@@ -70,6 +70,9 @@ class AccountResponse(BaseModel):
             },
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of data
+        if self.data:
+            _dict['data'] = self.data.to_dict()
         return _dict
 
     @classmethod
@@ -82,8 +85,7 @@ class AccountResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "keys": obj.get("keys"),
-            "address": obj.get("address")
+            "data": AccountData.from_dict(obj.get("data")) if obj.get("data") is not None else None
         })
         return _obj
 

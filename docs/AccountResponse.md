@@ -5,8 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**keys** | **List[str]** |  | [optional] 
-**address** | **str** |  | [optional] 
+**data** | [**AccountData**](AccountData.md) |  | 
 
 ## Example
 

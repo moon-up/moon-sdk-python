@@ -1,6 +1,6 @@
 # moonsdk.BitcoincashApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_bitcoin_cash_account**
-> AccountControllerResponse create_bitcoin_cash_account(authorization, bitcoin_cash_input)
+> AccountAPIResponse create_bitcoin_cash_account(authorization, bitcoin_cash_input)
 
 
 
@@ -24,15 +24,15 @@ Method | HTTP request | Description
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.models.bitcoin_cash_input import BitcoinCashInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bitcoin_cash_account**
-> AccountControllerResponse get_bitcoin_cash_account(authorization, account_name)
+> AccountAPIResponse get_bitcoin_cash_account(authorization, account_name)
 
 
 
@@ -112,14 +112,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_bitcoin_cash_accounts**
-> AccountControllerResponse list_bitcoin_cash_accounts(authorization)
+> AccountAPIResponse list_bitcoin_cash_accounts(authorization)
 
 
 
@@ -199,14 +199,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_bitcoin_cash_transaction**
-> AccountControllerResponse sign_bitcoin_cash_transaction(authorization, account_name, bitcoin_cash_transaction_input)
+> BitcoinCashAPIResponse sign_bitcoin_cash_transaction(authorization, account_name, bitcoin_cash_transaction_input)
 
 
 
@@ -284,15 +284,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.bitcoin_cash_api_response import BitcoinCashAPIResponse
 from moonsdk.models.bitcoin_cash_transaction_input import BitcoinCashTransactionInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**BitcoinCashAPIResponse**](BitcoinCashAPIResponse.md)
 
 ### Authorization
 

@@ -21,7 +21,6 @@ from moonsdk.api.default_api import DefaultApi
 from moonsdk.api.eos_api import EosApi
 from moonsdk.api.oneinch_api import OneinchApi
 from moonsdk.api.onramper_api import OnramperApi
-from moonsdk.api.payment_api import PaymentApi
 from moonsdk.api.ripple_api import RippleApi
 from moonsdk.api.yearn_api import YearnApi
 

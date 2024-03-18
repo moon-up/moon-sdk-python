@@ -25,7 +25,7 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.models.uniswap_input import UniswapInput
 
 from moonsdk.api_client import ApiClient
@@ -64,7 +64,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """add_liquidity
 
 
@@ -107,7 +107,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -138,7 +138,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """add_liquidity
 
 
@@ -181,7 +181,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -255,7 +255,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -363,7 +363,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """remove_liquidity
 
 
@@ -406,7 +406,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -437,7 +437,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """remove_liquidity
 
 
@@ -480,7 +480,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -554,7 +554,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -662,7 +662,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """swap_exact_eth_for_tokens
 
 
@@ -705,7 +705,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -736,7 +736,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """swap_exact_eth_for_tokens
 
 
@@ -779,7 +779,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -853,7 +853,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -961,7 +961,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """swap_exact_tokens_for_tokens
 
 
@@ -1004,7 +1004,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1035,7 +1035,7 @@ class UniSwapApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """swap_exact_tokens_for_tokens
 
 
@@ -1078,7 +1078,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1152,7 +1152,7 @@ class UniSwapApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

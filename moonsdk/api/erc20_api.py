@@ -25,8 +25,8 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
 from moonsdk.api_client import ApiClient
 from moonsdk.api_response import ApiResponse
@@ -64,7 +64,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """allowance_erc20
 
 
@@ -107,7 +107,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -138,7 +138,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """allowance_erc20
 
 
@@ -181,7 +181,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -255,7 +255,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -363,7 +363,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """approve_erc20
 
 
@@ -406,7 +406,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -437,7 +437,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """approve_erc20
 
 
@@ -480,7 +480,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -554,7 +554,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -662,7 +662,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """balance_of_erc20
 
 
@@ -705,7 +705,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -736,7 +736,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """balance_of_erc20
 
 
@@ -779,7 +779,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -853,7 +853,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -961,7 +961,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """decimals_erc20
 
 
@@ -1004,7 +1004,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1035,7 +1035,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """decimals_erc20
 
 
@@ -1078,7 +1078,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1152,7 +1152,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1260,7 +1260,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """name_erc20
 
 
@@ -1303,7 +1303,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1334,7 +1334,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """name_erc20
 
 
@@ -1377,7 +1377,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1451,7 +1451,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1559,7 +1559,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """symbol_erc20
 
 
@@ -1602,7 +1602,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1633,7 +1633,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """symbol_erc20
 
 
@@ -1676,7 +1676,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1750,7 +1750,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1858,7 +1858,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """total_supply_erc20
 
 
@@ -1901,7 +1901,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1932,7 +1932,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """total_supply_erc20
 
 
@@ -1975,7 +1975,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2049,7 +2049,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2157,7 +2157,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """transfer_erc20
 
 
@@ -2200,7 +2200,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2231,7 +2231,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """transfer_erc20
 
 
@@ -2274,7 +2274,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2348,7 +2348,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2456,7 +2456,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """transfer_from_erc20
 
 
@@ -2499,7 +2499,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2530,7 +2530,7 @@ class Erc20Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """transfer_from_erc20
 
 
@@ -2573,7 +2573,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2647,7 +2647,7 @@ class Erc20Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

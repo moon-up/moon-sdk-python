@@ -25,13 +25,18 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
+from moonsdk.models.balance_api_response import BalanceAPIResponse
+from moonsdk.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
 from moonsdk.models.broadcast_input import BroadcastInput
 from moonsdk.models.create_account_input import CreateAccountInput
 from moonsdk.models.deploy_input import DeployInput
 from moonsdk.models.input_body import InputBody
+from moonsdk.models.nonce_api_response import NonceAPIResponse
 from moonsdk.models.sign_message import SignMessage
+from moonsdk.models.sign_message_api_response import SignMessageAPIResponse
 from moonsdk.models.sign_typed_data import SignTypedData
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
 from moonsdk.api_client import ApiClient
 from moonsdk.api_response import ApiResponse
@@ -69,7 +74,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> BroadCastRawTransactionAPIResponse:
         """broadcast_tx
 
 
@@ -112,7 +117,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BroadCastRawTransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -143,7 +148,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[BroadCastRawTransactionAPIResponse]:
         """broadcast_tx
 
 
@@ -186,7 +191,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BroadCastRawTransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -260,7 +265,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BroadCastRawTransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -367,7 +372,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """create_account
 
 
@@ -407,7 +412,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -437,7 +442,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """create_account
 
 
@@ -477,7 +482,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -547,7 +552,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -651,7 +656,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """delete_account
 
 
@@ -691,7 +696,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -721,7 +726,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """delete_account
 
 
@@ -761,7 +766,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -831,7 +836,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -923,7 +928,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """deploy_contract
 
 
@@ -966,7 +971,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -997,7 +1002,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """deploy_contract
 
 
@@ -1040,7 +1045,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1114,7 +1119,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1221,7 +1226,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """get_account
 
 
@@ -1261,7 +1266,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1291,7 +1296,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """get_account
 
 
@@ -1331,7 +1336,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1401,7 +1406,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1493,7 +1498,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> BalanceAPIResponse:
         """get_balance
 
 
@@ -1536,7 +1541,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BalanceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1567,7 +1572,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[BalanceAPIResponse]:
         """get_balance
 
 
@@ -1610,7 +1615,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BalanceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1684,7 +1689,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "BalanceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1780,7 +1785,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> NonceAPIResponse:
         """get_nonce
 
 
@@ -1820,7 +1825,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "NonceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1850,7 +1855,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[NonceAPIResponse]:
         """get_nonce
 
 
@@ -1890,7 +1895,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "NonceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1960,7 +1965,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "NonceAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2050,7 +2055,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """list_accounts
 
 
@@ -2087,7 +2092,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2116,7 +2121,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """list_accounts
 
 
@@ -2153,7 +2158,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2219,7 +2224,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2308,7 +2313,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> SignMessageAPIResponse:
         """sign_message
 
 
@@ -2351,7 +2356,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2382,7 +2387,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[SignMessageAPIResponse]:
         """sign_message
 
 
@@ -2425,7 +2430,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2499,7 +2504,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2607,7 +2612,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """sign_transaction
 
 
@@ -2650,7 +2655,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2681,7 +2686,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """sign_transaction
 
 
@@ -2724,7 +2729,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2798,7 +2803,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2906,7 +2911,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> SignMessageAPIResponse:
         """sign_typed_data
 
 
@@ -2949,7 +2954,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -2980,7 +2985,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[SignMessageAPIResponse]:
         """sign_typed_data
 
 
@@ -3023,7 +3028,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -3097,7 +3102,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "SignMessageAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -3205,7 +3210,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """transfer_eth
 
 
@@ -3248,7 +3253,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -3279,7 +3284,7 @@ class AccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """transfer_eth
 
 
@@ -3322,7 +3327,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -3396,7 +3401,7 @@ class AccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

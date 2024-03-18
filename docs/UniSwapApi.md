@@ -1,6 +1,6 @@
 # moonsdk.UniSwapApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **add_liquidity**
-> AccountControllerResponse add_liquidity(authorization, name, uniswap_input)
+> TransactionAPIResponse add_liquidity(authorization, name, uniswap_input)
 
 
 
@@ -24,15 +24,15 @@ Method | HTTP request | Description
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.models.uniswap_input import UniswapInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_liquidity**
-> AccountControllerResponse remove_liquidity(authorization, name, uniswap_input)
+> TransactionAPIResponse remove_liquidity(authorization, name, uniswap_input)
 
 
 
@@ -114,15 +114,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.models.uniswap_input import UniswapInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **swap_exact_eth_for_tokens**
-> AccountControllerResponse swap_exact_eth_for_tokens(authorization, name, uniswap_input)
+> TransactionAPIResponse swap_exact_eth_for_tokens(authorization, name, uniswap_input)
 
 
 
@@ -204,15 +204,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.models.uniswap_input import UniswapInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **swap_exact_tokens_for_tokens**
-> AccountControllerResponse swap_exact_tokens_for_tokens(authorization, name, uniswap_input)
+> TransactionAPIResponse swap_exact_tokens_for_tokens(authorization, name, uniswap_input)
 
 
 
@@ -294,15 +294,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.models.uniswap_input import UniswapInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

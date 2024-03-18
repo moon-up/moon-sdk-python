@@ -25,8 +25,9 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
 from moonsdk.api_client import ApiClient
 from moonsdk.api_response import ApiResponse
@@ -64,7 +65,7 @@ class Erc4337Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """get_address
 
 
@@ -107,7 +108,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -138,7 +139,7 @@ class Erc4337Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """get_address
 
 
@@ -181,7 +182,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -255,7 +256,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -363,7 +364,7 @@ class Erc4337Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> TransactionAPIResponse:
         """sign_broadcast_user_op_tx
 
 
@@ -406,7 +407,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -437,7 +438,7 @@ class Erc4337Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[TransactionAPIResponse]:
         """sign_broadcast_user_op_tx
 
 
@@ -480,7 +481,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -554,7 +555,7 @@ class Erc4337Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "TransactionAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

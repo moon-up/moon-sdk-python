@@ -25,7 +25,8 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
+from moonsdk.models.ripple_api_response import RippleAPIResponse
 from moonsdk.models.ripple_input import RippleInput
 from moonsdk.models.ripple_transaction_input import RippleTransactionInput
 
@@ -64,7 +65,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """create_ripple_account
 
 
@@ -104,7 +105,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -134,7 +135,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """create_ripple_account
 
 
@@ -174,7 +175,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -244,7 +245,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -348,7 +349,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """get_ripple_account
 
 
@@ -388,7 +389,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -418,7 +419,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """get_ripple_account
 
 
@@ -458,7 +459,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -528,7 +529,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -618,7 +619,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> AccountAPIResponse:
         """list_ripple_accounts
 
 
@@ -655,7 +656,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -684,7 +685,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[AccountAPIResponse]:
         """list_ripple_accounts
 
 
@@ -721,7 +722,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -787,7 +788,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "AccountAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -876,7 +877,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> RippleAPIResponse:
         """sign_ripple_transaction
 
 
@@ -919,7 +920,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "RippleAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -950,7 +951,7 @@ class RippleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[RippleAPIResponse]:
         """sign_ripple_transaction
 
 
@@ -993,7 +994,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "RippleAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -1067,7 +1068,7 @@ class RippleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "RippleAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

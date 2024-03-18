@@ -37,7 +37,7 @@ setup(
     version=VERSION,
     description="moon-vault-api",
     author="OpenAPI Generator community",
-    author_email="ewhal@bytemasons.com",
+    author_email="team@openapitools.org",
     url="https://pypi.org/project/MoonSDK/",
     keywords=["OpenAPI", "OpenAPI-Generator", "moon-vault-api"],
     install_requires=REQUIRES,

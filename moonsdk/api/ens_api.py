@@ -25,7 +25,7 @@ except ImportError:
 
 from pydantic import StrictStr
 
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.ens_resolve_api_response import EnsResolveAPIResponse
 from moonsdk.models.ens_resolve_input import EnsResolveInput
 
 from moonsdk.api_client import ApiClient
@@ -63,7 +63,7 @@ class ENSApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> AccountControllerResponse:
+    ) -> EnsResolveAPIResponse:
         """resolve
 
 
@@ -103,7 +103,7 @@ class ENSApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "EnsResolveAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -133,7 +133,7 @@ class ENSApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[AccountControllerResponse]:
+    ) -> ApiResponse[EnsResolveAPIResponse]:
         """resolve
 
 
@@ -173,7 +173,7 @@ class ENSApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "EnsResolveAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,
@@ -243,7 +243,7 @@ class ENSApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AccountControllerResponse",
+            '200': "EnsResolveAPIResponse",
         }
         response_data = await self.api_client.call_api(
             *_param,

@@ -86,7 +86,7 @@ conf = moonsdk.Configuration(
                  ) -> None:
         """Constructor
         """
-        self._base_path = "https://vault-api.usemoon.ai" if host is None else host
+        self._base_path = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -419,7 +419,7 @@ conf = moonsdk.Configuration(
         """
         return [
             {
-                'url': "https://vault-api.usemoon.ai",
+                'url': "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app",
                 'description': "No description provided",
             }
         ]

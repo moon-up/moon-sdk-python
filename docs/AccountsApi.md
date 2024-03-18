@@ -1,6 +1,6 @@
 # moonsdk.AccountsApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **broadcast_tx**
-> AccountControllerResponse broadcast_tx(authorization, account_name, broadcast_input)
+> BroadCastRawTransactionAPIResponse broadcast_tx(authorization, account_name, broadcast_input)
 
 
 
@@ -32,15 +32,15 @@ Method | HTTP request | Description
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
 from moonsdk.models.broadcast_input import BroadcastInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**BroadCastRawTransactionAPIResponse**](BroadCastRawTransactionAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_account**
-> AccountControllerResponse create_account(authorization, create_account_input)
+> AccountAPIResponse create_account(authorization, create_account_input)
 
 
 
@@ -122,15 +122,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.models.create_account_input import CreateAccountInput
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account**
-> AccountControllerResponse delete_account(authorization, account_name)
+> AccountAPIResponse delete_account(authorization, account_name)
 
 
 
@@ -210,14 +210,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deploy_contract**
-> AccountControllerResponse deploy_contract(authorization, account_name, deploy_input)
+> TransactionAPIResponse deploy_contract(authorization, account_name, deploy_input)
 
 
 
@@ -297,15 +297,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.deploy_input import DeployInput
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_account**
-> AccountControllerResponse get_account(authorization, account_name)
+> AccountAPIResponse get_account(authorization, account_name)
 
 
 
@@ -387,14 +387,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_balance**
-> AccountControllerResponse get_balance(account_name, authorization, chain_id)
+> BalanceAPIResponse get_balance(account_name, authorization, chain_id)
 
 
 
@@ -474,14 +474,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.balance_api_response import BalanceAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**BalanceAPIResponse**](BalanceAPIResponse.md)
 
 ### Authorization
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nonce**
-> AccountControllerResponse get_nonce(account_name, authorization)
+> NonceAPIResponse get_nonce(account_name, authorization)
 
 
 
@@ -563,14 +563,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.nonce_api_response import NonceAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**NonceAPIResponse**](NonceAPIResponse.md)
 
 ### Authorization
 
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_accounts**
-> AccountControllerResponse list_accounts(authorization)
+> AccountAPIResponse list_accounts(authorization)
 
 
 
@@ -650,14 +650,14 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -702,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_message**
-> AccountControllerResponse sign_message(account_name, authorization, sign_message)
+> SignMessageAPIResponse sign_message(account_name, authorization, sign_message)
 
 
 
@@ -735,15 +735,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.sign_message import SignMessage
+from moonsdk.models.sign_message_api_response import SignMessageAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**SignMessageAPIResponse**](SignMessageAPIResponse.md)
 
 ### Authorization
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_transaction**
-> AccountControllerResponse sign_transaction(account_name, authorization, input_body)
+> TransactionAPIResponse sign_transaction(account_name, authorization, input_body)
 
 
 
@@ -825,15 +825,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -902,7 +902,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_typed_data**
-> AccountControllerResponse sign_typed_data(account_name, authorization, sign_typed_data)
+> SignMessageAPIResponse sign_typed_data(account_name, authorization, sign_typed_data)
 
 
 
@@ -915,15 +915,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
+from moonsdk.models.sign_message_api_response import SignMessageAPIResponse
 from moonsdk.models.sign_typed_data import SignTypedData
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -972,7 +972,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**SignMessageAPIResponse**](SignMessageAPIResponse.md)
 
 ### Authorization
 
@@ -992,7 +992,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transfer_eth**
-> AccountControllerResponse transfer_eth(account_name, authorization, input_body)
+> TransactionAPIResponse transfer_eth(account_name, authorization, input_body)
 
 
 
@@ -1005,15 +1005,15 @@ Name | Type | Description  | Notes
 import time
 import os
 import moonsdk
-from moonsdk.models.account_controller_response import AccountControllerResponse
 from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 from moonsdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://vault-api.usemoon.ai
+# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = moonsdk.Configuration(
-    host = "https://vault-api.usemoon.ai"
+    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1062,7 +1062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
