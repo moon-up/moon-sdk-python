@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**TronTransactionOutput**](TronTransactionOutput.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.tron_api_response import TronAPIResponse
+from openapi_client.models.tron_api_response import TronAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of TronAPIResponse from a JSON string
 tron_api_response_instance = TronAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print TronAPIResponse.to_json()
+print(TronAPIResponse.to_json())
 
 # convert the object into a dict
 tron_api_response_dict = tron_api_response_instance.to_dict()

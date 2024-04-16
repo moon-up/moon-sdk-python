@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.bitcoin_cash_transaction_output import BitcoinCashTransactionOutput
+from openapi_client.models.bitcoin_cash_transaction_output import BitcoinCashTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BitcoinCashTransactionOutput from a JSON string
 bitcoin_cash_transaction_output_instance = BitcoinCashTransactionOutput.from_json(json)
 # print the JSON string representation of the object
-print BitcoinCashTransactionOutput.to_json()
+print(BitcoinCashTransactionOutput.to_json())
 
 # convert the object into a dict
 bitcoin_cash_transaction_output_dict = bitcoin_cash_transaction_output_instance.to_dict()

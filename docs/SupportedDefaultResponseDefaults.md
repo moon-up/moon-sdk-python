@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
+from openapi_client.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SupportedDefaultResponseDefaults from a JSON string
 supported_default_response_defaults_instance = SupportedDefaultResponseDefaults.from_json(json)
 # print the JSON string representation of the object
-print SupportedDefaultResponseDefaults.to_json()
+print(SupportedDefaultResponseDefaults.to_json())
 
 # convert the object into a dict
 supported_default_response_defaults_dict = supported_default_response_defaults_instance.to_dict()

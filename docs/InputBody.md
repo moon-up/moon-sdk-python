@@ -24,14 +24,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.input_body import InputBody
+from openapi_client.models.input_body import InputBody
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of InputBody from a JSON string
 input_body_instance = InputBody.from_json(json)
 # print the JSON string representation of the object
-print InputBody.to_json()
+print(InputBody.to_json())
 
 # convert the object into a dict
 input_body_dict = input_body_instance.to_dict()

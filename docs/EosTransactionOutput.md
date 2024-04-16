@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.eos_transaction_output import EosTransactionOutput
+from openapi_client.models.eos_transaction_output import EosTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of EosTransactionOutput from a JSON string
 eos_transaction_output_instance = EosTransactionOutput.from_json(json)
 # print the JSON string representation of the object
-print EosTransactionOutput.to_json()
+print(EosTransactionOutput.to_json())
 
 # convert the object into a dict
 eos_transaction_output_dict = eos_transaction_output_instance.to_dict()

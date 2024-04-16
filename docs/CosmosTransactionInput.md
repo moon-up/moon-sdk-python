@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.cosmos_transaction_input import CosmosTransactionInput
+from openapi_client.models.cosmos_transaction_input import CosmosTransactionInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of CosmosTransactionInput from a JSON string
 cosmos_transaction_input_instance = CosmosTransactionInput.from_json(json)
 # print the JSON string representation of the object
-print CosmosTransactionInput.to_json()
+print(CosmosTransactionInput.to_json())
 
 # convert the object into a dict
 cosmos_transaction_input_dict = cosmos_transaction_input_instance.to_dict()

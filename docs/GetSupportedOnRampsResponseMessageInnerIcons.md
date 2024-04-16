@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
+from openapi_client.models.get_supported_on_ramps_response_message_inner_icons import GetSupportedOnRampsResponseMessageInnerIcons
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of GetSupportedOnRampsResponseMessageInnerIcons from a JSON string
 get_supported_on_ramps_response_message_inner_icons_instance = GetSupportedOnRampsResponseMessageInnerIcons.from_json(json)
 # print the JSON string representation of the object
-print GetSupportedOnRampsResponseMessageInnerIcons.to_json()
+print(GetSupportedOnRampsResponseMessageInnerIcons.to_json())
 
 # convert the object into a dict
 get_supported_on_ramps_response_message_inner_icons_dict = get_supported_on_ramps_response_message_inner_icons_instance.to_dict()

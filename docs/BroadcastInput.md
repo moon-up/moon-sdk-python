@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.broadcast_input import BroadcastInput
+from openapi_client.models.broadcast_input import BroadcastInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BroadcastInput from a JSON string
 broadcast_input_instance = BroadcastInput.from_json(json)
 # print the JSON string representation of the object
-print BroadcastInput.to_json()
+print(BroadcastInput.to_json())
 
 # convert the object into a dict
 broadcast_input_dict = broadcast_input_instance.to_dict()

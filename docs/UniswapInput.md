@@ -28,14 +28,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.uniswap_input import UniswapInput
+from openapi_client.models.uniswap_input import UniswapInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of UniswapInput from a JSON string
 uniswap_input_instance = UniswapInput.from_json(json)
 # print the JSON string representation of the object
-print UniswapInput.to_json()
+print(UniswapInput.to_json())
 
 # convert the object into a dict
 uniswap_input_dict = uniswap_input_instance.to_dict()

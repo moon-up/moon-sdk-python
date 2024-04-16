@@ -1,6 +1,6 @@
-# moonsdk.UniSwapApi
+# openapi_client.UniSwapApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,18 +21,16 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.models.uniswap_input import UniswapInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.models.uniswap_input import UniswapInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -53,15 +51,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.UniSwapApi(api_client)
+    api_instance = openapi_client.UniSwapApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    uniswap_input = moonsdk.UniswapInput() # UniswapInput | 
+    uniswap_input = openapi_client.UniswapInput() # UniswapInput | 
 
     try:
-        api_response = await api_instance.add_liquidity(authorization, name, uniswap_input)
+        api_response = api_instance.add_liquidity(authorization, name, uniswap_input)
         print("The response of UniSwapApi->add_liquidity:\n")
         pprint(api_response)
     except Exception as e:
@@ -111,18 +109,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.models.uniswap_input import UniswapInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.models.uniswap_input import UniswapInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -143,15 +139,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.UniSwapApi(api_client)
+    api_instance = openapi_client.UniSwapApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    uniswap_input = moonsdk.UniswapInput() # UniswapInput | 
+    uniswap_input = openapi_client.UniswapInput() # UniswapInput | 
 
     try:
-        api_response = await api_instance.remove_liquidity(authorization, name, uniswap_input)
+        api_response = api_instance.remove_liquidity(authorization, name, uniswap_input)
         print("The response of UniSwapApi->remove_liquidity:\n")
         pprint(api_response)
     except Exception as e:
@@ -201,18 +197,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.models.uniswap_input import UniswapInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.models.uniswap_input import UniswapInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -233,15 +227,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.UniSwapApi(api_client)
+    api_instance = openapi_client.UniSwapApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    uniswap_input = moonsdk.UniswapInput() # UniswapInput | 
+    uniswap_input = openapi_client.UniswapInput() # UniswapInput | 
 
     try:
-        api_response = await api_instance.swap_exact_eth_for_tokens(authorization, name, uniswap_input)
+        api_response = api_instance.swap_exact_eth_for_tokens(authorization, name, uniswap_input)
         print("The response of UniSwapApi->swap_exact_eth_for_tokens:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,18 +285,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.models.uniswap_input import UniswapInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.models.uniswap_input import UniswapInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -323,15 +315,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.UniSwapApi(api_client)
+    api_instance = openapi_client.UniSwapApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    uniswap_input = moonsdk.UniswapInput() # UniswapInput | 
+    uniswap_input = openapi_client.UniswapInput() # UniswapInput | 
 
     try:
-        api_response = await api_instance.swap_exact_tokens_for_tokens(authorization, name, uniswap_input)
+        api_response = api_instance.swap_exact_tokens_for_tokens(authorization, name, uniswap_input)
         print("The response of UniSwapApi->swap_exact_tokens_for_tokens:\n")
         pprint(api_response)
     except Exception as e:

@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.quote import Quote
+from openapi_client.models.quote import Quote
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of Quote from a JSON string
 quote_instance = Quote.from_json(json)
 # print the JSON string representation of the object
-print Quote.to_json()
+print(Quote.to_json())
 
 # convert the object into a dict
 quote_dict = quote_instance.to_dict()

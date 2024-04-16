@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.solana_transaction_input import SolanaTransactionInput
+from openapi_client.models.solana_transaction_input import SolanaTransactionInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SolanaTransactionInput from a JSON string
 solana_transaction_input_instance = SolanaTransactionInput.from_json(json)
 # print the JSON string representation of the object
-print SolanaTransactionInput.to_json()
+print(SolanaTransactionInput.to_json())
 
 # convert the object into a dict
 solana_transaction_input_dict = solana_transaction_input_instance.to_dict()

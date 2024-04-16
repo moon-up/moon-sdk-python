@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**BitcoinTransactionOutput**](BitcoinTransactionOutput.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.bitcoin_api_response import BitcoinAPIResponse
+from openapi_client.models.bitcoin_api_response import BitcoinAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BitcoinAPIResponse from a JSON string
 bitcoin_api_response_instance = BitcoinAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print BitcoinAPIResponse.to_json()
+print(BitcoinAPIResponse.to_json())
 
 # convert the object into a dict
 bitcoin_api_response_dict = bitcoin_api_response_instance.to_dict()

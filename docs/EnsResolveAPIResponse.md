@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**EnsResolveResponse**](EnsResolveResponse.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.ens_resolve_api_response import EnsResolveAPIResponse
+from openapi_client.models.ens_resolve_api_response import EnsResolveAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of EnsResolveAPIResponse from a JSON string
 ens_resolve_api_response_instance = EnsResolveAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print EnsResolveAPIResponse.to_json()
+print(EnsResolveAPIResponse.to_json())
 
 # convert the object into a dict
 ens_resolve_api_response_dict = ens_resolve_api_response_instance.to_dict()

@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.ping_response import PingResponse
+from openapi_client.models.ping_response import PingResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of PingResponse from a JSON string
 ping_response_instance = PingResponse.from_json(json)
 # print the JSON string representation of the object
-print PingResponse.to_json()
+print(PingResponse.to_json())
 
 # convert the object into a dict
 ping_response_dict = ping_response_instance.to_dict()

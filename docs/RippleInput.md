@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.ripple_input import RippleInput
+from openapi_client.models.ripple_input import RippleInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of RippleInput from a JSON string
 ripple_input_instance = RippleInput.from_json(json)
 # print the JSON string representation of the object
-print RippleInput.to_json()
+print(RippleInput.to_json())
 
 # convert the object into a dict
 ripple_input_dict = ripple_input_instance.to_dict()

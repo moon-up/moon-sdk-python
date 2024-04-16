@@ -31,14 +31,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.get_swap_dto import GetSwapDto
+from openapi_client.models.get_swap_dto import GetSwapDto
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of GetSwapDto from a JSON string
 get_swap_dto_instance = GetSwapDto.from_json(json)
 # print the JSON string representation of the object
-print GetSwapDto.to_json()
+print(GetSwapDto.to_json())
 
 # convert the object into a dict
 get_swap_dto_dict = get_swap_dto_instance.to_dict()

@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**CosmosTransactionOutput**](CosmosTransactionOutput.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.cosmos_api_response import CosmosAPIResponse
+from openapi_client.models.cosmos_api_response import CosmosAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of CosmosAPIResponse from a JSON string
 cosmos_api_response_instance = CosmosAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print CosmosAPIResponse.to_json()
+print(CosmosAPIResponse.to_json())
 
 # convert the object into a dict
 cosmos_api_response_dict = cosmos_api_response_instance.to_dict()

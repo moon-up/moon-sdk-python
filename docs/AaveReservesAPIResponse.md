@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**AaveReservesData**](AaveReservesData.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.aave_reserves_api_response import AaveReservesAPIResponse
+from openapi_client.models.aave_reserves_api_response import AaveReservesAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of AaveReservesAPIResponse from a JSON string
 aave_reserves_api_response_instance = AaveReservesAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print AaveReservesAPIResponse.to_json()
+print(AaveReservesAPIResponse.to_json())
 
 # convert the object into a dict
 aave_reserves_api_response_dict = aave_reserves_api_response_instance.to_dict()

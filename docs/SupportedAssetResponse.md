@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.supported_asset_response import SupportedAssetResponse
+from openapi_client.models.supported_asset_response import SupportedAssetResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SupportedAssetResponse from a JSON string
 supported_asset_response_instance = SupportedAssetResponse.from_json(json)
 # print the JSON string representation of the object
-print SupportedAssetResponse.to_json()
+print(SupportedAssetResponse.to_json())
 
 # convert the object into a dict
 supported_asset_response_dict = supported_asset_response_instance.to_dict()

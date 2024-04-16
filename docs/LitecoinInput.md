@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.litecoin_input import LitecoinInput
+from openapi_client.models.litecoin_input import LitecoinInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of LitecoinInput from a JSON string
 litecoin_input_instance = LitecoinInput.from_json(json)
 # print the JSON string representation of the object
-print LitecoinInput.to_json()
+print(LitecoinInput.to_json())
 
 # convert the object into a dict
 litecoin_input_dict = litecoin_input_instance.to_dict()

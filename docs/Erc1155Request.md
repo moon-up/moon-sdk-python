@@ -24,14 +24,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.erc1155_request import Erc1155Request
+from openapi_client.models.erc1155_request import Erc1155Request
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of Erc1155Request from a JSON string
 erc1155_request_instance = Erc1155Request.from_json(json)
 # print the JSON string representation of the object
-print Erc1155Request.to_json()
+print(Erc1155Request.to_json())
 
 # convert the object into a dict
 erc1155_request_dict = erc1155_request_instance.to_dict()

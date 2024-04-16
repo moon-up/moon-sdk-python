@@ -12,14 +12,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.available_payment_method import AvailablePaymentMethod
+from openapi_client.models.available_payment_method import AvailablePaymentMethod
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of AvailablePaymentMethod from a JSON string
 available_payment_method_instance = AvailablePaymentMethod.from_json(json)
 # print the JSON string representation of the object
-print AvailablePaymentMethod.to_json()
+print(AvailablePaymentMethod.to_json())
 
 # convert the object into a dict
 available_payment_method_dict = available_payment_method_instance.to_dict()

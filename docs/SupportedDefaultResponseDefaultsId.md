@@ -14,14 +14,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
+from openapi_client.models.supported_default_response_defaults_id import SupportedDefaultResponseDefaultsId
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SupportedDefaultResponseDefaultsId from a JSON string
 supported_default_response_defaults_id_instance = SupportedDefaultResponseDefaultsId.from_json(json)
 # print the JSON string representation of the object
-print SupportedDefaultResponseDefaultsId.to_json()
+print(SupportedDefaultResponseDefaultsId.to_json())
 
 # convert the object into a dict
 supported_default_response_defaults_id_dict = supported_default_response_defaults_id_instance.to_dict()

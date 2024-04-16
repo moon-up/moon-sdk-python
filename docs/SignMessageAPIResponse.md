@@ -7,19 +7,21 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **message** | **str** |  | 
+**body** | [**InputBody**](InputBody.md) |  | [optional] 
+**address** | **str** |  | [optional] 
 **data** | [**TransactionData**](TransactionData.md) |  | [optional] 
 
 ## Example
 
 ```python
-from moonsdk.models.sign_message_api_response import SignMessageAPIResponse
+from openapi_client.models.sign_message_api_response import SignMessageAPIResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SignMessageAPIResponse from a JSON string
 sign_message_api_response_instance = SignMessageAPIResponse.from_json(json)
 # print the JSON string representation of the object
-print SignMessageAPIResponse.to_json()
+print(SignMessageAPIResponse.to_json())
 
 # convert the object into a dict
 sign_message_api_response_dict = sign_message_api_response_instance.to_dict()

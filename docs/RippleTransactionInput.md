@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.ripple_transaction_input import RippleTransactionInput
+from openapi_client.models.ripple_transaction_input import RippleTransactionInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of RippleTransactionInput from a JSON string
 ripple_transaction_input_instance = RippleTransactionInput.from_json(json)
 # print the JSON string representation of the object
-print RippleTransactionInput.to_json()
+print(RippleTransactionInput.to_json())
 
 # convert the object into a dict
 ripple_transaction_input_dict = ripple_transaction_input_instance.to_dict()

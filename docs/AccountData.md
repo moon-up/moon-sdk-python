@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.account_data import AccountData
+from openapi_client.models.account_data import AccountData
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of AccountData from a JSON string
 account_data_instance = AccountData.from_json(json)
 # print the JSON string representation of the object
-print AccountData.to_json()
+print(AccountData.to_json())
 
 # convert the object into a dict
 account_data_dict = account_data_instance.to_dict()

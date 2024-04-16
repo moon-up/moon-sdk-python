@@ -14,14 +14,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.fiat_currency import FiatCurrency
+from openapi_client.models.fiat_currency import FiatCurrency
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of FiatCurrency from a JSON string
 fiat_currency_instance = FiatCurrency.from_json(json)
 # print the JSON string representation of the object
-print FiatCurrency.to_json()
+print(FiatCurrency.to_json())
 
 # convert the object into a dict
 fiat_currency_dict = fiat_currency_instance.to_dict()

@@ -1,6 +1,6 @@
-# moonsdk.OnramperApi
+# openapi_client.OnramperApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,17 +26,15 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.transaction_input import TransactionInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.transaction_input import TransactionInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -57,15 +55,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
-    transaction_input = moonsdk.TransactionInput() # TransactionInput | 
+    transaction_input = openapi_client.TransactionInput() # TransactionInput | 
 
     try:
-        api_response = await api_instance.on_ramper_checkout(authorization, account_name, transaction_input)
+        api_response = api_instance.on_ramper_checkout(authorization, account_name, transaction_input)
         print("The response of OnramperApi->on_ramper_checkout:\n")
         pprint(api_response)
     except Exception as e:
@@ -115,17 +113,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.quote import Quote
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.quote import Quote
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -146,9 +142,9 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     fiat = 'fiat_example' # str | 
     crypto = 'crypto_example' # str | 
@@ -159,7 +155,7 @@ async with moonsdk.ApiClient(configuration) as api_client:
     country = '' # str |  (optional) (default to '')
 
     try:
-        api_response = await api_instance.on_ramper_get_quotes_buy(authorization, fiat, crypto, amount, payment_method=payment_method, uuid=uuid, client_name=client_name, country=country)
+        api_response = api_instance.on_ramper_get_quotes_buy(authorization, fiat, crypto, amount, payment_method=payment_method, uuid=uuid, client_name=client_name, country=country)
         print("The response of OnramperApi->on_ramper_get_quotes_buy:\n")
         pprint(api_response)
     except Exception as e:
@@ -214,17 +210,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.sell_quote import SellQuote
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.sell_quote import SellQuote
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -245,9 +239,9 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     fiat = 'fiat_example' # str | 
     crypto = 'crypto_example' # str | 
@@ -258,7 +252,7 @@ async with moonsdk.ApiClient(configuration) as api_client:
     country = '' # str |  (optional) (default to '')
 
     try:
-        api_response = await api_instance.on_ramper_get_quotes_sell(authorization, fiat, crypto, amount, payment_method=payment_method, uuid=uuid, client_name=client_name, country=country)
+        api_response = api_instance.on_ramper_get_quotes_sell(authorization, fiat, crypto, amount, payment_method=payment_method, uuid=uuid, client_name=client_name, country=country)
         print("The response of OnramperApi->on_ramper_get_quotes_sell:\n")
         pprint(api_response)
     except Exception as e:
@@ -313,17 +307,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.supported_asset_response import SupportedAssetResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.supported_asset_response import SupportedAssetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -344,15 +336,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     source = 'source_example' # str | 
     country = 'country_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_assets(authorization, source, country)
+        api_response = api_instance.on_ramper_get_supported_assets(authorization, source, country)
         print("The response of OnramperApi->on_ramper_get_supported_assets:\n")
         pprint(api_response)
     except Exception as e:
@@ -402,17 +394,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.supported_currencies_response import SupportedCurrenciesResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.supported_currencies_response import SupportedCurrenciesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -433,14 +423,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     type = 'type_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_currencies(authorization, type)
+        api_response = api_instance.on_ramper_get_supported_currencies(authorization, type)
         print("The response of OnramperApi->on_ramper_get_supported_currencies:\n")
         pprint(api_response)
     except Exception as e:
@@ -489,17 +479,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.supported_default_response import SupportedDefaultResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.supported_default_response import SupportedDefaultResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -520,15 +508,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     country = 'country_example' # str | 
     type = 'type_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_defaults_all(authorization, country, type)
+        api_response = api_instance.on_ramper_get_supported_defaults_all(authorization, country, type)
         print("The response of OnramperApi->on_ramper_get_supported_defaults_all:\n")
         pprint(api_response)
     except Exception as e:
@@ -578,17 +566,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -609,13 +595,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_on_ramps_all(authorization)
+        api_response = api_instance.on_ramper_get_supported_on_ramps_all(authorization)
         print("The response of OnramperApi->on_ramper_get_supported_on_ramps_all:\n")
         pprint(api_response)
     except Exception as e:
@@ -663,17 +649,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -694,16 +678,16 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     fiat = 'fiat_example' # str | 
     country = 'country_example' # str | 
     type = 'type_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_payment_types(authorization, fiat, country, type)
+        api_response = api_instance.on_ramper_get_supported_payment_types(authorization, fiat, country, type)
         print("The response of OnramperApi->on_ramper_get_supported_payment_types:\n")
         pprint(api_response)
     except Exception as e:
@@ -754,17 +738,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -785,15 +767,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.OnramperApi(api_client)
+    api_instance = openapi_client.OnramperApi(api_client)
     authorization = 'authorization_example' # str | 
     fiat = 'fiat_example' # str | 
     country = 'country_example' # str | 
 
     try:
-        api_response = await api_instance.on_ramper_get_supported_payment_types_fiat(authorization, fiat, country)
+        api_response = api_instance.on_ramper_get_supported_payment_types_fiat(authorization, fiat, country)
         print("The response of OnramperApi->on_ramper_get_supported_payment_types_fiat:\n")
         pprint(api_response)
     except Exception as e:

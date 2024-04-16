@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.nonce_response import NonceResponse
+from openapi_client.models.nonce_response import NonceResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of NonceResponse from a JSON string
 nonce_response_instance = NonceResponse.from_json(json)
 # print the JSON string representation of the object
-print NonceResponse.to_json()
+print(NonceResponse.to_json())
 
 # convert the object into a dict
 nonce_response_dict = nonce_response_instance.to_dict()

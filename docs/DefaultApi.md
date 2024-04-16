@@ -1,6 +1,6 @@
-# moonsdk.DefaultApi
+# openapi_client.DefaultApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,27 +16,25 @@ Method | HTTP request | Description
 
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.ping_response import PingResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.ping_response import PingResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.DefaultApi(api_client)
+    api_instance = openapi_client.DefaultApi(api_client)
 
     try:
-        api_response = await api_instance.get_message()
+        api_response = api_instance.get_message()
         print("The response of DefaultApi->get_message:\n")
         pprint(api_response)
     except Exception as e:

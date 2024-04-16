@@ -17,14 +17,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.transaction_input_supported_params_theme import TransactionInputSupportedParamsTheme
+from openapi_client.models.transaction_input_supported_params_theme import TransactionInputSupportedParamsTheme
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of TransactionInputSupportedParamsTheme from a JSON string
 transaction_input_supported_params_theme_instance = TransactionInputSupportedParamsTheme.from_json(json)
 # print the JSON string representation of the object
-print TransactionInputSupportedParamsTheme.to_json()
+print(TransactionInputSupportedParamsTheme.to_json())
 
 # convert the object into a dict
 transaction_input_supported_params_theme_dict = transaction_input_supported_params_theme_instance.to_dict()

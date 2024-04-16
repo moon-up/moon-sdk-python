@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.tron_transaction_output import TronTransactionOutput
+from openapi_client.models.tron_transaction_output import TronTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of TronTransactionOutput from a JSON string
 tron_transaction_output_instance = TronTransactionOutput.from_json(json)
 # print the JSON string representation of the object
-print TronTransactionOutput.to_json()
+print(TronTransactionOutput.to_json())
 
 # convert the object into a dict
 tron_transaction_output_dict = tron_transaction_output_instance.to_dict()

@@ -1,6 +1,6 @@
-# moonsdk.AaveApi
+# openapi_client.AaveApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,18 +21,16 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.aave_input import AaveInput
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.aave_input import AaveInput
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -53,15 +51,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.AaveApi(api_client)
+    api_instance = openapi_client.AaveApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    aave_input = moonsdk.AaveInput() # AaveInput | 
+    aave_input = openapi_client.AaveInput() # AaveInput | 
 
     try:
-        api_response = await api_instance.borrow(authorization, name, aave_input)
+        api_response = api_instance.borrow(authorization, name, aave_input)
         print("The response of AaveApi->borrow:\n")
         pprint(api_response)
     except Exception as e:
@@ -111,18 +109,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.aave_input import AaveInput
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.aave_input import AaveInput
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -143,15 +139,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.AaveApi(api_client)
+    api_instance = openapi_client.AaveApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    aave_input = moonsdk.AaveInput() # AaveInput | 
+    aave_input = openapi_client.AaveInput() # AaveInput | 
 
     try:
-        api_response = await api_instance.lend(authorization, name, aave_input)
+        api_response = api_instance.lend(authorization, name, aave_input)
         print("The response of AaveApi->lend:\n")
         pprint(api_response)
     except Exception as e:
@@ -201,18 +197,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.aave_input import AaveInput
-from moonsdk.models.transaction_api_response import TransactionAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.aave_input import AaveInput
+from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -233,15 +227,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.AaveApi(api_client)
+    api_instance = openapi_client.AaveApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    aave_input = moonsdk.AaveInput() # AaveInput | 
+    aave_input = openapi_client.AaveInput() # AaveInput | 
 
     try:
-        api_response = await api_instance.repay(authorization, name, aave_input)
+        api_response = api_instance.repay(authorization, name, aave_input)
         print("The response of AaveApi->repay:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,18 +285,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.aave_input import AaveInput
-from moonsdk.models.aave_reserves_api_response import AaveReservesAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.aave_input import AaveInput
+from openapi_client.models.aave_reserves_api_response import AaveReservesAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -323,15 +315,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.AaveApi(api_client)
+    api_instance = openapi_client.AaveApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    aave_input = moonsdk.AaveInput() # AaveInput | 
+    aave_input = openapi_client.AaveInput() # AaveInput | 
 
     try:
-        api_response = await api_instance.user_reserve_data(authorization, name, aave_input)
+        api_response = api_instance.user_reserve_data(authorization, name, aave_input)
         print("The response of AaveApi->user_reserve_data:\n")
         pprint(api_response)
     except Exception as e:

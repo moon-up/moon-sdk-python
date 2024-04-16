@@ -32,14 +32,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.token_swap_params import TokenSwapParams
+from openapi_client.models.token_swap_params import TokenSwapParams
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of TokenSwapParams from a JSON string
 token_swap_params_instance = TokenSwapParams.from_json(json)
 # print the JSON string representation of the object
-print TokenSwapParams.to_json()
+print(TokenSwapParams.to_json())
 
 # convert the object into a dict
 token_swap_params_dict = token_swap_params_instance.to_dict()

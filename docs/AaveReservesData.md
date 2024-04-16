@@ -19,14 +19,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.aave_reserves_data import AaveReservesData
+from openapi_client.models.aave_reserves_data import AaveReservesData
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of AaveReservesData from a JSON string
 aave_reserves_data_instance = AaveReservesData.from_json(json)
 # print the JSON string representation of the object
-print AaveReservesData.to_json()
+print(AaveReservesData.to_json())
 
 # convert the object into a dict
 aave_reserves_data_dict = aave_reserves_data_instance.to_dict()

@@ -1,6 +1,6 @@
-# moonsdk.ConveyorFinanceApi
+# openapi_client.ConveyorFinanceApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,18 +18,16 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
-from moonsdk.models.token_swap_params import TokenSwapParams
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.conveyor_finance_controller_response import ConveyorFinanceControllerResponse
+from openapi_client.models.token_swap_params import TokenSwapParams
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -50,15 +48,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.ConveyorFinanceApi(api_client)
+    api_instance = openapi_client.ConveyorFinanceApi(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    token_swap_params = moonsdk.TokenSwapParams() # TokenSwapParams | 
+    token_swap_params = openapi_client.TokenSwapParams() # TokenSwapParams | 
 
     try:
-        api_response = await api_instance.swap(authorization, name, token_swap_params)
+        api_response = api_instance.swap(authorization, name, token_swap_params)
         print("The response of ConveyorFinanceApi->swap:\n")
         pprint(api_response)
     except Exception as e:

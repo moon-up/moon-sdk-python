@@ -1,6 +1,6 @@
-# moonsdk.BitcoincashApi
+# openapi_client.BitcoincashApi
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,18 +21,16 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.account_api_response import AccountAPIResponse
-from moonsdk.models.bitcoin_cash_input import BitcoinCashInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.account_api_response import AccountAPIResponse
+from openapi_client.models.bitcoin_cash_input import BitcoinCashInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -53,14 +51,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.BitcoincashApi(api_client)
+    api_instance = openapi_client.BitcoincashApi(api_client)
     authorization = 'authorization_example' # str | 
-    bitcoin_cash_input = moonsdk.BitcoinCashInput() # BitcoinCashInput | 
+    bitcoin_cash_input = openapi_client.BitcoinCashInput() # BitcoinCashInput | 
 
     try:
-        api_response = await api_instance.create_bitcoin_cash_account(authorization, bitcoin_cash_input)
+        api_response = api_instance.create_bitcoin_cash_account(authorization, bitcoin_cash_input)
         print("The response of BitcoincashApi->create_bitcoin_cash_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -109,17 +107,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.account_api_response import AccountAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.account_api_response import AccountAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -140,14 +136,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.BitcoincashApi(api_client)
+    api_instance = openapi_client.BitcoincashApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
 
     try:
-        api_response = await api_instance.get_bitcoin_cash_account(authorization, account_name)
+        api_response = api_instance.get_bitcoin_cash_account(authorization, account_name)
         print("The response of BitcoincashApi->get_bitcoin_cash_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -196,17 +192,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.account_api_response import AccountAPIResponse
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.account_api_response import AccountAPIResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -227,13 +221,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.BitcoincashApi(api_client)
+    api_instance = openapi_client.BitcoincashApi(api_client)
     authorization = 'authorization_example' # str | 
 
     try:
-        api_response = await api_instance.list_bitcoin_cash_accounts(authorization)
+        api_response = api_instance.list_bitcoin_cash_accounts(authorization)
         print("The response of BitcoincashApi->list_bitcoin_cash_accounts:\n")
         pprint(api_response)
     except Exception as e:
@@ -281,18 +275,16 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import time
-import os
-import moonsdk
-from moonsdk.models.bitcoin_cash_api_response import BitcoinCashAPIResponse
-from moonsdk.models.bitcoin_cash_transaction_input import BitcoinCashTransactionInput
-from moonsdk.rest import ApiException
+import openapi_client
+from openapi_client.models.bitcoin_cash_api_response import BitcoinCashAPIResponse
+from openapi_client.models.bitcoin_cash_transaction_input import BitcoinCashTransactionInput
+from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+# Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = moonsdk.Configuration(
-    host = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"
+configuration = openapi_client.Configuration(
+    host = "https://beta.usemoon.ai"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -313,15 +305,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with moonsdk.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = moonsdk.BitcoincashApi(api_client)
+    api_instance = openapi_client.BitcoincashApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
-    bitcoin_cash_transaction_input = moonsdk.BitcoinCashTransactionInput() # BitcoinCashTransactionInput | 
+    bitcoin_cash_transaction_input = openapi_client.BitcoinCashTransactionInput() # BitcoinCashTransactionInput | 
 
     try:
-        api_response = await api_instance.sign_bitcoin_cash_transaction(authorization, account_name, bitcoin_cash_transaction_input)
+        api_response = api_instance.sign_bitcoin_cash_transaction(authorization, account_name, bitcoin_cash_transaction_input)
         print("The response of BitcoincashApi->sign_bitcoin_cash_transaction:\n")
         pprint(api_response)
     except Exception as e:

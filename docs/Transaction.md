@@ -19,14 +19,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.transaction import Transaction
+from openapi_client.models.transaction import Transaction
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of Transaction from a JSON string
 transaction_instance = Transaction.from_json(json)
 # print the JSON string representation of the object
-print Transaction.to_json()
+print(Transaction.to_json())
 
 # convert the object into a dict
 transaction_dict = transaction_instance.to_dict()

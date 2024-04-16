@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
+from openapi_client.models.get_supported_on_ramps_response_message_inner import GetSupportedOnRampsResponseMessageInner
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of GetSupportedOnRampsResponseMessageInner from a JSON string
 get_supported_on_ramps_response_message_inner_instance = GetSupportedOnRampsResponseMessageInner.from_json(json)
 # print the JSON string representation of the object
-print GetSupportedOnRampsResponseMessageInner.to_json()
+print(GetSupportedOnRampsResponseMessageInner.to_json())
 
 # convert the object into a dict
 get_supported_on_ramps_response_message_inner_dict = get_supported_on_ramps_response_message_inner_instance.to_dict()

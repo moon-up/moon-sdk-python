@@ -19,14 +19,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.crypto_currency import CryptoCurrency
+from openapi_client.models.crypto_currency import CryptoCurrency
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of CryptoCurrency from a JSON string
 crypto_currency_instance = CryptoCurrency.from_json(json)
 # print the JSON string representation of the object
-print CryptoCurrency.to_json()
+print(CryptoCurrency.to_json())
 
 # convert the object into a dict
 crypto_currency_dict = crypto_currency_instance.to_dict()

@@ -14,14 +14,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.sign_message import SignMessage
+from openapi_client.models.sign_message import SignMessage
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SignMessage from a JSON string
 sign_message_instance = SignMessage.from_json(json)
 # print the JSON string representation of the object
-print SignMessage.to_json()
+print(SignMessage.to_json())
 
 # convert the object into a dict
 sign_message_dict = sign_message_instance.to_dict()

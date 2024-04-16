@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.ens_resolve_input import EnsResolveInput
+from openapi_client.models.ens_resolve_input import EnsResolveInput
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of EnsResolveInput from a JSON string
 ens_resolve_input_instance = EnsResolveInput.from_json(json)
 # print the JSON string representation of the object
-print EnsResolveInput.to_json()
+print(EnsResolveInput.to_json())
 
 # convert the object into a dict
 ens_resolve_input_dict = ens_resolve_input_instance.to_dict()

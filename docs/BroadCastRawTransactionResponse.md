@@ -12,14 +12,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
+from openapi_client.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BroadCastRawTransactionResponse from a JSON string
 broad_cast_raw_transaction_response_instance = BroadCastRawTransactionResponse.from_json(json)
 # print the JSON string representation of the object
-print BroadCastRawTransactionResponse.to_json()
+print(BroadCastRawTransactionResponse.to_json())
 
 # convert the object into a dict
 broad_cast_raw_transaction_response_dict = broad_cast_raw_transaction_response_instance.to_dict()

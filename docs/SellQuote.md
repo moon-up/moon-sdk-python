@@ -17,14 +17,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.sell_quote import SellQuote
+from openapi_client.models.sell_quote import SellQuote
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SellQuote from a JSON string
 sell_quote_instance = SellQuote.from_json(json)
 # print the JSON string representation of the object
-print SellQuote.to_json()
+print(SellQuote.to_json())
 
 # convert the object into a dict
 sell_quote_dict = sell_quote_instance.to_dict()

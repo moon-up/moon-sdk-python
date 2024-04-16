@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from moonsdk.models.supported_currencies_response import SupportedCurrenciesResponse
+from openapi_client.models.supported_currencies_response import SupportedCurrenciesResponse
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of SupportedCurrenciesResponse from a JSON string
 supported_currencies_response_instance = SupportedCurrenciesResponse.from_json(json)
 # print the JSON string representation of the object
-print SupportedCurrenciesResponse.to_json()
+print(SupportedCurrenciesResponse.to_json())
 
 # convert the object into a dict
 supported_currencies_response_dict = supported_currencies_response_instance.to_dict()
