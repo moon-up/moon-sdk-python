@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
+from moonsdk.models.supported_default_response_defaults import SupportedDefaultResponseDefaults
 
 # TODO update the JSON string below
 json = "{}"

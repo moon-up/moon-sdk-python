@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.uniswap_input import UniswapInput
+from moonsdk.models.uniswap_input import UniswapInput
 
 # TODO update the JSON string below
 json = "{}"

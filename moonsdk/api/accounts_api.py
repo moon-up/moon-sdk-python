@@ -11,20 +11,12 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from pydantic import StrictStr
-
 from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.models.balance_api_response import BalanceAPIResponse
 from moonsdk.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
@@ -38,7 +30,7 @@ from moonsdk.models.sign_message_api_response import SignMessageAPIResponse
 from moonsdk.models.sign_typed_data import SignTypedData
 from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
-from moonsdk.api_client import ApiClient
+from moonsdk.api_client import ApiClient, RequestSerialized
 from moonsdk.api_response import ApiResponse
 from moonsdk.rest import RESTResponseType
 
@@ -283,7 +275,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -569,7 +561,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -853,7 +845,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1137,7 +1129,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1423,7 +1415,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1707,7 +1699,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1982,7 +1974,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2240,7 +2232,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2522,7 +2514,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2821,7 +2813,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3120,7 +3112,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3419,7 +3411,7 @@ class AccountsApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 

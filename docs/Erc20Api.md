@@ -1,4 +1,4 @@
-# openapi_client.Erc20Api
+# moonsdk.Erc20Api
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -26,15 +26,15 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -56,15 +56,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.allowance_erc20(authorization, name, input_body)
+        api_response = await api_instance.allowance_erc20(authorization, name, input_body)
         print("The response of Erc20Api->allowance_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -114,15 +114,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -144,15 +144,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.approve_erc20(authorization, name, input_body)
+        api_response = await api_instance.approve_erc20(authorization, name, input_body)
         print("The response of Erc20Api->approve_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -202,15 +202,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -232,15 +232,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.balance_of_erc20(authorization, name, input_body)
+        api_response = await api_instance.balance_of_erc20(authorization, name, input_body)
         print("The response of Erc20Api->balance_of_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -290,15 +290,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -320,15 +320,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.decimals_erc20(authorization, name, input_body)
+        api_response = await api_instance.decimals_erc20(authorization, name, input_body)
         print("The response of Erc20Api->decimals_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -378,15 +378,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -408,15 +408,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.name_erc20(authorization, name, input_body)
+        api_response = await api_instance.name_erc20(authorization, name, input_body)
         print("The response of Erc20Api->name_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -466,15 +466,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -496,15 +496,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.symbol_erc20(authorization, name, input_body)
+        api_response = await api_instance.symbol_erc20(authorization, name, input_body)
         print("The response of Erc20Api->symbol_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -554,15 +554,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -584,15 +584,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.total_supply_erc20(authorization, name, input_body)
+        api_response = await api_instance.total_supply_erc20(authorization, name, input_body)
         print("The response of Erc20Api->total_supply_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -642,15 +642,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -672,15 +672,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.transfer_erc20(authorization, name, input_body)
+        api_response = await api_instance.transfer_erc20(authorization, name, input_body)
         print("The response of Erc20Api->transfer_erc20:\n")
         pprint(api_response)
     except Exception as e:
@@ -730,15 +730,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_body import InputBody
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.input_body import InputBody
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -760,15 +760,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.Erc20Api(api_client)
+    api_instance = moonsdk.Erc20Api(api_client)
     authorization = 'authorization_example' # str | 
     name = 'name_example' # str | 
-    input_body = openapi_client.InputBody() # InputBody | 
+    input_body = moonsdk.InputBody() # InputBody | 
 
     try:
-        api_response = api_instance.transfer_from_erc20(authorization, name, input_body)
+        api_response = await api_instance.transfer_from_erc20(authorization, name, input_body)
         print("The response of Erc20Api->transfer_from_erc20:\n")
         pprint(api_response)
     except Exception as e:

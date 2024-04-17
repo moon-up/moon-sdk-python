@@ -1,4 +1,4 @@
-# openapi_client.ENSApi
+# moonsdk.ENSApi
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -18,15 +18,15 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.ens_resolve_api_response import EnsResolveAPIResponse
-from openapi_client.models.ens_resolve_input import EnsResolveInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.ens_resolve_api_response import EnsResolveAPIResponse
+from moonsdk.models.ens_resolve_input import EnsResolveInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -48,14 +48,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ENSApi(api_client)
+    api_instance = moonsdk.ENSApi(api_client)
     authorization = 'authorization_example' # str | 
-    ens_resolve_input = openapi_client.EnsResolveInput() # EnsResolveInput | 
+    ens_resolve_input = moonsdk.EnsResolveInput() # EnsResolveInput | 
 
     try:
-        api_response = api_instance.resolve(authorization, ens_resolve_input)
+        api_response = await api_instance.resolve(authorization, ens_resolve_input)
         print("The response of ENSApi->resolve:\n")
         pprint(api_response)
     except Exception as e:

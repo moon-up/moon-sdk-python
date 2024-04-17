@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.doge_coin_transaction_input import DogeCoinTransactionInput
+from moonsdk.models.doge_coin_transaction_input import DogeCoinTransactionInput
 
 # TODO update the JSON string below
 json = "{}"

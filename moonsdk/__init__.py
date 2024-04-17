@@ -26,7 +26,6 @@ from moonsdk.api.doge_coin_api import DogeCoinApi
 from moonsdk.api.ens_api import ENSApi
 from moonsdk.api.erc1155_api import ERC1155Api
 from moonsdk.api.erc20_api import Erc20Api
-from moonsdk.api.erc4337_api import Erc4337Api
 from moonsdk.api.erc721_api import Erc721Api
 from moonsdk.api.litecoin_api import LitecoinApi
 from moonsdk.api.solana_api import SolanaApi

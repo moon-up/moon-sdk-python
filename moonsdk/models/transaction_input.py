@@ -17,17 +17,13 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Union
-from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
-from pydantic import Field
 from moonsdk.models.transaction_input_meta_data import TransactionInputMetaData
 from moonsdk.models.transaction_input_supported_params import TransactionInputSupportedParams
 from moonsdk.models.transaction_input_wallet import TransactionInputWallet
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class TransactionInput(BaseModel):
     """
@@ -48,11 +44,11 @@ class TransactionInput(BaseModel):
     onramp: StrictStr
     __properties: ClassVar[List[str]] = ["supportedParams", "wallet", "metaData", "originatingHost", "partnerContext", "uuid", "network", "paymentMethod", "type", "amount", "destination", "source", "onramp"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -65,7 +61,7 @@ class TransactionInput(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of TransactionInput from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -79,10 +75,12 @@ class TransactionInput(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of supported_params
@@ -97,7 +95,7 @@ class TransactionInput(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of TransactionInput from a dict"""
         if obj is None:
             return None
@@ -106,9 +104,9 @@ class TransactionInput(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "supportedParams": TransactionInputSupportedParams.from_dict(obj.get("supportedParams")) if obj.get("supportedParams") is not None else None,
-            "wallet": TransactionInputWallet.from_dict(obj.get("wallet")) if obj.get("wallet") is not None else None,
-            "metaData": TransactionInputMetaData.from_dict(obj.get("metaData")) if obj.get("metaData") is not None else None,
+            "supportedParams": TransactionInputSupportedParams.from_dict(obj["supportedParams"]) if obj.get("supportedParams") is not None else None,
+            "wallet": TransactionInputWallet.from_dict(obj["wallet"]) if obj.get("wallet") is not None else None,
+            "metaData": TransactionInputMetaData.from_dict(obj["metaData"]) if obj.get("metaData") is not None else None,
             "originatingHost": obj.get("originatingHost"),
             "partnerContext": obj.get("partnerContext"),
             "uuid": obj.get("uuid"),

@@ -11,26 +11,18 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from pydantic import StrictStr
-
 from moonsdk.models.account_api_response import AccountAPIResponse
 from moonsdk.models.eos_api_response import EosAPIResponse
 from moonsdk.models.eos_input import EosInput
 from moonsdk.models.eos_transaction_input import EosTransactionInput
 
-from moonsdk.api_client import ApiClient
+from moonsdk.api_client import ApiClient, RequestSerialized
 from moonsdk.api_response import ApiResponse
 from moonsdk.rest import RESTResponseType
 
@@ -262,7 +254,7 @@ class EosApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -546,7 +538,7 @@ class EosApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -804,7 +796,7 @@ class EosApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1086,7 +1078,7 @@ class EosApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 

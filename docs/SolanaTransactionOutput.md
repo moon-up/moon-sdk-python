@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.solana_transaction_output import SolanaTransactionOutput
+from moonsdk.models.solana_transaction_output import SolanaTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"

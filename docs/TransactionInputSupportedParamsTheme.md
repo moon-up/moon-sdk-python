@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_input_supported_params_theme import TransactionInputSupportedParamsTheme
+from moonsdk.models.transaction_input_supported_params_theme import TransactionInputSupportedParamsTheme
 
 # TODO update the JSON string below
 json = "{}"

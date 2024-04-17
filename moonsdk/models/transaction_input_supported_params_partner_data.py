@@ -17,15 +17,11 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List
-from pydantic import BaseModel
-from pydantic import Field
 from moonsdk.models.transaction_input_supported_params_partner_data_redirect_url import TransactionInputSupportedParamsPartnerDataRedirectUrl
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class TransactionInputSupportedParamsPartnerData(BaseModel):
     """
@@ -34,11 +30,11 @@ class TransactionInputSupportedParamsPartnerData(BaseModel):
     redirect_url: TransactionInputSupportedParamsPartnerDataRedirectUrl = Field(alias="redirectUrl")
     __properties: ClassVar[List[str]] = ["redirectUrl"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -51,7 +47,7 @@ class TransactionInputSupportedParamsPartnerData(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of TransactionInputSupportedParamsPartnerData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -65,10 +61,12 @@ class TransactionInputSupportedParamsPartnerData(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of redirect_url
@@ -77,7 +75,7 @@ class TransactionInputSupportedParamsPartnerData(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of TransactionInputSupportedParamsPartnerData from a dict"""
         if obj is None:
             return None
@@ -86,7 +84,7 @@ class TransactionInputSupportedParamsPartnerData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "redirectUrl": TransactionInputSupportedParamsPartnerDataRedirectUrl.from_dict(obj.get("redirectUrl")) if obj.get("redirectUrl") is not None else None
+            "redirectUrl": TransactionInputSupportedParamsPartnerDataRedirectUrl.from_dict(obj["redirectUrl"]) if obj.get("redirectUrl") is not None else None
         })
         return _obj
 

@@ -1,4 +1,4 @@
-# openapi_client.OneinchApi
+# moonsdk.OneinchApi
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -23,13 +23,13 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -51,13 +51,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     body = None # object | 
 
     try:
-        api_response = api_instance.approve_call_data(body)
+        api_response = await api_instance.approve_call_data(body)
         print("The response of OneinchApi->approve_call_data:\n")
         pprint(api_response)
     except Exception as e:
@@ -105,13 +105,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -133,13 +133,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     body = None # object | 
 
     try:
-        api_response = api_instance.approve_spender(body)
+        api_response = await api_instance.approve_spender(body)
         print("The response of OneinchApi->approve_spender:\n")
         pprint(api_response)
     except Exception as e:
@@ -187,13 +187,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -215,13 +215,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     body = None # object | 
 
     try:
-        api_response = api_instance.protocols(body)
+        api_response = await api_instance.protocols(body)
         print("The response of OneinchApi->protocols:\n")
         pprint(api_response)
     except Exception as e:
@@ -269,13 +269,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -297,13 +297,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     body = None # object | 
 
     try:
-        api_response = api_instance.quote(body)
+        api_response = await api_instance.quote(body)
         print("The response of OneinchApi->quote:\n")
         pprint(api_response)
     except Exception as e:
@@ -351,14 +351,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.get_swap_dto import GetSwapDto
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.get_swap_dto import GetSwapDto
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -380,15 +380,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     account_name = 'account_name_example' # str | 
     authorization = 'authorization_example' # str | 
-    get_swap_dto = openapi_client.GetSwapDto() # GetSwapDto | 
+    get_swap_dto = moonsdk.GetSwapDto() # GetSwapDto | 
 
     try:
-        api_response = api_instance.swap(account_name, authorization, get_swap_dto)
+        api_response = await api_instance.swap(account_name, authorization, get_swap_dto)
         print("The response of OneinchApi->swap:\n")
         pprint(api_response)
     except Exception as e:
@@ -438,13 +438,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -466,13 +466,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OneinchApi(api_client)
+    api_instance = moonsdk.OneinchApi(api_client)
     body = None # object | 
 
     try:
-        api_response = api_instance.tokens(body)
+        api_response = await api_instance.tokens(body)
         print("The response of OneinchApi->tokens:\n")
         pprint(api_response)
     except Exception as e:

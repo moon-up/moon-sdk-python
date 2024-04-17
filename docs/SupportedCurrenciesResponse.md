@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_currencies_response import SupportedCurrenciesResponse
+from moonsdk.models.supported_currencies_response import SupportedCurrenciesResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ripple_transaction_output import RippleTransactionOutput
+from moonsdk.models.ripple_transaction_output import RippleTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"

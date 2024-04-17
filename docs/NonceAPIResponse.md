@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.nonce_api_response import NonceAPIResponse
+from moonsdk.models.nonce_api_response import NonceAPIResponse
 
 # TODO update the JSON string below
 json = "{}"

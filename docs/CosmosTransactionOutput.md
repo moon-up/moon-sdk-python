@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cosmos_transaction_output import CosmosTransactionOutput
+from moonsdk.models.cosmos_transaction_output import CosmosTransactionOutput
 
 # TODO update the JSON string below
 json = "{}"

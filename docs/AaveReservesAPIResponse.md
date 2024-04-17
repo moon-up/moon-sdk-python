@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.aave_reserves_api_response import AaveReservesAPIResponse
+from moonsdk.models.aave_reserves_api_response import AaveReservesAPIResponse
 
 # TODO update the JSON string below
 json = "{}"

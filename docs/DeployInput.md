@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.deploy_input import DeployInput
+from moonsdk.models.deploy_input import DeployInput
 
 # TODO update the JSON string below
 json = "{}"

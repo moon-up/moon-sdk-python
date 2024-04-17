@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_api_response import TransactionAPIResponse
+from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
 # TODO update the JSON string below
 json = "{}"

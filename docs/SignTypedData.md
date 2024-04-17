@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.sign_typed_data import SignTypedData
+from moonsdk.models.sign_typed_data import SignTypedData
 
 # TODO update the JSON string below
 json = "{}"

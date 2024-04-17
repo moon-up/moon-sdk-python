@@ -17,18 +17,15 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictStr
 from moonsdk.models.input_body import InputBody
 from moonsdk.models.transaction import Transaction
 from moonsdk.models.transaction_data import TransactionData
 from moonsdk.models.transaction_response import TransactionResponse
 from moonsdk.models.transaction_response_tx import TransactionResponseTx
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class ConveyorFinanceControllerResponse(BaseModel):
     """
@@ -43,11 +40,11 @@ class ConveyorFinanceControllerResponse(BaseModel):
     message: StrictStr
     __properties: ClassVar[List[str]] = ["input", "convey", "data", "tx", "signed", "success", "message"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -60,7 +57,7 @@ class ConveyorFinanceControllerResponse(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of ConveyorFinanceControllerResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -74,10 +71,12 @@ class ConveyorFinanceControllerResponse(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of input
@@ -98,7 +97,7 @@ class ConveyorFinanceControllerResponse(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of ConveyorFinanceControllerResponse from a dict"""
         if obj is None:
             return None
@@ -107,11 +106,11 @@ class ConveyorFinanceControllerResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "input": InputBody.from_dict(obj.get("input")) if obj.get("input") is not None else None,
-            "convey": TransactionResponse.from_dict(obj.get("convey")) if obj.get("convey") is not None else None,
-            "data": TransactionData.from_dict(obj.get("data")) if obj.get("data") is not None else None,
-            "tx": TransactionResponseTx.from_dict(obj.get("tx")) if obj.get("tx") is not None else None,
-            "signed": Transaction.from_dict(obj.get("signed")) if obj.get("signed") is not None else None,
+            "input": InputBody.from_dict(obj["input"]) if obj.get("input") is not None else None,
+            "convey": TransactionResponse.from_dict(obj["convey"]) if obj.get("convey") is not None else None,
+            "data": TransactionData.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "tx": TransactionResponseTx.from_dict(obj["tx"]) if obj.get("tx") is not None else None,
+            "signed": Transaction.from_dict(obj["signed"]) if obj.get("signed") is not None else None,
             "success": obj.get("success"),
             "message": obj.get("message")
         })

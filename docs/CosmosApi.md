@@ -1,4 +1,4 @@
-# openapi_client.CosmosApi
+# moonsdk.CosmosApi
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -21,15 +21,15 @@ Method | HTTP request | Description
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.account_api_response import AccountAPIResponse
-from openapi_client.models.cosmos_input import CosmosInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_api_response import AccountAPIResponse
+from moonsdk.models.cosmos_input import CosmosInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -51,14 +51,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CosmosApi(api_client)
+    api_instance = moonsdk.CosmosApi(api_client)
     authorization = 'authorization_example' # str | 
-    cosmos_input = openapi_client.CosmosInput() # CosmosInput | 
+    cosmos_input = moonsdk.CosmosInput() # CosmosInput | 
 
     try:
-        api_response = api_instance.create_cosmos_account(authorization, cosmos_input)
+        api_response = await api_instance.create_cosmos_account(authorization, cosmos_input)
         print("The response of CosmosApi->create_cosmos_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -107,14 +107,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.account_api_response import AccountAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_api_response import AccountAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -136,14 +136,14 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CosmosApi(api_client)
+    api_instance = moonsdk.CosmosApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
 
     try:
-        api_response = api_instance.get_cosmos_account(authorization, account_name)
+        api_response = await api_instance.get_cosmos_account(authorization, account_name)
         print("The response of CosmosApi->get_cosmos_account:\n")
         pprint(api_response)
     except Exception as e:
@@ -192,14 +192,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.account_api_response import AccountAPIResponse
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.account_api_response import AccountAPIResponse
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -221,13 +221,13 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CosmosApi(api_client)
+    api_instance = moonsdk.CosmosApi(api_client)
     authorization = 'authorization_example' # str | 
 
     try:
-        api_response = api_instance.list_cosmos_accounts(authorization)
+        api_response = await api_instance.list_cosmos_accounts(authorization)
         print("The response of CosmosApi->list_cosmos_accounts:\n")
         pprint(api_response)
     except Exception as e:
@@ -275,15 +275,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cosmos_api_response import CosmosAPIResponse
-from openapi_client.models.cosmos_transaction_input import CosmosTransactionInput
-from openapi_client.rest import ApiException
+import moonsdk
+from moonsdk.models.cosmos_api_response import CosmosAPIResponse
+from moonsdk.models.cosmos_transaction_input import CosmosTransactionInput
+from moonsdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://beta.usemoon.ai
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = moonsdk.Configuration(
     host = "https://beta.usemoon.ai"
 )
 
@@ -305,15 +305,15 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+async with moonsdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CosmosApi(api_client)
+    api_instance = moonsdk.CosmosApi(api_client)
     authorization = 'authorization_example' # str | 
     account_name = 'account_name_example' # str | 
-    cosmos_transaction_input = openapi_client.CosmosTransactionInput() # CosmosTransactionInput | 
+    cosmos_transaction_input = moonsdk.CosmosTransactionInput() # CosmosTransactionInput | 
 
     try:
-        api_response = api_instance.sign_cosmos_transaction(authorization, account_name, cosmos_transaction_input)
+        api_response = await api_instance.sign_cosmos_transaction(authorization, account_name, cosmos_transaction_input)
         print("The response of CosmosApi->sign_cosmos_transaction:\n")
         pprint(api_response)
     except Exception as e:

@@ -17,14 +17,11 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from pydantic import BaseModel
 from moonsdk.models.payment_type import PaymentType
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class SupportedPaymentTypesMessage(BaseModel):
     """
@@ -35,11 +32,11 @@ class SupportedPaymentTypesMessage(BaseModel):
     creditcard: PaymentType
     __properties: ClassVar[List[str]] = ["googlepay", "applepay", "creditcard"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -52,7 +49,7 @@ class SupportedPaymentTypesMessage(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of SupportedPaymentTypesMessage from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -66,10 +63,12 @@ class SupportedPaymentTypesMessage(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of googlepay
@@ -84,7 +83,7 @@ class SupportedPaymentTypesMessage(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of SupportedPaymentTypesMessage from a dict"""
         if obj is None:
             return None
@@ -93,9 +92,9 @@ class SupportedPaymentTypesMessage(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "googlepay": PaymentType.from_dict(obj.get("googlepay")) if obj.get("googlepay") is not None else None,
-            "applepay": PaymentType.from_dict(obj.get("applepay")) if obj.get("applepay") is not None else None,
-            "creditcard": PaymentType.from_dict(obj.get("creditcard")) if obj.get("creditcard") is not None else None
+            "googlepay": PaymentType.from_dict(obj["googlepay"]) if obj.get("googlepay") is not None else None,
+            "applepay": PaymentType.from_dict(obj["applepay"]) if obj.get("applepay") is not None else None,
+            "creditcard": PaymentType.from_dict(obj["creditcard"]) if obj.get("creditcard") is not None else None
         })
         return _obj
 

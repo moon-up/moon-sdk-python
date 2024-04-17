@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
+from moonsdk.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
 
 # TODO update the JSON string below
 json = "{}"

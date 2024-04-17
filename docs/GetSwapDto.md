@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_swap_dto import GetSwapDto
+from moonsdk.models.get_swap_dto import GetSwapDto
 
 # TODO update the JSON string below
 json = "{}"

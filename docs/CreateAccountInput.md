@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_account_input import CreateAccountInput
+from moonsdk.models.create_account_input import CreateAccountInput
 
 # TODO update the JSON string below
 json = "{}"

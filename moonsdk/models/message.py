@@ -17,15 +17,12 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from pydantic import BaseModel
 from moonsdk.models.crypto_currency import CryptoCurrency
 from moonsdk.models.fiat_currency import FiatCurrency
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class Message(BaseModel):
     """
@@ -35,11 +32,11 @@ class Message(BaseModel):
     crypto: List[CryptoCurrency]
     __properties: ClassVar[List[str]] = ["fiat", "crypto"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -52,7 +49,7 @@ class Message(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of Message from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -66,10 +63,12 @@ class Message(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in fiat (list)
@@ -89,7 +88,7 @@ class Message(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of Message from a dict"""
         if obj is None:
             return None
@@ -98,8 +97,8 @@ class Message(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "fiat": [FiatCurrency.from_dict(_item) for _item in obj.get("fiat")] if obj.get("fiat") is not None else None,
-            "crypto": [CryptoCurrency.from_dict(_item) for _item in obj.get("crypto")] if obj.get("crypto") is not None else None
+            "fiat": [FiatCurrency.from_dict(_item) for _item in obj["fiat"]] if obj.get("fiat") is not None else None,
+            "crypto": [CryptoCurrency.from_dict(_item) for _item in obj["crypto"]] if obj.get("crypto") is not None else None
         })
         return _obj
 

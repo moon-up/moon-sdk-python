@@ -11,22 +11,13 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from pydantic import StrictFloat, StrictInt, StrictStr
-
-from typing import Any, List, Optional, Union
-
+from typing import Optional, Union
 from moonsdk.models.get_supported_on_ramps_response import GetSupportedOnRampsResponse
 from moonsdk.models.quote import Quote
 from moonsdk.models.sell_quote import SellQuote
@@ -36,7 +27,7 @@ from moonsdk.models.supported_default_response import SupportedDefaultResponse
 from moonsdk.models.supported_payment_types_currency_response import SupportedPaymentTypesCurrencyResponse
 from moonsdk.models.transaction_input import TransactionInput
 
-from moonsdk.api_client import ApiClient
+from moonsdk.api_client import ApiClient, RequestSerialized
 from moonsdk.api_response import ApiResponse
 from moonsdk.rest import RESTResponseType
 
@@ -281,7 +272,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -645,7 +636,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1020,7 +1011,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1330,7 +1321,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1607,7 +1598,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1893,7 +1884,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2157,7 +2148,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2452,7 +2443,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2746,7 +2737,7 @@ class OnramperApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 

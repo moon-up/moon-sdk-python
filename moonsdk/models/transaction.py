@@ -17,17 +17,13 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictStr
-from pydantic import Field
 from moonsdk.models.transaction_data import TransactionData
 from moonsdk.models.transaction_request import TransactionRequest
 from moonsdk.models.tx import Tx
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class Transaction(BaseModel):
     """
@@ -45,11 +41,11 @@ class Transaction(BaseModel):
     userop_transaction: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["transaction_hash", "signed_transaction", "raw_transaction", "data", "transactions", "moon_scan_url", "signature", "transaction", "userOps", "userop_transaction"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -62,7 +58,7 @@ class Transaction(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of Transaction from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -76,10 +72,12 @@ class Transaction(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
@@ -107,7 +105,7 @@ class Transaction(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of Transaction from a dict"""
         if obj is None:
             return None
@@ -120,11 +118,11 @@ class Transaction(BaseModel):
             "signed_transaction": obj.get("signed_transaction"),
             "raw_transaction": obj.get("raw_transaction"),
             "data": obj.get("data"),
-            "transactions": [TransactionData.from_dict(_item) for _item in obj.get("transactions")] if obj.get("transactions") is not None else None,
+            "transactions": [TransactionData.from_dict(_item) for _item in obj["transactions"]] if obj.get("transactions") is not None else None,
             "moon_scan_url": obj.get("moon_scan_url"),
             "signature": obj.get("signature"),
-            "transaction": Tx.from_dict(obj.get("transaction")) if obj.get("transaction") is not None else None,
-            "userOps": [TransactionRequest.from_dict(_item) for _item in obj.get("userOps")] if obj.get("userOps") is not None else None,
+            "transaction": Tx.from_dict(obj["transaction"]) if obj.get("transaction") is not None else None,
+            "userOps": [TransactionRequest.from_dict(_item) for _item in obj["userOps"]] if obj.get("userOps") is not None else None,
             "userop_transaction": obj.get("userop_transaction")
         })
         return _obj

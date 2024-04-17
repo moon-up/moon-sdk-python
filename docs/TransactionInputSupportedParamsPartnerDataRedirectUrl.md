@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transaction_input_supported_params_partner_data_redirect_url import TransactionInputSupportedParamsPartnerDataRedirectUrl
+from moonsdk.models.transaction_input_supported_params_partner_data_redirect_url import TransactionInputSupportedParamsPartnerDataRedirectUrl
 
 # TODO update the JSON string below
 json = "{}"

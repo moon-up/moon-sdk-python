@@ -17,14 +17,12 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictStr
+from moonsdk.models.input_body import InputBody
 from moonsdk.models.transaction import Transaction
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class TransactionAPIResponse(BaseModel):
     """
@@ -32,14 +30,18 @@ class TransactionAPIResponse(BaseModel):
     """ # noqa: E501
     success: StrictBool
     message: StrictStr
+    body: Optional[InputBody] = None
+    address: Optional[StrictStr] = None
+    transaction_hash: Optional[Any] = None
+    signed_tx: Optional[Any] = Field(default=None, alias="signedTx")
     data: Optional[Transaction] = None
-    __properties: ClassVar[List[str]] = ["success", "message", "data"]
+    __properties: ClassVar[List[str]] = ["success", "message", "body", "address", "transaction_hash", "signedTx", "data"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -52,7 +54,7 @@ class TransactionAPIResponse(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of TransactionAPIResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -66,19 +68,34 @@ class TransactionAPIResponse(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of body
+        if self.body:
+            _dict['body'] = self.body.to_dict()
         # override the default output from pydantic by calling `to_dict()` of data
         if self.data:
             _dict['data'] = self.data.to_dict()
+        # set to None if transaction_hash (nullable) is None
+        # and model_fields_set contains the field
+        if self.transaction_hash is None and "transaction_hash" in self.model_fields_set:
+            _dict['transaction_hash'] = None
+
+        # set to None if signed_tx (nullable) is None
+        # and model_fields_set contains the field
+        if self.signed_tx is None and "signed_tx" in self.model_fields_set:
+            _dict['signedTx'] = None
+
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of TransactionAPIResponse from a dict"""
         if obj is None:
             return None
@@ -89,7 +106,11 @@ class TransactionAPIResponse(BaseModel):
         _obj = cls.model_validate({
             "success": obj.get("success"),
             "message": obj.get("message"),
-            "data": Transaction.from_dict(obj.get("data")) if obj.get("data") is not None else None
+            "body": InputBody.from_dict(obj["body"]) if obj.get("body") is not None else None,
+            "address": obj.get("address"),
+            "transaction_hash": obj.get("transaction_hash"),
+            "signedTx": obj.get("signedTx"),
+            "data": Transaction.from_dict(obj["data"]) if obj.get("data") is not None else None
         })
         return _obj
 

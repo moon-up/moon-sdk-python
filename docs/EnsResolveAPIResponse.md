@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ens_resolve_api_response import EnsResolveAPIResponse
+from moonsdk.models.ens_resolve_api_response import EnsResolveAPIResponse
 
 # TODO update the JSON string below
 json = "{}"

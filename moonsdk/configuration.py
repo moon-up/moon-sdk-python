@@ -14,7 +14,9 @@
 
 import copy
 import logging
+from logging import FileHandler
 import sys
+from typing import Optional
 import urllib3
 
 import http.client as httplib
@@ -86,7 +88,7 @@ conf = moonsdk.Configuration(
                  ) -> None:
         """Constructor
         """
-        self._base_path = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app" if host is None else host
+        self._base_path = "https://beta.usemoon.ai" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -134,7 +136,7 @@ conf = moonsdk.Configuration(
         self.logger_stream_handler = None
         """Log stream handler
         """
-        self.logger_file_handler = None
+        self.logger_file_handler: Optional[FileHandler] = None
         """Log file handler
         """
         self.logger_file = None
@@ -171,7 +173,7 @@ conf = moonsdk.Configuration(
            Default values is 100, None means no-limit.
         """
 
-        self.proxy = None
+        self.proxy: Optional[str] = None
         """Proxy URL
         """
         self.proxy_headers = None
@@ -419,7 +421,7 @@ conf = moonsdk.Configuration(
         """
         return [
             {
-                'url': "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app",
+                'url': "https://beta.usemoon.ai",
                 'description': "No description provided",
             }
         ]

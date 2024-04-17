@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.supported_asset_response_assets_inner import SupportedAssetResponseAssetsInner
+from moonsdk.models.supported_asset_response_assets_inner import SupportedAssetResponseAssetsInner
 
 # TODO update the JSON string below
 json = "{}"
