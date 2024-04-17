@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "moonsdk"
-version = "1.0.0"
+version = "1.0.2"
 description = "moon-vault-api"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "ISC"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/moon-up/moon-sdk-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "moon-vault-api"]
 include = ["moonsdk/py.typed"]
 
