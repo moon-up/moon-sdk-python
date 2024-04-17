@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.broad_cast_raw_transaction_api_response import BroadCastRawTransactionAPIResponse
 
@@ -38,6 +37,23 @@ class TestBroadCastRawTransactionAPIResponse(unittest.TestCase):
             return BroadCastRawTransactionAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.broad_cast_raw_transaction_response.BroadCastRawTransactionResponse(
                     success = True, 
                     message = '', 

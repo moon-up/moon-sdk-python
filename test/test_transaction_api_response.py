@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.transaction_api_response import TransactionAPIResponse
 
@@ -38,6 +37,25 @@ class TestTransactionAPIResponse(unittest.TestCase):
             return TransactionAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
+                transaction_hash = None,
+                signed_tx = None,
                 data = moonsdk.models.transaction.Transaction(
                     transaction_hash = '', 
                     signed_transaction = '', 

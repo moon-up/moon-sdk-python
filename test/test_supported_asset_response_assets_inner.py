@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.supported_asset_response_assets_inner import SupportedAssetResponseAssetsInner
 

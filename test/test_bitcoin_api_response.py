@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.bitcoin_api_response import BitcoinAPIResponse
 
@@ -38,6 +37,23 @@ class TestBitcoinAPIResponse(unittest.TestCase):
             return BitcoinAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.bitcoin_transaction_output.BitcoinTransactionOutput(
                     signed_tx = '', 
                     transaction_hash = '', )

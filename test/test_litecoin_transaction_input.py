@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.litecoin_transaction_input import LitecoinTransactionInput
 

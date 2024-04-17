@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.balance_api_response import BalanceAPIResponse
 
@@ -38,6 +37,23 @@ class TestBalanceAPIResponse(unittest.TestCase):
             return BalanceAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.balance_response.BalanceResponse(
                     balance = '', )
             )

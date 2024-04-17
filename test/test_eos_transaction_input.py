@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.eos_transaction_input import EosTransactionInput
 

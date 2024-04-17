@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.ripple_api_response import RippleAPIResponse
 
@@ -38,6 +37,23 @@ class TestRippleAPIResponse(unittest.TestCase):
             return RippleAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.ripple_transaction_output.RippleTransactionOutput(
                     signed_tx = '', 
                     transaction_hash = '', )

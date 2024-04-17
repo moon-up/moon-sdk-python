@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.ens_resolve_response import EnsResolveResponse
 

@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.bitcoin_cash_transaction_input import BitcoinCashTransactionInput
 

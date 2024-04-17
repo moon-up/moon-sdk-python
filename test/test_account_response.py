@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.account_response import AccountResponse
 
@@ -36,13 +35,19 @@ class TestAccountResponse(unittest.TestCase):
         model = AccountResponse()
         if include_optional:
             return AccountResponse(
-                keys = [
-                    ''
-                    ],
-                address = ''
+                data = moonsdk.models.account_data.AccountData(
+                    keys = [
+                        ''
+                        ], 
+                    address = '', )
             )
         else:
             return AccountResponse(
+                data = moonsdk.models.account_data.AccountData(
+                    keys = [
+                        ''
+                        ], 
+                    address = '', ),
         )
         """
 

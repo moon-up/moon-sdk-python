@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.cosmos_transaction_input import CosmosTransactionInput
 

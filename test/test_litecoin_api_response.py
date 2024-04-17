@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.litecoin_api_response import LitecoinAPIResponse
 
@@ -38,6 +37,23 @@ class TestLitecoinAPIResponse(unittest.TestCase):
             return LitecoinAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.litecoin_transaction_output.LitecoinTransactionOutput(
                     signed_tx = '', 
                     transaction_hash = '', )

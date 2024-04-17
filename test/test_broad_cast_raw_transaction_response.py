@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.broad_cast_raw_transaction_response import BroadCastRawTransactionResponse
 

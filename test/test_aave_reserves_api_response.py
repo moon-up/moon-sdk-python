@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.aave_reserves_api_response import AaveReservesAPIResponse
 
@@ -38,6 +37,23 @@ class TestAaveReservesAPIResponse(unittest.TestCase):
             return AaveReservesAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.aave_reserves_data.AaveReservesData(
                     current_atoken_balance = '', 
                     current_borrow_balance = '', 

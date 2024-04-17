@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.ripple_transaction_input import RippleTransactionInput
 

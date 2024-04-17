@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.supported_currencies_response import SupportedCurrenciesResponse
 

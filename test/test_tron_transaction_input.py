@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.tron_transaction_input import TronTransactionInput
 

@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.transaction_input_supported_params_theme import TransactionInputSupportedParamsTheme
 

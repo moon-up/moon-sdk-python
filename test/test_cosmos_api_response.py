@@ -13,7 +13,6 @@
 
 
 import unittest
-import datetime
 
 from moonsdk.models.cosmos_api_response import CosmosAPIResponse
 
@@ -38,6 +37,23 @@ class TestCosmosAPIResponse(unittest.TestCase):
             return CosmosAPIResponse(
                 success = True,
                 message = '',
+                body = moonsdk.models.input_body.InputBody(
+                    to = '', 
+                    data = '', 
+                    input = '', 
+                    value = '', 
+                    nonce = '', 
+                    gas = '', 
+                    gas_price = '', 
+                    chain_id = '', 
+                    encoding = '', 
+                    eoa = True, 
+                    contract_address = '', 
+                    token_id = '', 
+                    token_ids = '', 
+                    approved = True, 
+                    broadcast = True, ),
+                address = '',
                 data = moonsdk.models.cosmos_transaction_output.CosmosTransactionOutput(
                     signed_tx = '', 
                     transaction_hash = '', )
